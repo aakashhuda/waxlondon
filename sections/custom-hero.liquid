@@ -1,0 +1,311 @@
+<section class="container">
+    <div class="parent-container">
+        <div class="text-container">
+            <div class="text address">{{ section.settings.address }}</div>
+            <div class="text store">{{ section.settings.store-name }}</div>
+            {% for item in section.blocks %}
+                {% if item.settings.day-to != "null" %}
+                    <div class="time-schedule text">
+                        <p>{{ item.settings.day-from }} - {{ item.settings.day-to }}: {{ item.settings.time-from }}{{ item.settings.time-period }} - {{ item.settings.time-to }}{{ item.settings.time-period-2 }}</p>
+                    </div>
+                {% else %}
+                <div class="time-schedule text">
+                    <p>{{ item.settings.day-from }}: {{ item.settings.time-from }}{{ item.settings.time-period }} - {{ item.settings.time-to }}{{ item.settings.time-period-2 }}</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+            <div class="btn-div">
+                <a href="{{ section.settings.anchor-tag-url }}" class="my-btn">Button</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .btn-div {
+        margin-top: 1em;
+    }
+    .my-btn {
+        text-decoration: none;
+        background-color: black;
+        padding: 0.5em {{ section.settings.btn-padding }}em;
+        color: {{ section.settings.btn-color }};
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        height: {{ section.settings.main-container-height }}vh;
+        font-family: Assistant, sans-serif;
+    }
+    .parent-container {
+        background-image: url({{ section.settings.background-image | img_url: "master" }});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: {{ section.settings.background-position-y }}%;
+        width: {{ section.settings.image-container-width }}%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: {{ section.settings.main-container-padding }}%;
+    }
+    .text-container {
+        width: 50%;
+        height: auto;
+        background-color: rgba(255,255,255, {{ section.settings.text-container-opacity }} );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: {{ section.settings.text-container-padding-x }}px {{ section.settings.text-container-padding-y }}px ;
+    }
+    .text {
+        opacity: 1;
+    }
+    .address {
+        color: #000000;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .store {
+        color: #000000;
+        font-size: 32px;
+    }
+    .time-schedule p {
+        margin: 0;
+    }
+
+</style>
+
+{% schema %}
+{
+    "name": "custom-hero",
+    "settings": [
+        {
+            "type": "text",
+            "id": "address",
+            "default": "67 Berwick Street, London, W1F 8GR",
+            "label": "Enter Address"
+        },
+        {
+            "type": "text",
+            "id": "store-name",
+            "default": "London Store",
+            "label": "Enter Store Name"
+        },
+        {
+            "type": "image_picker",
+            "id": "background-image",
+            "label": "Choose Background Image"
+        },
+        {
+            "type": "range",
+            "id": "text-container-opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.10,
+            "label": "Text Background Opacity",
+            "unit": "num",
+            "default": 0.5
+        },
+        {
+            "type": "range",
+            "id": "background-position-y",
+            "label": "Background Image Position",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "step": 1,
+            "default": 52
+        },
+        {
+            "type": "range",
+            "id": "main-container-height",
+            "label": "Height",
+            "min": 0,
+            "max": 100,
+            "unit": "vh",
+            "step": 1,
+            "default": 61
+        },
+        {
+            "type": "range",
+            "id": "image-container-width",
+            "label": "Image Width",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "step": 1,
+            "default": 57
+        },
+        {
+            "type": "range",
+            "id": "text-container-padding-x",
+            "label": "Text Padding Y",
+            "min": 0,
+            "max": 50,
+            "unit": "px",
+            "step": 1,
+            "default": 15
+        },
+        {
+            "type": "range",
+            "id": "text-container-padding-y",
+            "label": "Text Padding X",
+            "min": 0,
+            "max": 100,
+            "unit": "px",
+            "step": 1,
+            "default": 30
+        },
+        {
+            "type": "url",
+            "id": "anchor-tag-url",
+            "label": "Button URL"
+        },
+        {
+            "type": "range",
+            "id": "btn-padding",
+            "label": "Button Width",
+            "min": 1,
+            "max": 5,
+            "step": 0.10,
+            "unit": "em",
+            "default": 3
+        },
+        {
+            "type": "color",
+            "id": "btn-color",
+            "label": "Button Text Color",
+            "default": "#FFFFFF"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Schedule",
+            "type": "schedule",
+            "settings": [
+                {
+                    "type": "select",
+                    "id": "day-from",
+                    "label": "From (Day)",
+                    "options": [
+                        {
+                            "value": "Mon",
+                            "label": "Monday"
+                        },
+                        {
+                            "value": "Tue",
+                            "label": "Tuesday"
+                        },
+                        {
+                            "value": "Wed",
+                            "label": "Wednesday"
+                        },
+                        {
+                            "value": "Thu",
+                            "label": "Thursday"
+                        },
+                        {
+                            "value": "Fri",
+                            "label": "Friday"
+                        },
+                        {
+                            "value": "Sat",
+                            "label": "Saturday"
+                        },
+                        {
+                            "value": "Sun",
+                            "label": "Sunday"
+                        }
+                    ],
+                    "default": "Mon"
+                },
+                {
+                    "type": "text",
+                    "id": "time-from",
+                    "label": "From (Hours)",
+                    "default": "10.30"
+                },
+                {
+                    "type": "select",
+                    "id": "time-period",
+                    "label": "AM/PM",
+                    "options": [
+                        {
+                            "value": "am",
+                            "label": "am"
+                        },
+                        {
+                            "value": "pm",
+                            "label": "pm"
+                        }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "id": "day-to",
+                    "label": "To (Day)",
+                    "options": [
+                        {
+                            "value": "Mon",
+                            "label": "Monday"
+                        },
+                        {
+                            "value": "Tue",
+                            "label": "Tuesday"
+                        },
+                        {
+                            "value": "Wed",
+                            "label": "Wednesday"
+                        },
+                        {
+                            "value": "Thu",
+                            "label": "Thursday"
+                        },
+                        {
+                            "value": "Fri",
+                            "label": "Friday"
+                        },
+                        {
+                            "value": "Sat",
+                            "label": "Saturday"
+                        },
+                        {
+                            "value": "Sun",
+                            "label": "Sunday"
+                        },
+                        {
+                            "value": "null",
+                            "label": "None"
+                        }
+                    ],
+                    "default": "Fri"
+                },
+                {
+                    "type": "text",
+                    "id": "time-to",
+                    "label": "To (Hours)",
+                    "default": "7.00"
+                },
+                {
+                    "type": "select",
+                    "id": "time-period-2",
+                    "label": "AM/PM",
+                    "options": [
+                        {
+                            "value": "am",
+                            "label": "am"
+                        },
+                        {
+                            "value": "pm",
+                            "label": "pm"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
