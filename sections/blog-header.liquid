@@ -1,8 +1,95 @@
 <section id="blog-header">
-    <div>Header</div>
+    <div class="article-title"> <h1>{{ section.settings.title }}</h1> </div>
+    <div class="article-info">
+        Posted on: <span>{{ section.settings.article-info-date }}</span> - Words by <span>{{ section.settings.article-info-writer }}</span>
+    </div>
+    <div class="article-publisher">
+        Posted in <span>{{ section.settings.article-published-in }}</span> at
+        
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when "page-names" %}
+                    <span class="category">{{ block.settings.page-category-name }}<span>
+            {% endcase %}
+        {% endfor %}
+    </div>
 </section>
+
+<style>
+.article-title {
+    text-align: center;
+    padding: 0 {{ section.settings.title-padding }}%;
+    color: rgb(51, 51, 51);
+    margin-bottom: 20px;
+}
+.article-title h1 {
+    margin: 0;
+}
+.article-publisher, .article-info {
+    text-align: center;
+    font-size: 12px;
+    color: rgb(122, 122, 122);
+}
+.category {
+    text-decoration: underline;
+}
+{% comment %} .page-links:last-child {
+    font-size: 30px;
+} {% endcomment %}
+</style>
+
 {% schema %}
 {
-
+    "name": "Article Header",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Journal title, its' a pretty long one too",
+            "label": "Title"
+        },
+        {
+            "type": "text",
+            "id": "article-info-date",
+            "default": "13/10/2022",
+            "label": "Date"
+        },
+        {
+            "type": "text",
+            "id": "article-info-writer",
+            "default": "Lizzie",
+            "label": "Writer"
+        },
+        {
+            "type": "text",
+            "id": "article-published-in",
+            "default": "Integrity",
+            "label": "Writer"
+        },
+        {
+            "type": "range",
+            "id": "title-padding",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "step": 10,
+            "label": "Title Padding",
+            "default": 30
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Page Names",
+            "type": "page-names",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "page-category-name",
+                    "default": "Wax",
+                    "label": "Page Name"
+                }
+            ]
+        }
+    ]
 }
 {% endschema %}
