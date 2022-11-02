@@ -1,0 +1,54 @@
+<section class="text-container {{ section.settings.text-layout-style }}">
+    {{ section.settings.text-content }}
+</section>
+
+<style>
+    .text-container {
+        font-size: {{ section.settings.text-font-size }}px;
+    }
+    .text-container.multi {
+        column-count: 2;
+        column-fill: balance;
+        column-gap: 5px;
+    }
+    .text-container.center {
+        padding: 0 30%;
+    }
+    .text-container.full {
+        width: 100%
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Text Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "text-content",
+            "label": "Text Content",
+            "default": "Example Text"
+        },
+        {
+            "type": "range",
+            "id": "text-font-size",
+            "min": 0,
+            "max": 50,
+            "step": 1,
+            "unit": "px",
+            "default": 16,
+            "label": "Font Size"
+        },
+        {
+            "type": "select",
+            "id": "text-layout-style",
+            "label": "Text Layout",
+            "options": [
+                {"value": "multi", "label": "Mutlitcolumn"},
+                {"value": "center", "label": "Centered"},
+                {"value": "full", "label": "Full Width"}
+            ]
+        }
+    ]
+}
+{% endschema %}

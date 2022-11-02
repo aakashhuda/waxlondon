@@ -2,9 +2,17 @@
   "sections": {
     "header": {
       "type": "blog-header"
+    },
+    "spacer": {
+      "type": "spacer"
+    },
+    "text": {
+      "type": "my-text-section"
     }
   },
   "order": [
-    "header"
+    "header",
+    "spacer",
+    "text"
   ]
 }
