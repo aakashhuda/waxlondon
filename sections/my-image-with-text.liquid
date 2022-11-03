@@ -1,10 +1,109 @@
 <section>
-    image with text
+    <div class="image-container">
+        <img class="image" src="{{ section.settings.image | img_url }}">
+    </div>
+    <div class=text-container>
+        <p>
+            Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
+            with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
+            <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
+        </p>
+    </div>
 </section>
-<style></style>
+<style>
+    .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .image {
+        width: {{ section.settings.image-size }}% ;
+    }
+    .text-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        font-size: 12px;
+    }
+    .text-container p {
+        position: absolute;
+        margin: 0;
+    }
+
+    {% if section.settings.image-size == "50" %}
+        .text-container p {
+            left: 25%;
+        }
+    {% elsif section.settings.image-size == "70" %}
+        .text-container p {
+            left: 15%;
+        }
+    {% else %}
+        .text-container p {
+            position: relative;
+        }
+    {% endif %}
+</style>
 
 {% schema %}
 {
-    "name": "My-image-with-text"
+    "name": "My-image-with-text",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "select",
+            "id": "image-size",
+            "label": "Image Size",
+            "default": "50",
+            "options": [
+                {
+                    "value": "50",
+                    "label": "Small"
+                },
+                {
+                    "value": "70",
+                    "label": "Medium"
+                },
+                {
+                    "value": "100",
+                    "label": "Full Width"
+                }
+            ]
+        },
+        {
+            "type": "url",
+            "id": "wearing-url",
+            "label": "Wearing URL"
+        },
+        {
+            "type": "text",
+            "id": "wearing-text",
+            "label": "Wearing Text"
+        },
+        {
+            "type": "url",
+            "id": "with-url-1",
+            "label": "Wearing With URL 1"
+        },
+        {
+            "type": "text",
+            "id": "with-text-1",
+            "label": "Wearing With text 1"
+        },
+        {
+            "type": "url",
+            "id": "with-url-2",
+            "label": "Wearing With URL 2"
+        },
+        {
+            "type": "text",
+            "id": "with-text-2",
+            "label": "Wearing With text 2"
+        }
+    ]
 }
 {% endschema %}
