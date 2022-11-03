@@ -11,12 +11,16 @@
     },
     "second_spacer": {
       "type": "spacer"
+    },
+    "image-with-text": {
+      "type": "my-image-with-text"
     }
   },
   "order": [
     "header",
     "spacer",
     "text",
-    "second_spacer"
+    "second_spacer",
+    "image-with-text"
   ]
 }
