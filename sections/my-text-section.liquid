@@ -5,18 +5,12 @@
 <style>
     .text-container {
         font-size: {{ section.settings.text-font-size }}px;
+        padding: 0 {{ section.settings.text-padding }}% ;
     }
     .text-container.multi {
         column-count: 2;
         column-fill: balance;
         column-gap: 20px;
-    }
-    .text-container.center {
-        padding: 0 30%;
-        text-align: justify;
-    }
-    .text-container.full {
-        width: 100%
     }
 </style>
 
@@ -46,9 +40,18 @@
             "label": "Text Layout",
             "options": [
                 {"value": "multi", "label": "Mutlitcolumn"},
-                {"value": "center", "label": "Centered"},
-                {"value": "full", "label": "Full Width"}
+                {"value": "normal", "label": "Normal"}
             ]
+        },
+        {
+            "type": "range",
+            "id": "text-padding",
+            "min": 0,
+            "max": 80,
+            "step": 1,
+            "unit": "%",
+            "default": 0,
+            "label": "Text Padding"
         }
     ]
 }

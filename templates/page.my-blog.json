@@ -8,11 +8,15 @@
     },
     "text": {
       "type": "my-text-section"
+    },
+    "second_spacer": {
+      "type": "spacer"
     }
   },
   "order": [
     "header",
     "spacer",
-    "text"
+    "text",
+    "second_spacer"
   ]
 }
