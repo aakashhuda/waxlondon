@@ -6,6 +6,7 @@
     .text-container {
         font-size: {{ section.settings.text-font-size }}px;
         padding: 0 {{ section.settings.text-padding }}% ;
+        font-family: {{ section.settings.text-font-picker }}
     }
     .text-container.multi {
         column-count: 2;
@@ -52,6 +53,12 @@
             "unit": "%",
             "default": 0,
             "label": "Text Padding"
+        },
+        {
+            "type": "font_picker",
+            "id": "text-font-picker",
+            "label": "Font Picker",
+            "default": "helvetica_n4"
         }
     ]
 }
