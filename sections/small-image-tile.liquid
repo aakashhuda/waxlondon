@@ -1,0 +1,198 @@
+<section class="small-image-tile-container">
+    <div class="tile-image-container image-container-1">
+        <img class="tile-image image-1" src="{{ section.settings.image-1 | img_url: 'master' }}">
+    </div>
+    <div class="tile-image-container image-container-2">
+        <img class="tile-image image-2" src="{{ section.settings.image-2 | img_url: 'master' }}">
+    </div>
+</section>
+
+<section class="small-image-tile-text-container">
+    <div class="tile-text-container">
+        Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
+            with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
+            <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
+    </div>
+    <div class="tile-text-container">
+        Model wears <a href="{{ section.settings.wearing-url-right | url_encode }}">{{ section.settings.wearing-text-right }}</a>
+            with <a href="{{ section.settings.with-url-1-right | url_encode }}">{{ section.settings.with-text-1-right }}</a> and
+            <a href="{{ section.settings.with-url-2-right | url_encode }}">{{ section.settings.with-text-2-right }}</a>
+    </div>
+</section>
+
+<style>
+:root {
+    --small-image-width: {{ section.settings.image-width }}px;
+}
+.small-image-tile-container {
+    display: flex;
+    justify-content: center;
+    gap: {{ section.settings.gap }}px;
+}
+
+.tile-image-container {
+    background-color: rgb(255, 255, 255);
+    width: var(--small-image-width);
+    height: calc( var(--small-image-width) + 100px );
+    display: flex;
+    justify-content: center;
+}
+.tile-image {
+    width: inherit;
+    height: auto;
+}
+
+.image-container-1 {
+    padding: {{ section.settings.image-1-padding }}px;
+}
+
+.image-container-2 {
+    padding: {{ section.settings.image-2-padding }}px;
+}
+
+.small-image-tile-text-container {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    gap: {{ section.settings.gap }}px;
+}
+
+.tile-text-container {
+    width: var(--small-image-width);
+    word-wrap: break-word;
+}
+
+{% if section.settings.show-text == false %}
+    .small-image-tile-text-container{
+        display: none;
+    }
+{% endif %}
+
+</style>
+
+{% schema %}
+{
+    "name": "Small Image Tile",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image-1",
+            "label": "Choose First Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image-2",
+            "label": "Choose Second Image"
+        },
+        {
+            "type": "range",
+            "id": "image-width",
+            "label": "Image Size",
+            "min": 300,
+            "max": 500,
+            "unit": "px",
+            "default": 300,
+            "step": 10
+        },
+        {
+            "type": "range",
+            "id": "image-1-padding",
+            "label": "Padding for First Image",
+            "min": 0,
+            "max": 50,
+            "unit": "px",
+            "default": 0,
+            "step": 1
+        },
+        {
+            "type": "range",
+            "id": "image-2-padding",
+            "label": "Padding for Second Image",
+            "min": 0,
+            "max": 50,
+            "unit": "px",
+            "default": 0,
+            "step": 1
+        },
+        {
+            "type": "checkbox",
+            "id": "show-text",
+            "label": "Show Text",
+            "default": false
+        },
+        {
+            "type": "url",
+            "id": "wearing-url",
+            "label": "Wearing URL"
+        },
+        {
+            "type": "text",
+            "id": "wearing-text",
+            "label": "Wearing Text"
+        },
+        {
+            "type": "url",
+            "id": "with-url-1",
+            "label": "Wearing With URL 1"
+        },
+        {
+            "type": "text",
+            "id": "with-text-1",
+            "label": "Wearing With text 1"
+        },
+        {
+            "type": "url",
+            "id": "with-url-2",
+            "label": "Wearing With URL 2"
+        },
+        {
+            "type": "text",
+            "id": "with-text-2",
+            "label": "Wearing With text 2"
+        },
+        {
+            "type": "url",
+            "id": "wearing-url-right",
+            "label": "Wearing URL (Right Imaege)"
+        },
+        {
+            "type": "text",
+            "id": "wearing-text-right",
+            "label": "Wearing Text (Right Imaege)"
+        },
+        {
+            "type": "url",
+            "id": "with-url-1-right",
+            "label": "Wearing With URL 1 (Right Imaege)"
+        },
+        {
+            "type": "text",
+            "id": "with-text-1-right",
+            "label": "Wearing With text 1 (Right Imaege)"
+        },
+        {
+            "type": "url",
+            "id": "with-url-2-right",
+            "label": "Wearing With URL 2 (Right Imaege)"
+        },
+        {
+            "type": "text",
+            "id": "with-text-2-right",
+            "label": "Wearing With text 2 (Right Imaege)"
+        },
+        {
+            "type": "range",
+            "id": "gap",
+            "min": 0,
+            "max": 20,
+            "unit": "px",
+            "default": 0,
+            "step": 1,
+            "label": "Image Gap"
+        }
+    ],
+    "presets": [
+        
+    ]
+}
+{% endschema %}
