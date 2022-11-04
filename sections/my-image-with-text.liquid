@@ -2,7 +2,7 @@
     <div class="image-container">
         <img class="image" src="{{ section.settings.image | img_url }}">
     </div>
-    <div class=text-container>
+    <div class="text-container-image-section">
         <p>
             Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
             with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
@@ -19,27 +19,27 @@
     .image {
         width: {{ section.settings.image-size }}% ;
     }
-    .text-container {
+    .text-container-image-section {
         display: flex;
         justify-content: center;
         position: relative;
         font-size: 12px;
     }
-    .text-container p {
+    .text-container-image-section p {
         position: absolute;
         margin: 0;
     }
 
     {% if section.settings.image-size == "50" %}
-        .text-container p {
+        .text-container-image-section p {
             left: 25%;
         }
     {% elsif section.settings.image-size == "70" %}
-        .text-container p {
+        .text-container-image-section p {
             left: 15%;
         }
     {% else %}
-        .text-container p {
+        .text-container-image-section p {
             position: relative;
         }
     {% endif %}
