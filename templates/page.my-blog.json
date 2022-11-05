@@ -20,6 +20,12 @@
     },
     "small-image-tile": {
       "type": "small-image-tile"
+    },
+    "fourth_spacer": {
+      "type": "spacer"
+    },
+    "image-text-tile": {
+      "type": "image-text-tile"
     }
   },
   "order": [
@@ -29,6 +35,8 @@
     "second_spacer",
     "image-with-text",
     "third_spacer",
-    "small-image-tile"
+    "small-image-tile",
+    "fourth_spacer",
+    "image-text-tile"
   ]
 }
