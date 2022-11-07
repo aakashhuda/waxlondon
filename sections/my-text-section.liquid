@@ -1,17 +1,32 @@
 <section class="text-container {{ section.settings.text-layout-style }}">
-    {{ section.settings.text-content }}
+    {% if section.settings.text-layout-style == "decorated" %}
+        <p>{{ section.settings.text-content }}</p>
+    {% else %}
+        {{ section.settings.text-content }}
+    {% endif %}
 </section>
 
 <style>
     .text-container {
         font-size: {{ section.settings.text-font-size }}px;
         padding: 0 {{ section.settings.text-padding }}% ;
-        font-family: {{ section.settings.text-font-picker }}
+        font-family: {{ section.settings.text-font-picker }};
+        color: {{ section.settings.text-font-color }}
     }
     .text-container.multi {
         column-count: 2;
         column-fill: balance;
         column-gap: 20px;
+    }
+    .text-container.multi p {
+        margin: 0;
+    }
+    .text-container.decorated p {
+        margin: 0;
+    }
+    .text-container.decorated > p {
+        border-left: 2px solid {{ section.settings.border-color }};
+        padding-left: 20px;
     }
 </style>
 
@@ -20,10 +35,9 @@
     "name": "Text Section",
     "settings": [
         {
-            "type": "text",
+            "type": "richtext",
             "id": "text-content",
-            "label": "Text Content",
-            "default": "Example Text"
+            "label": "Text Content"
         },
         {
             "type": "range",
@@ -41,7 +55,8 @@
             "label": "Text Layout",
             "options": [
                 {"value": "multi", "label": "Mutlitcolumn"},
-                {"value": "normal", "label": "Normal"}
+                {"value": "normal", "label": "Normal"},
+                {"value": "decorated", "label": "Decorated"}
             ]
         },
         {
@@ -59,6 +74,18 @@
             "id": "text-font-picker",
             "label": "Font Picker",
             "default": "helvetica_n4"
+        },
+        {
+            "type": "color",
+            "id": "text-font-color",
+            "label": "Font Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "border-color",
+            "label": "Border Color",
+            "default": "#000000"
         }
     ]
 }
