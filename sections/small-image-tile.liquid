@@ -8,12 +8,12 @@
 </section>
 
 <section class="small-image-tile-text-container">
-    <div class="tile-text-container">
+    <div class="tile-text-container text-container-1">
         Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
             with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
             <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
     </div>
-    <div class="tile-text-container">
+    <div class="tile-text-container text-container-2">
         Model wears <a href="{{ section.settings.wearing-url-right | url_encode }}">{{ section.settings.wearing-text-right }}</a>
             with <a href="{{ section.settings.with-url-1-right | url_encode }}">{{ section.settings.with-text-1-right }}</a> and
             <a href="{{ section.settings.with-url-2-right | url_encode }}">{{ section.settings.with-text-2-right }}</a>
@@ -22,7 +22,8 @@
 
 <style>
 :root {
-    --small-image-width: {{ section.settings.image-width }}px;
+    --small-image-width: {{ section.settings.image-1-width }}px;
+    --image-2-width: {{ section.settings.image-2-width }}px;
 }
 .small-image-tile-container {
     display: flex;
@@ -32,22 +33,24 @@
 
 .tile-image-container {
     background-color: rgb(255, 255, 255);
-    width: var(--small-image-width);
-    height: calc( var(--small-image-width) + 100px );
     display: flex;
     justify-content: center;
 }
 .tile-image {
-    width: inherit;
+    width: 100%;
     height: auto;
 }
 
 .image-container-1 {
     padding: {{ section.settings.image-1-padding }}px;
+    width: var(--small-image-width);
+    height: calc( var(--small-image-width) + 100px );
 }
 
 .image-container-2 {
     padding: {{ section.settings.image-2-padding }}px;
+    width: var(--image-2-width);
+    height: calc( var(--image-2-width) + 100px );
 }
 
 .small-image-tile-text-container {
@@ -58,8 +61,15 @@
 }
 
 .tile-text-container {
-    width: var(--small-image-width);
     word-wrap: break-word;
+}
+
+.text-container-1 {
+    width: var(--small-image-width);
+}
+
+.text-container-2 {
+    width: var(--image-2-width);
 }
 
 {% if section.settings.show-text == false %}
@@ -86,8 +96,18 @@
         },
         {
             "type": "range",
-            "id": "image-width",
-            "label": "Image Size",
+            "id": "image-1-width",
+            "label": "Image 1 Size",
+            "min": 300,
+            "max": 500,
+            "unit": "px",
+            "default": 300,
+            "step": 10
+        },
+        {
+            "type": "range",
+            "id": "image-2-width",
+            "label": "Image 2 Size",
             "min": 300,
             "max": 500,
             "unit": "px",
