@@ -1,22 +1,28 @@
 <section class="small-image-tile-container">
-    <div class="tile-image-container image-container-1">
+    <figure class="tile-image-container image-container-1">
         <img class="tile-image image-1" src="{{ section.settings.image-1 | img_url: 'master' }}">
-    </div>
-    <div class="tile-image-container image-container-2">
+        <figcaption class="tile-text-container">
+            Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
+            with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
+            <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
+        </figcaption>
+    </figure>
+    <figure class="tile-image-container image-container-2">
         <img class="tile-image image-2" src="{{ section.settings.image-2 | img_url: 'master' }}">
-    </div>
+        <figcaption class="tile-text-container">
+            Model wears <a href="{{ section.settings.wearing-url-right | url_encode }}">{{ section.settings.wearing-text-right }}</a>
+            with <a href="{{ section.settings.with-url-1-right | url_encode }}">{{ section.settings.with-text-1-right }}</a> and
+            <a href="{{ section.settings.with-url-2-right | url_encode }}">{{ section.settings.with-text-2-right }}</a>
+        </figcaption>
+    </figure>
 </section>
 
 <section class="small-image-tile-text-container">
     <div class="tile-text-container text-container-1">
-        Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
-            with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
-            <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
+        
     </div>
     <div class="tile-text-container text-container-2">
-        Model wears <a href="{{ section.settings.wearing-url-right | url_encode }}">{{ section.settings.wearing-text-right }}</a>
-            with <a href="{{ section.settings.with-url-1-right | url_encode }}">{{ section.settings.with-text-1-right }}</a> and
-            <a href="{{ section.settings.with-url-2-right | url_encode }}">{{ section.settings.with-text-2-right }}</a>
+        
     </div>
 </section>
 
@@ -31,10 +37,20 @@
     gap: {{ section.settings.gap }}px;
 }
 
+.small-image-tile-container figure {
+    margin: 0;
+}
+
+.tile-image-container figcaption {
+    margin: 0;
+    padding: 0;
+}
+
 .tile-image-container {
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: stretch;
 }
 .tile-image {
     width: 100%;
@@ -44,13 +60,11 @@
 .image-container-1 {
     padding: {{ section.settings.image-1-padding }}px;
     width: var(--small-image-width);
-    height: calc( var(--small-image-width) + 100px );
 }
 
 .image-container-2 {
     padding: {{ section.settings.image-2-padding }}px;
     width: var(--image-2-width);
-    height: calc( var(--image-2-width) + 100px );
 }
 
 .small-image-tile-text-container {
@@ -62,6 +76,9 @@
 
 .tile-text-container {
     word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
 }
 
 .text-container-1 {
@@ -73,7 +90,7 @@
 }
 
 {% if section.settings.show-text == false %}
-    .small-image-tile-text-container{
+    .tile-text-container{
         display: none;
     }
 {% endif %}
