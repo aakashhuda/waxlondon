@@ -1,0 +1,65 @@
+<section class="my-radio-image">
+    <img src="{{ section.settings.radio-image | img_url: "master" }}">
+</section>
+
+<section class="my-track-list">
+    <ol>
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'song' %}
+                    <li><b>{{ block.settings.song-title }}</b> - {{ block.settings.artist }}</li>
+            {% endcase %}
+        {% endfor %}
+    </ol>
+</section>
+
+<style>
+    .my-radio-image {
+        display: flex;
+        justify-content: center;
+        align-items : center;
+    }
+    .my-track-list {
+        display: flex;
+        justify-content: center;
+        align-items : center;
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Radio Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "radio-image",
+            "label": "Image"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Song",
+            "type": "song",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "song-title",
+                    "label": "Song Title",
+                    "default": "Young Again"
+                },
+                {
+                    "type": "text",
+                    "id": "artist",
+                    "label": "Artist",
+                    "default": "Hak Baker"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Radio Section"
+        }
+    ]
+}
+{% endschema %}
