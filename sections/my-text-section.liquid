@@ -1,4 +1,4 @@
-<section class="text-container {{ section.settings.text-layout-style }}">
+<section class="text-container-{{ section.id }} {{ section.settings.text-layout-style }}">
     {% if section.settings.text-layout-style == "decorated" %}
         <p>{{ section.settings.text-content }}</p>
     {% else %}
@@ -7,24 +7,24 @@
 </section>
 
 <style>
-    .text-container {
+    .text-container-{{ section.id }} {
         font-size: {{ section.settings.text-font-size }}px;
         padding: 0 {{ section.settings.text-padding }}% ;
         font-family: {{ section.settings.text-font-picker }};
         color: {{ section.settings.text-font-color }}
     }
-    .text-container.multi {
+    .text-container-{{ section.id }}.multi {
         column-count: 2;
         column-fill: balance;
         column-gap: 20px;
     }
-    .text-container.multi p {
+    .text-container-{{ section.id }}.multi p {
         margin: 0;
     }
-    .text-container.decorated p {
+    .text-container-{{ section.id }}.decorated p {
         margin: 0;
     }
-    .text-container.decorated > p {
+    .text-container-{{ section.id }}.decorated > p {
         border-left: 2px solid {{ section.settings.border-color }};
         padding-left: 20px;
     }
