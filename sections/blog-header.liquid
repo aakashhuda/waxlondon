@@ -1,36 +1,36 @@
 <section id="blog-header">
-    <div class="article-title"> <h1>{{ section.settings.title }}</h1> </div>
-    <div class="article-info">
+    <div class="article-title-{{ section.id }}"> <h1>{{ section.settings.title }}</h1> </div>
+    <div class="article-info-{{ section.id }}">
         Posted on: <span>{{ section.settings.article-info-date }}</span> - Words by <span>{{ section.settings.article-info-writer }}</span>
     </div>
-    <div class="article-publisher">
+    <div class="article-publisher-{{ section.id }}">
         Posted in <span>{{ section.settings.article-published-in }}</span> at
         
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when "page-names" %}
-                    <span class="category">{{ block.settings.page-category-name }}<span>
+                    <span class="category-{{ section.id }}">{{ block.settings.page-category-name }}<span>
             {% endcase %}
         {% endfor %}
     </div>
 </section>
 
 <style>
-.article-title {
+.article-title-{{ section.id }} {
     text-align: center;
     padding: 0 {{ section.settings.title-padding }}%;
     color: rgb(51, 51, 51);
     margin-bottom: 20px;
 }
-.article-title h1 {
+.article-title-{{ section.id }} h1 {
     margin: 0;
 }
-.article-publisher, .article-info {
+.article-publisher-{{ section.id }}, .article-info-{{ section.id }} {
     text-align: center;
     font-size: 12px;
     color: rgb(122, 122, 122);
 }
-.category {
+.category-{{ section.id }} {
     text-decoration: underline;
 }
 {% comment %} .page-links:last-child {
