@@ -1,23 +1,23 @@
-<section class="image-text-tile-container">
+<section class="image-text-tile-container-{{ section.id }}">
     {% if section.settings.selected-layout == "image-first" %}
-        <div class="image-text-tile-image-container">
-            <img class="image-text-tile-image" src="{{ section.settings.image | img_url: 'master' }}">
+        <div class="image-text-tile-image-container-{{ section.id }}">
+            <img class="image-text-tile-image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
         </div>
-        <div class="image-text-tile-text-container">
+        <div class="image-text-tile-text-container-{{ section.id }}">
             {{ section.settings.text }}
-            <a class="text-tile-btn" href="{{ section.settings.button-url | url_encode }}">
+            <a class="text-tile-btn-{{ section.id }}" href="{{ section.settings.button-url | url_encode }}">
                 {{ section.settings.button-label }}
             </a>
         </div>
     {% else %}
-        <div class="image-text-tile-text-container">
+        <div class="image-text-tile-text-container-{{ section.id }}">
             {{ section.settings.text }}
-            <a class="text-tile-btn" href="{{ section.settings.button-url | url_encode }}">
+            <a class="text-tile-btn-{{ section.id }}" href="{{ section.settings.button-url | url_encode }}">
                 {{ section.settings.button-label }}
             </a>
         </div>
-        <div class="image-text-tile-image-container">
-            <img class="image-text-tile-image" src="{{ section.settings.image | img_url: 'master' }}">
+        <div class="image-text-tile-image-container-{{ section.id }}">
+            <img class="image-text-tile-image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
         </div>
     {% endif %}
 </section>
@@ -27,13 +27,13 @@
     --image-text-tile-image-width: {{ section.settings.image-width }}%;
 }
 
-.image-text-tile-container {
+.image-text-tile-container-{{ section.id }} {
     display: flex;
     justify-content: normal;
     align-items: stretch;
 }
 
-.image-text-tile-image-container {
+.image-text-tile-image-container-{{ section.id }} {
     background-color: {{ section.settings.bg-color }};
     max-width: var(--image-text-tile-image-width);
     max-height: 704px;
@@ -41,7 +41,7 @@
     justify-content: center;
 }
 
-.image-text-tile-text-container {
+.image-text-tile-text-container-{{ section.id }} {
     background-color: {{ section.settings.bg-color }};
     max-width: calc(100% - var(--image-text-tile-image-width));
     max-height: 704px;
@@ -50,12 +50,12 @@
     font-size:{{ section.settings.text-font-size }}px; 
 }
 
-.image-text-tile-image {
+.image-text-tile-image-{{ section.id }} {
     width: 100%;
     height: inherit;
 }
 
-.text-tile-btn {
+.text-tile-btn-{{ section.id }} {
     background-color: {{ section.settings.button-background-color }};
     color: {{ section.settings.button-text-color }};
     border: none;
@@ -67,7 +67,7 @@
 }
 
 {% if section.settings.show-button == false %}
-    .text-tile-btn {
+    .text-tile-btn-{{ section.id }} {
         display: none;
     }
 {% endif %}
