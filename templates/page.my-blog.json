@@ -1,8 +1,10 @@
 {
   "sections": {
-    
+    "header": {
+      "type": "blog-header"
+    }
   },
   "order": [
-    
+    "header"
   ]
 }
