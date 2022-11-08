@@ -1,50 +1,8 @@
 {
   "sections": {
-    "header": {
-      "type": "blog-header"
-    },
-    "spacer": {
-      "type": "spacer"
-    },
-    "text": {
-      "type": "my-text-section"
-    },
-    "second_spacer": {
-      "type": "spacer"
-    },
-    "image-with-text": {
-      "type": "my-image-with-text"
-    },
-    "third_spacer": {
-      "type": "spacer"
-    },
-    "small-image-tile": {
-      "type": "small-image-tile"
-    },
-    "fourth_spacer": {
-      "type": "spacer"
-    },
-    "image-text-tile": {
-      "type": "image-text-tile"
-    },
-    "fifth_spacer": {
-      "type": "spacer"
-    },
-    "wax-radio": {
-      "type": "wax-radio"
-    }
+    
   },
   "order": [
-    "header",
-    "spacer",
-    "text",
-    "second_spacer",
-    "image-with-text",
-    "third_spacer",
-    "small-image-tile",
-    "fourth_spacer",
-    "image-text-tile",
-    "fifth_spacer",
-    "wax-radio"
+    
   ]
 }
