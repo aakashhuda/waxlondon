@@ -1,34 +1,34 @@
-<section class="my-radio-image">
+<section class="my-radio-image-{{ section.id }}">
     <img src="{{ section.settings.radio-image | img_url: "master" }}">
 </section>
 
-<section class="my-track-list">
+<section class="my-track-list-{{ section.id }}">
     <ol>
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'song' %}
-                    <li><span class="list-item"><b>{{ block.settings.song-title }}</b> - {{ block.settings.artist }}</span></li>
+                    <li><span class="list-item-{{ section.id }}"><b>{{ block.settings.song-title }}</b> - {{ block.settings.artist }}</span></li>
             {% endcase %}
         {% endfor %}
     </ol>
 </section>
 
 <style>
-    .my-radio-image, .my-track-list {
+    .my-radio-image-{{ section.id }}, .my-track-list-{{ section.id }} {
         display: flex;
         justify-content: center;
         align-items : center;
     }
-    .my-radio-image img {
+    .my-radio-image-{{ section.id }} img {
         width: {{ section.settings.image-width }}%;
     }
-    .my-track-list ol {
+    .my-track-list-{{ section.id }} ol {
         color: {{ section.settings.list-color }};
     }
-    .my-track-list li {
+    .my-track-list-{{ section.id }} li {
         margin-right: 10px;
     }
-    span.list-item {
+    span.list-item-{{ section.id }} {
         color: {{ section.settings.list-item-color }};
         margin-left: {{ section.settings.list-item-margin }}px;
     }
