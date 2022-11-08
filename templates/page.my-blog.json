@@ -26,6 +26,12 @@
     },
     "image-text-tile": {
       "type": "image-text-tile"
+    },
+    "fifth_spacer": {
+      "type": "spacer"
+    },
+    "wax-radio": {
+      "type": "wax-radio"
     }
   },
   "order": [
@@ -37,6 +43,8 @@
     "third_spacer",
     "small-image-tile",
     "fourth_spacer",
-    "image-text-tile"
+    "image-text-tile",
+    "fifth_spacer",
+    "wax-radio"
   ]
 }
