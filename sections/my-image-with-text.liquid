@@ -1,8 +1,8 @@
 <section>
-    <div class="image-container">
-        <img class="image" src="{{ section.settings.image | img_url: "master" }}">
+    <div class="image-container-{{ section.id }}">
+        <img class="image-{{ section.id }}" src="{{ section.settings.image | img_url: "master" }}">
     </div>
-    <div class="text-container-image-section">
+    <div class="text-container-image-section-{{ section.id }}">
         <p>
             Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
             with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
@@ -11,35 +11,35 @@
     </div>
 </section>
 <style>
-    .image-container {
+    .image-container-{{ section.id }} {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .image {
+    .image-{{ section.id }} {
         width: {{ section.settings.image-size }}% ;
     }
-    .text-container-image-section {
+    .text-container-image-section-{{ section.id }} {
         display: flex;
         justify-content: center;
         position: relative;
         font-size: 12px;
     }
-    .text-container-image-section p {
+    .text-container-image-section-{{ section.id }} p {
         position: absolute;
         margin: 0;
     }
 
     {% if section.settings.image-size == "50" %}
-        .text-container-image-section p {
+        .text-container-image-section-{{ section.id }} p {
             left: 25%;
         }
     {% elsif section.settings.image-size == "70" %}
-        .text-container-image-section p {
+        .text-container-image-section-{{ section.id }} p {
             left: 15%;
         }
     {% else %}
-        .text-container-image-section p {
+        .text-container-image-section-{{ section.id }} p {
             position: relative;
         }
     {% endif %}
