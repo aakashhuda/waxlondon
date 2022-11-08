@@ -7,22 +7,30 @@
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'song' %}
-                    <li><b>{{ block.settings.song-title }}</b> - {{ block.settings.artist }}</li>
+                    <li><span class="list-item"><b>{{ block.settings.song-title }}</b> - {{ block.settings.artist }}</span></li>
             {% endcase %}
         {% endfor %}
     </ol>
 </section>
 
 <style>
-    .my-radio-image {
+    .my-radio-image, .my-track-list {
         display: flex;
         justify-content: center;
         align-items : center;
     }
-    .my-track-list {
-        display: flex;
-        justify-content: center;
-        align-items : center;
+    .my-radio-image img {
+        width: {{ section.settings.image-width }}%;
+    }
+    .my-track-list ol {
+        color: {{ section.settings.list-color }};
+    }
+    .my-track-list li {
+        margin-right: 10px;
+    }
+    span.list-item {
+        color: {{ section.settings.list-item-color }};
+        margin-left: {{ section.settings.list-item-margin }}px;
     }
 </style>
 
@@ -34,6 +42,38 @@
             "type": "image_picker",
             "id": "radio-image",
             "label": "Image"
+        },
+        {
+            "type": "range",
+            "id": "image-width",
+            "label": "Image Size",
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "step": 1,
+            "default": 100
+        },
+        {
+            "type": "color",
+            "id": "list-color",
+            "label": "List Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "list-item-color",
+            "label": "List Item Color",
+            "default": "#000000"
+        },
+        {
+            "type": "range",
+            "id": "list-item-margin",
+            "label": "List Item Margin",
+            "min": 0,
+            "max": 50,
+            "unit": "px",
+            "step": 1,
+            "default": 5
         }
     ],
     "blocks": [
