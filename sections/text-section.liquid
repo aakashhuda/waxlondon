@@ -22,7 +22,6 @@
             {% when "normal", "multi", "decorated" %}
                 .text-container-{{ block.id }} {
                     font-size: {{ block.settings.text-font-size }}px;
-                    padding: 0 {{ block.settings.text-padding }}% ;
                     font-family: {{ block.settings.text-font-picker }};
                     color: {{ block.settings.text-font-color }};
                     line-height: {{ block.settings.text-line-height }};
@@ -84,16 +83,6 @@
                     "unit": "px",
                     "default": 16,
                     "label": "Font Size"
-                },
-                {
-                    "type": "range",
-                    "id": "text-padding",
-                    "min": 0,
-                    "max": 80,
-                    "step": 1,
-                    "unit": "%",
-                    "default": 0,
-                    "label": "Text Padding"
                 },
                 {
                     "type": "font",
@@ -164,16 +153,6 @@
                     "label": "Font Size"
                 },
                 {
-                    "type": "range",
-                    "id": "text-padding",
-                    "min": 0,
-                    "max": 80,
-                    "step": 1,
-                    "unit": "%",
-                    "default": 0,
-                    "label": "Text Padding"
-                },
-                {
                     "type": "font",
                     "id": "text-font-picker",
                     "label": "Font"
@@ -240,16 +219,6 @@
                     "unit": "px",
                     "default": 16,
                     "label": "Font Size"
-                },
-                {
-                    "type": "range",
-                    "id": "text-padding",
-                    "min": 0,
-                    "max": 80,
-                    "step": 1,
-                    "unit": "%",
-                    "default": 0,
-                    "label": "Text Padding"
                 },
                 {
                     "type": "font",
