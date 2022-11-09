@@ -40,9 +40,16 @@
         "article-published-in": "Integrity",
         "title-padding": 30
       }
+    },
+    "bf4513a4-d530-4127-9162-287742ef8609": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 50
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "bf4513a4-d530-4127-9162-287742ef8609"
   ]
 }
