@@ -17,11 +17,19 @@
             "page-category-name": "Fabrics",
             "page-url": ""
           }
+        },
+        "975321f1-7ca7-4f78-96f5-b44f5e6e84f5": {
+          "type": "page-names",
+          "settings": {
+            "page-category-name": "Cool Stuff",
+            "page-url": ""
+          }
         }
       },
       "block_order": [
         "1ba6d08e-e13b-4437-8081-4e5675c35be9",
-        "79275580-dbbc-4216-b8f9-229d3d10f944"
+        "79275580-dbbc-4216-b8f9-229d3d10f944",
+        "975321f1-7ca7-4f78-96f5-b44f5e6e84f5"
       ],
       "settings": {
         "title-font": "Georgia, Utopia, 'Times New Roman', Times, serif",
