@@ -9,7 +9,7 @@
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when "page-names" %}
-                    <span class="category-{{ section.id }}">{{ block.settings.page-category-name }}<span>
+                    <a href="{{ block.settings.page-url }}" class="category-{{ section.id }}">{{ block.settings.page-category-name }}</a>
             {% endcase %}
         {% endfor %}
     </div>
@@ -30,8 +30,10 @@
     font-size: 12px;
     color: rgb(122, 122, 122);
 }
-.category-{{ section.id }} {
+a.category-{{ section.id }} {
     text-decoration: underline;
+    color: inherit;
+    font-weight: bold;
 }
 {% comment %} .page-links:last-child {
     font-size: 30px;
@@ -87,6 +89,11 @@
                     "id": "page-category-name",
                     "default": "Wax",
                     "label": "Page Name"
+                },
+                {
+                    "type": "url",
+                    "id": "page-url",
+                    "label": "Page Url"
                 }
             ]
         }

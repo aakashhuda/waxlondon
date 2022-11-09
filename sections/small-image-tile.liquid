@@ -33,7 +33,7 @@
 }
 
 .tile-image-container-{{ section.id }} figcaption {
-    margin: 0;
+    margin: 2px;
     padding: 0;
 }
 
@@ -46,23 +46,30 @@
 .tile-image-{{ section.id }} {
     width: 100%;
     height: auto;
+    margin-bottom: 1px;
 }
 
 .image-container-1-{{ section.id }} {
-    padding: {{ section.settings.image-1-padding }}px;
-    width: var(--small-image-width);
+    width: {{ section.settings.image-1-width }}px;
 }
 
 .image-container-2-{{ section.id }} {
-    padding: {{ section.settings.image-2-padding }}px;
-    width: var(--image-2-width);
+    width: {{ section.settings.image-2-width }}px;
 }
 
 .tile-text-container-{{ section.id }} {
     word-wrap: break-word;
+    border: none;
     padding: 0;
     margin: 0;
     font-size: 12px;
+}
+.image-1-{{ section.id }} {
+    padding: {{ section.settings.image-1-padding }}px;
+}
+
+.image-2-{{ section.id }} {
+    padding: {{ section.settings.image-2-padding }}px;
 }
 
 {% if section.settings.show-text == false %}
@@ -134,64 +141,70 @@
             "default": false
         },
         {
-            "type": "url",
-            "id": "wearing-url",
-            "label": "Wearing URL"
-        },
-        {
             "type": "text",
             "id": "wearing-text",
-            "label": "Wearing Text"
+            "label": "Wearing Text (Left Image)",
+            "default": "Whiting Shirt Cosmic Papaya Check"
         },
         {
             "type": "url",
-            "id": "with-url-1",
-            "label": "Wearing With URL 1"
+            "id": "wearing-url",
+            "label": "Wearing URL (Left Image)"
         },
         {
             "type": "text",
             "id": "with-text-1",
-            "label": "Wearing With text 1"
+            "label": "Wearing With Name 1 (Left Image)",
+            "default": "Dean T Shirt Black"
         },
         {
             "type": "url",
-            "id": "with-url-2",
-            "label": "Wearing With URL 2"
+            "id": "with-url-1",
+            "label": "Wearing With URL 1 (Left Image)"
         },
         {
             "type": "text",
             "id": "with-text-2",
-            "label": "Wearing With text 2"
+            "label": "Wearing With Name 2 (Left Image)",
+            "default": "Pleat Trousers Black"
         },
         {
             "type": "url",
-            "id": "wearing-url-right",
-            "label": "Wearing URL (Right Imaege)"
+            "id": "with-url-2",
+            "label": "Wearing With URL 2 (Left Image)"
         },
         {
             "type": "text",
             "id": "wearing-text-right",
-            "label": "Wearing Text (Right Imaege)"
+            "label": "Wearing Text (Right Image)",
+            "default": "Whiting Shirt Cosmic Papaya Check"
         },
         {
             "type": "url",
-            "id": "with-url-1-right",
-            "label": "Wearing With URL 1 (Right Imaege)"
+            "id": "wearing-url-right",
+            "label": "Wearing URL (Right Image)"
         },
         {
             "type": "text",
             "id": "with-text-1-right",
-            "label": "Wearing With text 1 (Right Imaege)"
+            "label": "Wearing With 1 (Right Image)",
+            "default": "Dean T Shirt Black"
         },
         {
             "type": "url",
-            "id": "with-url-2-right",
-            "label": "Wearing With URL 2 (Right Imaege)"
+            "id": "with-url-1-right",
+            "label": "Wearing With URL 1 (Right Image)"
         },
         {
             "type": "text",
             "id": "with-text-2-right",
-            "label": "Wearing With text 2 (Right Imaege)"
+            "label": "Wearing With 2 (Right Image)",
+            "default": "Pleat Trousers Black"
+        },
+        {
+            "type": "url",
+            "id": "with-url-2-right",
+            "label": "Wearing With URL 2 (Right Image)"
         },
         {
             "type": "range",
