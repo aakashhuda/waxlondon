@@ -2,7 +2,36 @@
   "wrapper": "div.blog-page-wrapper",
   "sections": {
     "header": {
-      "type": "blog-header"
+      "type": "blog-header",
+      "blocks": {
+        "1ba6d08e-e13b-4437-8081-4e5675c35be9": {
+          "type": "page-names",
+          "settings": {
+            "page-category-name": "Wax",
+            "page-url": ""
+          }
+        },
+        "79275580-dbbc-4216-b8f9-229d3d10f944": {
+          "type": "page-names",
+          "settings": {
+            "page-category-name": "Fabrics",
+            "page-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1ba6d08e-e13b-4437-8081-4e5675c35be9",
+        "79275580-dbbc-4216-b8f9-229d3d10f944"
+      ],
+      "settings": {
+        "title-font": "Georgia, Utopia, 'Times New Roman', Times, serif",
+        "info-font": "Georgia, Utopia, 'Times New Roman', Times, serif",
+        "title": "Journal title, its' a pretty long one too",
+        "article-info-date": "13\/10\/2022",
+        "article-info-writer": "Lizzie",
+        "article-published-in": "Integrity",
+        "title-padding": 30
+      }
     }
   },
   "order": [
