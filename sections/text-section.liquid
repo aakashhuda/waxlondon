@@ -11,7 +11,9 @@
         font-size: {{ section.settings.text-font-size }}px;
         padding: 0 {{ section.settings.text-padding }}% ;
         font-family: {{ section.settings.text-font-picker }};
-        color: {{ section.settings.text-font-color }}
+        color: {{ section.settings.text-font-color }};
+        line-height: {{ section.settings.text-line-height }};
+        letter-spacing: {{ section.settings.text-letter-spacing }}px;
     }
     .text-container-{{ section.id }}.multi {
         column-count: 2;
@@ -76,6 +78,26 @@
             "default": "helvetica_n4"
         },
         {
+            "type": "range",
+            "id": "text-line-height",
+            "min": 1,
+            "max": 4,
+            "step": 0.1,
+            "unit": "num",
+            "default": 1.5,
+            "label": "Line Height"
+        },
+        {
+            "type": "range",
+            "id": "text-letter-spacing",
+            "min": 0,
+            "max": 5,
+            "step": 0.50,
+            "unit": "px",
+            "default": 0.50,
+            "label": "Letter Spacing"
+        },
+        {
             "type": "color",
             "id": "text-font-color",
             "label": "Font Color",
@@ -90,7 +112,7 @@
     ],
     "presets": [
         {
-            "name": "My-text-section"
+            "name": "Text Section"
         }
     ]
 }
