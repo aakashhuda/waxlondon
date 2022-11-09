@@ -2879,6 +2879,12 @@ details-disclosure > details {
   border-right: none;
 }
 
+/* Blog page wrapper */
+
+div.blog-page-wrapper {
+  background-color: #f2f2f2;
+}
+
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
   .grid {
