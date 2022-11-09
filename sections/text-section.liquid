@@ -1,112 +1,294 @@
-<section class="text-container-{{ section.id }} {{ section.settings.text-layout-style }}">
-    {% if section.settings.text-layout-style == "decorated" %}
-        <p>{{ section.settings.text-content }}</p>
-    {% else %}
-        {{ section.settings.text-content }}
-    {% endif %}
-</section>
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'normal' %}
+            <section class="text-container-{{ block.id }} normal">
+                <div>{{ block.settings.text-content }}</div>
+            </section>
+        {% when 'multi' %}
+            <section class="text-container-{{ block.id }} multi">
+                <div>{{ block.settings.text-content }}</div>
+            </section>
+        {% when 'decorated' %}
+            <section class="text-container-{{ block.id }} decorated">
+                <p>{{ block.settings.text-content }}</p>
+            </section>
+        
+    {% endcase %}
+{% endfor %}
 
 <style>
-    .text-container-{{ section.id }} {
-        font-size: {{ section.settings.text-font-size }}px;
-        padding: 0 {{ section.settings.text-padding }}% ;
-        font-family: {{ section.settings.text-font-picker }};
-        color: {{ section.settings.text-font-color }};
-        line-height: {{ section.settings.text-line-height }};
-        letter-spacing: {{ section.settings.text-letter-spacing }}px;
-    }
-    .text-container-{{ section.id }}.multi {
-        column-count: 2;
-        column-fill: balance;
-        column-gap: 20px;
-    }
-    .text-container-{{ section.id }}.multi p {
-        margin: 0;
-    }
-    .text-container-{{ section.id }}.decorated p {
-        margin: 0;
-    }
-    .text-container-{{ section.id }}.decorated > p {
-        border-left: 2px solid {{ section.settings.border-color }};
-        padding-left: 20px;
-    }
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when "normal", "multi", "decorated" %}
+                .text-container-{{ block.id }} {
+                    font-size: {{ block.settings.text-font-size }}px;
+                    padding: 0 {{ block.settings.text-padding }}% ;
+                    font-family: {{ block.settings.text-font-picker }};
+                    color: {{ block.settings.text-font-color }};
+                    line-height: {{ block.settings.text-line-height }};
+                    letter-spacing: {{ block.settings.text-letter-spacing }}px;
+                    display: flex;
+                    justify-content: center;
+                }
+                .text-container-{{ block.id }} div, .text-container-{{ block.id }} > p {
+                    width: {{ block.settings.width }}%;
+                }
+                .text-container-{{ block.id }}.multi div {
+                    column-count: 2;
+                    column-fill: balance;
+                    column-gap: 20px;
+                }
+                .text-container-{{ block.id }}.multi div p {
+                    margin: 0;
+                }
+                .text-container-{{ block.id }}.decorated p {
+                    margin: 0;
+                }
+                .text-container-{{ block.id }}.decorated > p {
+                    border-left: 2px solid {{ block.settings.border-color }};
+                    padding-left: 20px;
+                }
+        {% endcase %}
+    {% endfor %}
 </style>
 
 {% schema %}
 {
     "name": "Text Section",
-    "settings": [
+    "blocks": [
         {
-            "type": "richtext",
-            "id": "text-content",
-            "label": "Text Content"
-        },
-        {
-            "type": "range",
-            "id": "text-font-size",
-            "min": 0,
-            "max": 50,
-            "step": 1,
-            "unit": "px",
-            "default": 16,
-            "label": "Font Size"
-        },
-        {
-            "type": "select",
-            "id": "text-layout-style",
-            "label": "Text Layout",
-            "options": [
-                {"value": "multi", "label": "Mutlitcolumn"},
-                {"value": "normal", "label": "Normal"},
-                {"value": "decorated", "label": "Decorated"}
+            "name": "Normal",
+            "type": "normal",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text-content",
+                    "label": "Text Content"
+                },
+                {
+                    "type": "range",
+                    "id": "width",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Text Width"
+                },
+                {
+                    "type": "range",
+                    "id": "text-font-size",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "text-padding",
+                    "min": 0,
+                    "max": 80,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 0,
+                    "label": "Text Padding"
+                },
+                {
+                    "type": "font",
+                    "id": "text-font-picker",
+                    "label": "Font"
+                },
+                {
+                    "type": "range",
+                    "id": "text-line-height",
+                    "min": 1,
+                    "max": 4,
+                    "step": 0.1,
+                    "unit": "num",
+                    "default": 1.5,
+                    "label": "Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "text-letter-spacing",
+                    "min": 0,
+                    "max": 5,
+                    "step": 0.50,
+                    "unit": "px",
+                    "default": 0.50,
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Font Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "border-color",
+                    "label": "Border Color",
+                    "default": "#000000"
+                }
             ]
         },
         {
-            "type": "range",
-            "id": "text-padding",
-            "min": 0,
-            "max": 80,
-            "step": 1,
-            "unit": "%",
-            "default": 0,
-            "label": "Text Padding"
+            "name": "Multi Column",
+            "type": "multi",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text-content",
+                    "label": "Text Content"
+                },
+                {
+                    "type": "range",
+                    "id": "width",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Text Width"
+                },
+                {
+                    "type": "range",
+                    "id": "text-font-size",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "text-padding",
+                    "min": 0,
+                    "max": 80,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 0,
+                    "label": "Text Padding"
+                },
+                {
+                    "type": "font",
+                    "id": "text-font-picker",
+                    "label": "Font"
+                },
+                {
+                    "type": "range",
+                    "id": "text-line-height",
+                    "min": 1,
+                    "max": 4,
+                    "step": 0.1,
+                    "unit": "num",
+                    "default": 1.5,
+                    "label": "Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "text-letter-spacing",
+                    "min": 0,
+                    "max": 5,
+                    "step": 0.50,
+                    "unit": "px",
+                    "default": 0.50,
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Font Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "border-color",
+                    "label": "Border Color",
+                    "default": "#000000"
+                }
+            ]
         },
         {
-            "type": "font",
-            "id": "text-font-picker",
-            "label": "Font"
-        },
-        {
-            "type": "range",
-            "id": "text-line-height",
-            "min": 1,
-            "max": 4,
-            "step": 0.1,
-            "unit": "num",
-            "default": 1.5,
-            "label": "Line Height"
-        },
-        {
-            "type": "range",
-            "id": "text-letter-spacing",
-            "min": 0,
-            "max": 5,
-            "step": 0.50,
-            "unit": "px",
-            "default": 0.50,
-            "label": "Letter Spacing"
-        },
-        {
-            "type": "color",
-            "id": "text-font-color",
-            "label": "Font Color",
-            "default": "#000000"
-        },
-        {
-            "type": "color",
-            "id": "border-color",
-            "label": "Border Color",
-            "default": "#000000"
+            "name": "Decorated",
+            "type": "decorated",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text-content",
+                    "label": "Text Content"
+                },
+                {
+                    "type": "range",
+                    "id": "width",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Text Width"
+                },
+                {
+                    "type": "range",
+                    "id": "text-font-size",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "text-padding",
+                    "min": 0,
+                    "max": 80,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 0,
+                    "label": "Text Padding"
+                },
+                {
+                    "type": "font",
+                    "id": "text-font-picker",
+                    "label": "Font"
+                },
+                {
+                    "type": "range",
+                    "id": "text-line-height",
+                    "min": 1,
+                    "max": 4,
+                    "step": 0.1,
+                    "unit": "num",
+                    "default": 1.5,
+                    "label": "Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "text-letter-spacing",
+                    "min": 0,
+                    "max": 5,
+                    "step": 0.50,
+                    "unit": "px",
+                    "default": 0.50,
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Font Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "border-color",
+                    "label": "Border Color",
+                    "default": "#000000"
+                }
+            ]
         }
     ],
     "presets": [
