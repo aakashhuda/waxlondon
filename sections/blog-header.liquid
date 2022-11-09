@@ -24,6 +24,7 @@
 }
 .article-title-{{ section.id }} h1 {
     margin: 0;
+    font-family: {{ section.settings.title-font }};
 }
 .article-publisher-{{ section.id }}, .article-info-{{ section.id }} {
     text-align: center;
@@ -35,15 +36,27 @@ a.category-{{ section.id }} {
     color: inherit;
     font-weight: bold;
 }
-{% comment %} .page-links:last-child {
-    font-size: 30px;
-} {% endcomment %}
+
+.article-info-{{ section.id }}, .article-publisher-{{section.id}} {
+    font-family: {{ section.settings.info-font }};
+}
+
 </style>
 
 {% schema %}
 {
     "name": "Article Header",
     "settings": [
+        {
+            "type": "font",
+            "id": "title-font",
+            "label": "Choose Title Font"
+        },
+        {
+            "type": "font",
+            "id": "info-font",
+            "label": "Choose Info Font"
+        },
         {
             "type": "text",
             "id": "title",
