@@ -52,8 +52,8 @@
       "settings": {
         "text-content": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32<\/p>",
         "text-font-size": 16,
-        "text-layout-style": "normal",
-        "text-padding": 20,
+        "text-layout-style": "decorated",
+        "text-padding": 10,
         "text-font-picker": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
         "text-line-height": 1.4,
         "text-letter-spacing": 0.5,
@@ -80,6 +80,130 @@
         "text-font-color": "#000000",
         "border-color": "#000000"
       }
+    },
+    "8141fe95-a057-4669-a45f-acdc38d7d37f": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 35
+      }
+    },
+    "22280609-04aa-4c68-b13b-f6450e55685c": {
+      "type": "text-section",
+      "settings": {
+        "text-content": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,<\/p>",
+        "text-font-size": 16,
+        "text-layout-style": "decorated",
+        "text-padding": 20,
+        "text-font-picker": "",
+        "text-line-height": 1.6,
+        "text-letter-spacing": 0.5,
+        "text-font-color": "#000000",
+        "border-color": "#1bb417"
+      }
+    },
+    "e3887531-d480-4ed1-943f-315b788d674c": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 50
+      }
+    },
+    "b0862897-2a5d-4531-afa7-b0d887088aa0": {
+      "type": "image-tile-with-caption",
+      "settings": {
+        "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1276.jpg",
+        "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+        "image-1-width": 390,
+        "image-2-width": 310,
+        "image-1-padding": 0,
+        "image-2-padding": 0,
+        "show-text": false,
+        "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+        "wearing-url": "",
+        "with-text-1": "Dean T Shirt Black",
+        "with-url-1": "",
+        "with-text-2": "Pleat Trousers Black",
+        "with-url-2": "",
+        "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
+        "wearing-url-right": "",
+        "with-text-1-right": "Dean T Shirt Black",
+        "with-url-1-right": "",
+        "with-text-2-right": "Pleat Trousers Black",
+        "with-url-2-right": "",
+        "gap": 18
+      }
+    },
+    "79afb8bf-fced-4b01-b17a-e85c8f679b58": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 55
+      }
+    },
+    "58e87d57-d9a9-423d-8d7b-5d12a13aadd0": {
+      "type": "image-text-tile",
+      "settings": {
+        "padding": 0,
+        "selected-layout": "image-first",
+        "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+        "image-width": 55,
+        "text": "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,<\/p>",
+        "bg-color": "#f3f3f3",
+        "text-padding": 50,
+        "text-font-size": 14,
+        "text-line-height": 1.5,
+        "text-letter-spacing": 0.5,
+        "text-font-color": "#000000",
+        "show-button": false,
+        "button-label": "Shop The Look",
+        "button-url": "",
+        "button-text-color": "#FFFFFF",
+        "button-background-color": "#000000"
+      }
+    },
+    "f0397a0d-cdaf-4be8-a31f-55fba1a837d6": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 55
+      }
+    },
+    "5e587654-179c-4f31-a36b-d8d6ca77d622": {
+      "type": "single-image-with-caption",
+      "settings": {
+        "image-size": "50",
+        "wearing-url": "",
+        "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+        "with-text-1": "Dean T Shirt Black",
+        "with-url-1": "",
+        "with-text-2": "Pleat Trousers Black",
+        "with-url-2": ""
+      }
+    },
+    "4ec19429-9528-4bfe-a6ae-4532e92e4afd": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 70
+      }
+    },
+    "86dc4d07-e6b1-41d0-9551-67a7b579e2ff": {
+      "type": "wax-radio",
+      "blocks": {
+        "0b4a9bcf-d701-42b8-b8ca-3788eeb02afb": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        }
+      },
+      "block_order": [
+        "0b4a9bcf-d701-42b8-b8ca-3788eeb02afb"
+      ],
+      "settings": {
+        "radio-image": "shopify:\/\/shop_images\/04-10-2022-WAX2264.jpg",
+        "image-width": 17,
+        "list-color": "#000000",
+        "list-item-color": "#000000",
+        "list-item-margin": 5
+      }
     }
   },
   "order": [
@@ -87,6 +211,16 @@
     "bf4513a4-d530-4127-9162-287742ef8609",
     "1fa65481-d5bd-4d2e-8771-aa5d8c0b766d",
     "7c94f382-b901-4b16-b335-ae0e90fe4953",
-    "b15d5f70-bfda-4684-9472-a706c77c93f8"
+    "b15d5f70-bfda-4684-9472-a706c77c93f8",
+    "8141fe95-a057-4669-a45f-acdc38d7d37f",
+    "22280609-04aa-4c68-b13b-f6450e55685c",
+    "e3887531-d480-4ed1-943f-315b788d674c",
+    "b0862897-2a5d-4531-afa7-b0d887088aa0",
+    "79afb8bf-fced-4b01-b17a-e85c8f679b58",
+    "58e87d57-d9a9-423d-8d7b-5d12a13aadd0",
+    "f0397a0d-cdaf-4be8-a31f-55fba1a837d6",
+    "5e587654-179c-4f31-a36b-d8d6ca77d622",
+    "4ec19429-9528-4bfe-a6ae-4532e92e4afd",
+    "86dc4d07-e6b1-41d0-9551-67a7b579e2ff"
   ]
 }
