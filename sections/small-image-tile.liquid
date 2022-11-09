@@ -64,6 +64,11 @@
     margin: 0;
     font-size: 12px;
 }
+
+.tile-text-container-{{ section.id }} a {
+    color: #000000;
+}
+
 .image-1-{{ section.id }} {
     padding: {{ section.settings.image-1-padding }}px;
 }
@@ -102,7 +107,7 @@
             "max": 500,
             "unit": "px",
             "default": 300,
-            "step": 10
+            "step": 2
         },
         {
             "type": "range",
@@ -112,7 +117,7 @@
             "max": 500,
             "unit": "px",
             "default": 300,
-            "step": 10
+            "step": 2
         },
         {
             "type": "range",
