@@ -1,214 +1,270 @@
-<section class="image-text-tile-container-{{ section.id }}">
-    {% if section.settings.selected-layout == "image-first" %}
-        <div class="image-text-tile-image-container-{{ section.id }}">
-            <img class="image-text-tile-image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
+{% for block in section.blocks %}
+    <section class="block-parent-{{ block.id }}">
+        <div class="image-text-tile-container-{{ block.id }}">
+            {% if block.settings.selected-layout == "image-first" %}
+                <div class="image-text-tile-image-container-{{ block.id }} item-{{ block.id }}">
+                    <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: 'master' }}">
+                </div>
+                <div class="image-text-tile-text-container-{{ block.id }} item-{{ block.id }}">
+                    {{ block.settings.text }}
+                    <a class="text-tile-btn-{{ block.id }}" href="{{ block.settings.button-url | url_encode }}">
+                        {{ block.settings.button-label }}
+                    </a>
+                </div>
+            {% else %}
+                <div class="image-text-tile-text-container-{{ block.id }} item-{{ block.id }}">
+                    {{ block.settings.text }}
+                    <a class="text-tile-btn-{{ block.id }}" href="{{ block.settings.button-url | url_encode }}">
+                        {{ block.settings.button-label }}
+                    </a>
+                </div>
+                <div class="image-text-tile-image-container-{{ block.id }} item-{{ block.id }}">
+                    <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: 'master' }}">
+                </div>
+            {% endif %}
         </div>
-        <div class="image-text-tile-text-container-{{ section.id }}">
-            {{ section.settings.text }}
-            <a class="text-tile-btn-{{ section.id }}" href="{{ section.settings.button-url | url_encode }}">
-                {{ section.settings.button-label }}
-            </a>
-        </div>
-    {% else %}
-        <div class="image-text-tile-text-container-{{ section.id }}">
-            {{ section.settings.text }}
-            <a class="text-tile-btn-{{ section.id }}" href="{{ section.settings.button-url | url_encode }}">
-                {{ section.settings.button-label }}
-            </a>
-        </div>
-        <div class="image-text-tile-image-container-{{ section.id }}">
-            <img class="image-text-tile-image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
-        </div>
-    {% endif %}
-</section>
+    </section>
+{% endfor %}
 
 <style>
-:root {
-    --image-text-tile-image-width: {{ section.settings.image-width }}%;
-}
-
-.image-text-tile-container-{{ section.id }} {
-    display: flex;
-    justify-content: normal;
-    align-items: stretch;
-    padding: 0 {{ section.settings.padding }}%;
-}
-
-.image-text-tile-image-container-{{ section.id }} {
-    background-color: {{ section.settings.bg-color }};
-    width: var(--image-text-tile-image-width);
-    max-height: 704px;
-    display: flex;
-    justify-content: center;
-}
-
-.image-text-tile-text-container-{{ section.id }} {
-    background-color: {{ section.settings.bg-color }};
-    max-width: calc(100% - var(--image-text-tile-image-width));
-    max-height: 704px;
-    overflow: hidden;
-    padding: {{ section.settings.text-padding }}px;
-    font-size:{{ section.settings.text-font-size }}px;
-    line-height: {{ section.settings.text-line-height }};
-    letter-spacing: {{ section.settings.text-letter-spacing }};
-    color: {{ section.settings.text-font-color }};
-}
-
-.image-text-tile-image-{{ section.id }} {
-    width: 100%;
-    height: inherit;
-}
-
-.text-tile-btn-{{ section.id }} {
-    background-color: {{ section.settings.button-background-color }};
-    color: {{ section.settings.button-text-color }};
-    border: none;
-    border-radius: 30px;
-    padding: 0.7em 2em;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 0.5em;
-    font-size:{{ section.settings.text-font-size }}px;
-}
-
-{% if section.settings.show-button == false %}
-    .text-tile-btn-{{ section.id }} {
-        display: none;
+{% for block in section.blocks %}
+    .block-parent-{{ block.id }}{
+        display: flex;
+        justify-content: center;
     }
-{% endif %}
+    .image-text-tile-container-{{ block.id }} {
+        display: flex;
+    }
+
+    {% if block.settings.width == "600" %}
+        .image-text-tile-container-{{ block.id }} {
+            width: 600px;
+        }
+        
+    {% elsif block.settings.width == "900" %}
+        .image-text-tile-container-{{ block.id }} {
+            width: 900px;
+        }
+        
+    {% else %}
+        .image-text-tile-container-{{ block.id }} {
+            width: 100%;
+        }
+    {% endif %}
+
+    .item-{{ block.id }} {
+        width: 50%;
+    }
+    .image-{{ block.id }}{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .image-text-tile-text-container-{{ block.id }} {
+        height: inherit;
+        overflow: hidden;
+        font-size: {{ block.settings.text-font-size }}px;
+        line-height: {{ block.settings.text-line-height }};
+        letter-spacing: {{ block.settings.text-letter-spacing }}px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: {{ block.settings.bg-color }};
+    }
+    {% if block.settings.text-layout-center == false %}
+        .image-text-tile-text-container-{{ block.id }} {
+            justify-content: start;
+        }
+        .image-text-tile-text-container-{{ block.id }} {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        {% if block.settings.selected-layout == "image-first" %}
+            .image-text-tile-text-container-{{ block.id }} {
+                padding-right: 0px;
+            }
+        {% else %}
+            .image-text-tile-text-container-{{ block.id }} {
+                padding-left: 0px;
+            }
+        {% endif %}
+    {% endif %}
+    .image-text-tile-text-container-{{ block.id }} p {
+        margin: 0;
+    }
+    .text-tile-btn-{{ block.id }} {
+        background-color: {{ block.settings.button-background-color }};
+        color: {{ block.settings.button-text-color }};
+        border: none;
+        border-radius: 30px;
+        padding: 0.5em 1.5em;
+        text-decoration: none;
+        font-weight: bold;
+        font-size:{{ block.settings.text-font-size }}px;
+        align-self: flex-start;
+        margin-top: 40px;
+    }
+
+    {% if block.settings.show-button == false %}
+        .text-tile-btn-{{ block.id }} {
+            display: none;
+        }
+    {% endif %}
+
+    {% if block.settings.make-image-larger == true %}
+        .image-text-tile-image-container-{{ block.id }} {
+            width: 65%;
+        }
+        .image-text-tile-text-container-{{ block.id }} {
+            width: 35%;
+        }
+
+    {% endif %}
+{% endfor %}
 
 </style>    
 
 {% schema %}
 {
     "name": "image-text-tile",
-    "settings": [
+    "blocks": [
         {
-            "type": "range",
-            "id": "padding",
-            "label": "Section Padding",
-            "min": 0,
-            "max": 20,
-            "unit": "%",
-            "default": 0,
-            "step": 1
-        },
-        {
-            "type": "select",
-            "id": "selected-layout",
-            "label": "Select Layout",
-            "default": "image-first",
-            "options": [
+            "name": "Image and Text Tile",
+            "type": "image-and-text-tile",
+            "settings": [
                 {
-                    "value": "image-first",
-                    "label": "Image First Layout"
+                    "type": "select",
+                    "id": "width",
+                    "label": "Select Section Width",
+                    "options": [
+                        {
+                            "value": "600",
+                            "label": "Small"
+                        },
+                        {
+                            "value": "900",
+                            "label": "Medium"
+                        },
+                        {
+                            "value": "100",
+                            "label": "Full Width"
+                        }
+                    ],
+                    "default": "100"
                 },
                 {
-                    "value": "text-first",
-                    "label": "Text First Layout"
+                    "type": "select",
+                    "id": "selected-layout",
+                    "label": "Select Section Layout",
+                    "default": "image-first",
+                    "options": [
+                        {
+                            "value": "image-first",
+                            "label": "Image First Layout"
+                        },
+                        {
+                            "value": "text-first",
+                            "label": "Text First Layout"
+                        }
+                    ]
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select Image"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "make-image-larger",
+                    "default": false,
+                    "label":  "Make Image Larger"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "text-layout-center",
+                    "default": true,
+                    "label": "Text Centered" 
+                },
+                {
+                    "type": "richtext",
+                    "id": "text",
+                    "label": "Add Text"
+                },
+                {
+                    "type": "color",
+                    "id": "bg-color",
+                    "label": "Choose text background color",
+                    "default": "#FFFFFF"
+                },
+                {
+                    "type": "range",
+                    "id": "text-font-size",
+                    "min": 6,
+                    "max": 32,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 14,
+                    "label": "Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "text-line-height",
+                    "min": 1,
+                    "max": 4,
+                    "step": 0.1,
+                    "unit": "num",
+                    "default": 1.5,
+                    "label": "Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "text-letter-spacing",
+                    "min": 0,
+                    "max": 5,
+                    "step": 0.50,
+                    "unit": "px",
+                    "default": 0.50,
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Font Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show-button",
+                    "label": "Show Button",
+                    "default": false
+                },
+                {
+                    "type": "text",
+                    "id": "button-label",
+                    "label": "Button Label",
+                    "default": "Shop The Look"
+                },
+                {
+                    "type": "url",
+                    "id": "button-url",
+                    "label": "Button URL"
+                },
+                {
+                    "type": "color",
+                    "id": "button-text-color",
+                    "label": "Button Text Color",
+                    "default": "#FFFFFF"
+                },
+                {
+                    "type": "color",
+                    "id": "button-background-color",
+                    "label": "Button Background Color",
+                    "default": "#000000"
                 }
             ]
-        },
-        {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Select Image"
-        },
-        {
-            "type": "range",
-            "id": "image-width",
-            "label": "Image Width",
-            "min": 40,
-            "max": 70,
-            "unit": "%",
-            "default": 50,
-            "step": 5
-        },
-        {
-            "type": "richtext",
-            "id": "text",
-            "label": "Add Text"
-        },
-        {
-            "type": "color",
-            "id": "bg-color",
-            "label": "Choose text background color",
-            "default": "#FFFFFF"
-        },
-        {
-            "type": "range",
-            "id": "text-padding",
-            "min": 0,
-            "max": 50,
-            "step": 1,
-            "unit": "px",
-            "default": 0,
-            "label": "Text Padding" 
-        },
-        {
-            "type": "range",
-            "id": "text-font-size",
-            "min": 6,
-            "max": 32,
-            "step": 1,
-            "unit": "px",
-            "default": 14,
-            "label": "Font Size"
-        },
-        {
-            "type": "range",
-            "id": "text-line-height",
-            "min": 1,
-            "max": 4,
-            "step": 0.1,
-            "unit": "num",
-            "default": 1.5,
-            "label": "Line Height"
-        },
-        {
-            "type": "range",
-            "id": "text-letter-spacing",
-            "min": 0,
-            "max": 5,
-            "step": 0.50,
-            "unit": "px",
-            "default": 0.50,
-            "label": "Letter Spacing"
-        },
-        {
-            "type": "color",
-            "id": "text-font-color",
-            "label": "Font Color",
-            "default": "#000000"
-        },
-        {
-            "type": "checkbox",
-            "id": "show-button",
-            "label": "Show Button",
-            "default": false
-        },
-        {
-            "type": "text",
-            "id": "button-label",
-            "label": "Button Label",
-            "default": "Shop The Look"
-        },
-        {
-            "type": "url",
-            "id": "button-url",
-            "label": "Button URL"
-        },
-        {
-            "type": "color",
-            "id": "button-text-color",
-            "label": "Button Text Color",
-            "default": "#FFFFFF"
-        },
-        {
-            "type": "color",
-            "id": "button-background-color",
-            "label": "Button Background Color",
-            "default": "#000000"
         }
     ],
     "presets": [
