@@ -1,225 +1,227 @@
-<section class="small-image-tile-container-{{ section.id }}">
-    <figure class="tile-image-container-{{ section.id }} image-container-1-{{ section.id }}">
-        <img class="tile-image-{{ section.id }} image-1-{{ section.id }}" src="{{ section.settings.image-1 | img_url: 'master' }}">
-        <figcaption class="tile-text-container-{{ section.id }}">
-            Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
-            with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
-            <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
-        </figcaption>
-    </figure>
-    <figure class="tile-image-container-{{ section.id }} image-container-2-{{ section.id }}">
-        <img class="tile-image-{{ section.id }} image-2-{{ section.id }}" src="{{ section.settings.image-2 | img_url: 'master' }}">
-        <figcaption class="tile-text-container-{{ section.id }}">
-            Model wears <a href="{{ section.settings.wearing-url-right | url_encode }}">{{ section.settings.wearing-text-right }}</a>
-            with <a href="{{ section.settings.with-url-1-right | url_encode }}">{{ section.settings.with-text-1-right }}</a> and
-            <a href="{{ section.settings.with-url-2-right | url_encode }}">{{ section.settings.with-text-2-right }}</a>
-        </figcaption>
-    </figure>
-</section>
+{% for block in section.blocks %}
+    <section class="image-tile-container-{{ block.id }}">
+        <div class="image-container-{{ block.id }} image-container-1-{{ block.id }}">
+            <img class="image{{ block.id }} image-1-{{ block.id }}" src="{{ block.settings.image-1 | img_url: 'master' }}">
+        </div>
+
+        <div class="image-container-{{ block.id }} image-container-2-{{ block.id }}">
+            <img class="image{{ block.id }} image-2-{{ block.id }}" src="{{ block.settings.image-2 | img_url: 'master' }}">
+        </div>
+    </section>
+
+    <section class="text-container-{{ block.id }}">
+        <div class="tile-text-container-{{ block.id }}">
+            Model wears <a href="{{ block.settings.wearing-url | url_encode }}">{{ block.settings.wearing-text }}</a>
+            with <a href="{{ block.settings.with-url-1 | url_encode }}">{{ block.settings.with-text-1 }}</a> and
+            <a href="{{ block.settings.with-url-2 | url_encode }}">{{ block.settings.with-text-2 }}</a>
+        </div>
+        <div class="tile-text-container-{{ block.id }}">
+            Model wears <a href="{{ block.settings.wearing-url-right | url_encode }}">{{ block.settings.wearing-text-right }}</a>
+            with <a href="{{ block.settings.with-url-1-right | url_encode }}">{{ block.settings.with-text-1-right }}</a> and
+            <a href="{{ block.settings.with-url-2-right | url_encode }}">{{ block.settings.with-text-2-right }}</a>
+        </div>
+    </section>
+{% endfor %}
 
 <style>
-:root {
-    --small-image-width: {{ section.settings.image-1-width }}px;
-    --image-2-width: {{ section.settings.image-2-width }}px;
-}
-.small-image-tile-container-{{ section.id }} {
-    display: flex;
-    justify-content: center;
-    gap: {{ section.settings.gap }}px;
-}
 
-.small-image-tile-container-{{ section.id }} figure {
-    margin: 0;
-}
+{% for block in section.blocks %}
 
-.tile-image-container-{{ section.id }} figcaption {
-    margin: 2px;
-    padding: 0;
-}
-
-.tile-image-container-{{ section.id }} {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-.tile-image-{{ section.id }} {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1px;
-}
-
-.image-container-1-{{ section.id }} {
-    width: {{ section.settings.image-1-width }}px;
-}
-
-.image-container-2-{{ section.id }} {
-    width: {{ section.settings.image-2-width }}px;
-}
-
-.tile-text-container-{{ section.id }} {
-    word-wrap: break-word;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-}
-
-.tile-text-container-{{ section.id }} a {
-    color: #000000;
-}
-
-.image-1-{{ section.id }} {
-    padding: {{ section.settings.image-1-padding }}px;
-}
-
-.image-2-{{ section.id }} {
-    padding: {{ section.settings.image-2-padding }}px;
-}
-
-{% if section.settings.show-text == false %}
-    .tile-text-container-{{ section.id }}{
-        display: none;
+    .image-tile-container-{{ block.id }} {
+        display: flex;
+        justify-content: center;
+        gap: {{ block.settings.gap }}px;
     }
-{% endif %}
+
+    .text-container-{{ block.id }} {
+        display: flex;
+        justify-content: center;
+        gap: {{ block.settings.gap }}px;
+    }
+    
+    .image-container-{{ block.id }} {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        height: auto;
+    }
+    .image{{ block.id }} {
+        width: 100%;
+    }
+    
+    .image-container-1-{{ block.id }}, .image-container-2-{{ block.id }} {
+        width: {{ block.settings.image-width }}px;
+    }
+    
+    .tile-text-container-{{ block.id }} {
+        word-wrap: break-word;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        width: {{ block.settings.image-width }}px;
+    }
+    
+    .tile-text-container-{{ block.id }} a {
+        color: #000000;
+    }
+    
+    .image-1-{{ block.id }} {
+        padding: {{ block.settings.image-1-padding }}px;
+    }
+    
+    .image-2-{{ block.id }} {
+        padding: {{ block.settings.image-2-padding }}px;
+    }
+    
+    {% if block.settings.show-text == false %}
+        .text-container-{{ block.id }}{
+            display: none;
+        }
+    {% endif %}
+
+    {% if block.settings.gap > 0 %}
+        .tile-text-container-{{ block.id }}, .image-container-1-{{ block.id }}, .image-container-2-{{ block.id }} {
+            width: calc( {{ block.settings.image-width }}px - {{ block.settings.gap }}px/2 );
+        }
+    {% endif %}
+    
+{% endfor %}
 
 </style>
 
 {% schema %}
 {
     "name": "Image Tile With Caption",
-    "settings": [
+    "blocks": [
         {
-            "type": "image_picker",
-            "id": "image-1",
-            "label": "Choose First Image"
-        },
-        {
-            "type": "image_picker",
-            "id": "image-2",
-            "label": "Choose Second Image"
-        },
-        {
-            "type": "range",
-            "id": "image-1-width",
-            "label": "Image 1 Size",
-            "min": 300,
-            "max": 500,
-            "unit": "px",
-            "default": 300,
-            "step": 2
-        },
-        {
-            "type": "range",
-            "id": "image-2-width",
-            "label": "Image 2 Size",
-            "min": 300,
-            "max": 500,
-            "unit": "px",
-            "default": 300,
-            "step": 2
-        },
-        {
-            "type": "range",
-            "id": "image-1-padding",
-            "label": "Padding for First Image",
-            "min": 0,
-            "max": 50,
-            "unit": "px",
-            "default": 0,
-            "step": 1
-        },
-        {
-            "type": "range",
-            "id": "image-2-padding",
-            "label": "Padding for Second Image",
-            "min": 0,
-            "max": 50,
-            "unit": "px",
-            "default": 0,
-            "step": 1
-        },
-        {
-            "type": "checkbox",
-            "id": "show-text",
-            "label": "Show Text",
-            "default": false
-        },
-        {
-            "type": "text",
-            "id": "wearing-text",
-            "label": "Wearing Text (Left Image)",
-            "default": "Whiting Shirt Cosmic Papaya Check"
-        },
-        {
-            "type": "url",
-            "id": "wearing-url",
-            "label": "Wearing URL (Left Image)"
-        },
-        {
-            "type": "text",
-            "id": "with-text-1",
-            "label": "Wearing With Name 1 (Left Image)",
-            "default": "Dean T Shirt Black"
-        },
-        {
-            "type": "url",
-            "id": "with-url-1",
-            "label": "Wearing With URL 1 (Left Image)"
-        },
-        {
-            "type": "text",
-            "id": "with-text-2",
-            "label": "Wearing With Name 2 (Left Image)",
-            "default": "Pleat Trousers Black"
-        },
-        {
-            "type": "url",
-            "id": "with-url-2",
-            "label": "Wearing With URL 2 (Left Image)"
-        },
-        {
-            "type": "text",
-            "id": "wearing-text-right",
-            "label": "Wearing Text (Right Image)",
-            "default": "Whiting Shirt Cosmic Papaya Check"
-        },
-        {
-            "type": "url",
-            "id": "wearing-url-right",
-            "label": "Wearing URL (Right Image)"
-        },
-        {
-            "type": "text",
-            "id": "with-text-1-right",
-            "label": "Wearing With 1 (Right Image)",
-            "default": "Dean T Shirt Black"
-        },
-        {
-            "type": "url",
-            "id": "with-url-1-right",
-            "label": "Wearing With URL 1 (Right Image)"
-        },
-        {
-            "type": "text",
-            "id": "with-text-2-right",
-            "label": "Wearing With 2 (Right Image)",
-            "default": "Pleat Trousers Black"
-        },
-        {
-            "type": "url",
-            "id": "with-url-2-right",
-            "label": "Wearing With URL 2 (Right Image)"
-        },
-        {
-            "type": "range",
-            "id": "gap",
-            "min": 0,
-            "max": 30,
-            "unit": "px",
-            "default": 0,
-            "step": 1,
-            "label": "Image Gap"
+            "name": "Double Image With Caption",
+            "type": "double-image-with-caption",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image-1",
+                    "label": "Choose First Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image-2",
+                    "label": "Choose Second Image"
+                },
+                {
+                    "type": "range",
+                    "id": "image-width",
+                    "label": "Image Size",
+                    "min": 200,
+                    "max": 900,
+                    "unit": "px",
+                    "default": 300,
+                    "step": 10
+                },
+                {
+                    "type": "range",
+                    "id": "gap",
+                    "min": 0,
+                    "max": 40,
+                    "unit": "px",
+                    "default": 0,
+                    "step": 2,
+                    "label": "Image Gap"
+                },
+                {
+                    "type": "range",
+                    "id": "image-1-padding",
+                    "label": "Padding for First Image",
+                    "min": 0,
+                    "max": 50,
+                    "unit": "px",
+                    "default": 0,
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "image-2-padding",
+                    "label": "Padding for Second Image",
+                    "min": 0,
+                    "max": 50,
+                    "unit": "px",
+                    "default": 0,
+                    "step": 1
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show-text",
+                    "label": "Show Text",
+                    "default": false
+                },
+                {
+                    "type": "text",
+                    "id": "wearing-text",
+                    "label": "Wearing Text (Left Image)",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "url",
+                    "id": "wearing-url",
+                    "label": "Wearing URL (Left Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1",
+                    "label": "Wearing With Name 1 (Left Image)",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1",
+                    "label": "Wearing With URL 1 (Left Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2",
+                    "label": "Wearing With Name 2 (Left Image)",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2",
+                    "label": "Wearing With URL 2 (Left Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "wearing-text-right",
+                    "label": "Wearing Text (Right Image)",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "url",
+                    "id": "wearing-url-right",
+                    "label": "Wearing URL (Right Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1-right",
+                    "label": "Wearing With 1 (Right Image)",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1-right",
+                    "label": "Wearing With URL 1 (Right Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2-right",
+                    "label": "Wearing With 2 (Right Image)",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2-right",
+                    "label": "Wearing With URL 2 (Right Image)"
+                }
+            ]
         }
     ],
     "presets": [
