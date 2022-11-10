@@ -1,111 +1,200 @@
-<section>
-    <div class="image-container-{{ section.id }}">
-        <img class="image-{{ section.id }}" src="{{ section.settings.image | img_url: "master" }}">
-    </div>
-    <div class="text-container-image-section-{{ section.id }}">
-        <p>
-            Model wears <a href="{{ section.settings.wearing-url | url_encode }}">{{ section.settings.wearing-text }}</a>
-            with <a href="{{ section.settings.with-url-1 | url_encode }}">{{ section.settings.with-text-1 }}</a> and
-            <a href="{{ section.settings.with-url-2 | url_encode }}">{{ section.settings.with-text-2 }}</a>
-        </p>
-    </div>
-</section>
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when "small", "medium", "large" %}
+            <section>
+                <div class="image-container-{{ block.id }}">
+                    <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: "master" }}">
+                </div>
+                <div class="text-container-image-section-{{ block.id }}">
+                    <p>
+                        Model wears <a href="{{ block.settings.wearing-url | url_encode }}">{{ block.settings.wearing-text }}</a>
+                        with <a href="{{ block.settings.with-url-1 | url_encode }}">{{ block.settings.with-text-1 }}</a> and
+                        <a href="{{ block.settings.with-url-2 | url_encode }}">{{ block.settings.with-text-2 }}</a>
+                    </p>
+                </div>
+            </section>
+    {% endcase %}
+{% endfor %}
 <style>
-    .image-container-{{ section.id }} {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .image-{{ section.id }} {
-        width: {{ section.settings.image-size }}% ;
-    }
-    .text-container-image-section-{{ section.id }} {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        font-size: 12px;
-    }
-    .text-container-image-section-{{ section.id }} p {
-        position: absolute;
-        margin: 0;
-    }
-
-    {% if section.settings.image-size == "50" %}
-        .text-container-image-section-{{ section.id }} p {
-            left: 25%;
-        }
-    {% elsif section.settings.image-size == "70" %}
-        .text-container-image-section-{{ section.id }} p {
-            left: 15%;
-        }
-    {% else %}
-        .text-container-image-section-{{ section.id }} p {
-            position: relative;
-        }
-    {% endif %}
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when "small", "large", "medium" %}
+                .image-container-{{ block.id }} {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+                .text-container-image-section-{{ block.id }} {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    font-size: 12px;
+                }
+                .text-container-image-section-{{ block.id }} p {
+                    position: absolute;
+                    margin: 0;
+                }
+        
+            {% when "small" %}
+                .image-{{ block.id }} {
+                    width: 50% ;
+                }
+                .text-container-image-section-{{ block.id }} p {
+                    left: 25%;
+                }
+            {% when "medium" %}
+                .image-{{ block.id }} {
+                    width: 70% ;
+                }
+                .text-container-image-section-{{ block.id }} p {
+                    left: 15%;
+                }
+            {% when "large" %}
+                .image-{{ block.id }} {
+                    width: 100% ;
+                }
+                .text-container-image-section-{{ block.id }} p {
+                    position: relative;
+                }
+        {% endcase %}
+    {% endfor %}
 </style>
 
 {% schema %}
 {
     "name": "Single Image With Caption",
-    "settings": [
+    "blocks":[
         {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Select Image"
-        },
-        {
-            "type": "select",
-            "id": "image-size",
-            "label": "Image Size",
-            "default": "50",
-            "options": [
+            "name": "Small",
+            "type": "small",
+            "settings": [
                 {
-                    "value": "50",
-                    "label": "Small"
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select Image"
                 },
                 {
-                    "value": "70",
-                    "label": "Medium"
+                    "type": "url",
+                    "id": "wearing-url",
+                    "label": "Wearing URL"
                 },
                 {
-                    "value": "100",
-                    "label": "Full Width"
+                    "type": "text",
+                    "id": "wearing-text",
+                    "label": "Model Wears:",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1",
+                    "label": "Wearing With 1:",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1",
+                    "label": "Wearing With URL 1"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2",
+                    "label": "Wearing With 2:",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2",
+                    "label": "Wearing With URL 2"
                 }
             ]
         },
         {
-            "type": "url",
-            "id": "wearing-url",
-            "label": "Wearing URL"
+            "name": "Medium",
+            "type": "medium",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select Image"
+                },
+                {
+                    "type": "url",
+                    "id": "wearing-url",
+                    "label": "Wearing URL"
+                },
+                {
+                    "type": "text",
+                    "id": "wearing-text",
+                    "label": "Model Wears:",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1",
+                    "label": "Wearing With 1:",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1",
+                    "label": "Wearing With URL 1"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2",
+                    "label": "Wearing With 2:",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2",
+                    "label": "Wearing With URL 2"
+                }
+            ]
         },
         {
-            "type": "text",
-            "id": "wearing-text",
-            "label": "Model Wears:",
-            "default": "Whiting Shirt Cosmic Papaya Check"
-        },
-        {
-            "type": "text",
-            "id": "with-text-1",
-            "label": "Wearing With 1:",
-            "default": "Dean T Shirt Black"
-        },
-        {
-            "type": "url",
-            "id": "with-url-1",
-            "label": "Wearing With URL 1"
-        },
-        {
-            "type": "text",
-            "id": "with-text-2",
-            "label": "Wearing With 2:",
-            "default": "Pleat Trousers Black"
-        },
-        {
-            "type": "url",
-            "id": "with-url-2",
-            "label": "Wearing With URL 2"
+            "name": "Large",
+            "type": "large",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select Image"
+                },
+                {
+                    "type": "url",
+                    "id": "wearing-url",
+                    "label": "Wearing URL"
+                },
+                {
+                    "type": "text",
+                    "id": "wearing-text",
+                    "label": "Model Wears:",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1",
+                    "label": "Wearing With 1:",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1",
+                    "label": "Wearing With URL 1"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2",
+                    "label": "Wearing With 2:",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2",
+                    "label": "Wearing With URL 2"
+                }
+            ]
         }
     ],
     "presets": [
