@@ -931,6 +931,60 @@
           "settings": {
             "spacer": 45
           }
+        },
+        "8fb9f663-7453-4481-8bdc-21530efe86ed": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "100",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "make-image-larger": true,
+            "text-layout-center": false,
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "bg-color": "#f3f3f3",
+            "text-font-size": 16,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        },
+        "4831bd26-d637-49f0-801c-b04646bf79e6": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        },
+        "9b046732-71b4-4583-9ce5-e77ad01eec78": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "100",
+            "selected-layout": "text-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "make-image-larger": true,
+            "text-layout-center": false,
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "bg-color": "#f3f3f3",
+            "text-font-size": 16,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        },
+        "e2dbaa92-0b03-47cb-b3e8-45f23f3c2b58": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
         }
       },
       "block_order": [
@@ -941,7 +995,11 @@
         "27173f81-e8c1-4ab7-be6c-b715c9e98019",
         "9bc2993f-a093-4491-afae-2645e208b118",
         "d7ce1b62-2cdb-4468-8bcb-7127e5be2d6e",
-        "7682a2b3-b3ef-4426-88d5-126ecf44ddee"
+        "7682a2b3-b3ef-4426-88d5-126ecf44ddee",
+        "8fb9f663-7453-4481-8bdc-21530efe86ed",
+        "4831bd26-d637-49f0-801c-b04646bf79e6",
+        "9b046732-71b4-4583-9ce5-e77ad01eec78",
+        "e2dbaa92-0b03-47cb-b3e8-45f23f3c2b58"
       ],
       "settings": {
       }
