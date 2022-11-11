@@ -511,12 +511,25 @@
             "text-letter-spacing": 0.5,
             "text-font-color": "#d67b3d"
           }
+        },
+        "d0b9e44d-f445-4d28-8184-2a791365b891": {
+          "type": "answer",
+          "settings": {
+            "text-content": "<p>Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#d67b3d"
+          }
         }
       },
       "block_order": [
         "25e44da2-4d2d-408e-94f5-099570cc9501",
         "d46966b3-ee3d-4270-a1f1-c15ce72c04fc",
-        "2689762d-4498-4c13-bb51-74c5d9407813"
+        "2689762d-4498-4c13-bb51-74c5d9407813",
+        "d0b9e44d-f445-4d28-8184-2a791365b891"
       ],
       "settings": {
       }
