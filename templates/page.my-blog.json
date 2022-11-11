@@ -565,247 +565,6 @@
       "settings": {
       }
     },
-    "d12d3309-2a82-4b00-8bc0-8d7815449f59": {
-      "type": "image-text-tile",
-      "blocks": {
-        "43c74943-c6a0-48f7-b8bf-d370896ac107": {
-          "type": "image-and-text-tile",
-          "settings": {
-            "width": "900",
-            "selected-layout": "image-first",
-            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
-            "make-image-larger": false,
-            "text-layout-center": true,
-            "text": "<p><strong>Whiting Overshirt<br\/><\/strong><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat.<\/p>",
-            "bg-color": "#4d4e3e",
-            "text-font-size": 18,
-            "text-line-height": 1.5,
-            "text-letter-spacing": 0.5,
-            "text-font-color": "#ffffff",
-            "show-button": true,
-            "button-label": "Shop The Look",
-            "button-url": "",
-            "button-text-color": "#ffffff",
-            "button-background-color": "#333333"
-          }
-        }
-      },
-      "block_order": [
-        "43c74943-c6a0-48f7-b8bf-d370896ac107"
-      ],
-      "settings": {
-      }
-    },
-    "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb": {
-      "type": "image-disproportional-tile",
-      "blocks": {
-        "aaa97c0e-d63f-44ab-b30c-80a1ed60c566": {
-          "type": "disproportional-image",
-          "settings": {
-            "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
-            "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
-            "second-image-larger": false,
-            "section-width": 100,
-            "image-width": 56,
-            "image-gap": true,
-            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
-            "wearing-url": "",
-            "with-text-1": "Dean T Shirt Black",
-            "with-url-1": "",
-            "with-text-2": "Pleat Trousers Black",
-            "with-url-2": "",
-            "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
-            "wearing-url-right": "",
-            "with-text-1-right": "Dean T Shirt Black",
-            "with-url-1-right": "",
-            "with-text-2-right": "Pleat Trousers Black",
-            "with-url-2-right": ""
-          }
-        }
-      },
-      "block_order": [
-        "aaa97c0e-d63f-44ab-b30c-80a1ed60c566"
-      ],
-      "settings": {
-      }
-    },
-    "0418a8b1-74f0-4821-a387-dca37cb22460": {
-      "type": "faq",
-      "blocks": {
-        "25e44da2-4d2d-408e-94f5-099570cc9501": {
-          "type": "question",
-          "settings": {
-            "text-content": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
-            "text-font-size": 16,
-            "text-font-picker": "Helvetica, Arial, sans-serif",
-            "text-line-height": 1.5,
-            "text-letter-spacing": 0.5,
-            "text-font-color": "#d67b3d"
-          }
-        },
-        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc": {
-          "type": "answer",
-          "settings": {
-            "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
-            "text-font-size": 16,
-            "text-font-picker": "Helvetica, Arial, sans-serif",
-            "text-line-height": 1.5,
-            "text-letter-spacing": 0.5,
-            "text-font-color": "#000000",
-            "border-color": "#d67b3d"
-          }
-        },
-        "2689762d-4498-4c13-bb51-74c5d9407813": {
-          "type": "question",
-          "settings": {
-            "text-content": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
-            "text-font-size": 16,
-            "text-font-picker": "Helvetica, Arial, sans-serif",
-            "text-line-height": 1.5,
-            "text-letter-spacing": 0.5,
-            "text-font-color": "#d67b3d"
-          }
-        },
-        "d0b9e44d-f445-4d28-8184-2a791365b891": {
-          "type": "answer",
-          "settings": {
-            "text-content": "<p>Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
-            "text-font-size": 16,
-            "text-font-picker": "Helvetica, Arial, sans-serif",
-            "text-line-height": 1.5,
-            "text-letter-spacing": 0.5,
-            "text-font-color": "#000000",
-            "border-color": "#d67b3d"
-          }
-        }
-      },
-      "block_order": [
-        "25e44da2-4d2d-408e-94f5-099570cc9501",
-        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc",
-        "2689762d-4498-4c13-bb51-74c5d9407813",
-        "d0b9e44d-f445-4d28-8184-2a791365b891"
-      ],
-      "settings": {
-      }
-    },
-    "716f3f80-3d75-4ec7-b807-0072327a1843": {
-      "type": "wax-radio",
-      "blocks": {
-        "601ba29e-aeb2-44bc-bdb7-1004bf44088e": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "234b902a-b94d-460b-a9cf-ca77ee63963c": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "d1819126-47ff-42e9-9cf7-d28a22e01d52": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "a37663cc-040a-4e7b-adbb-601938284c59": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "2dd9ed14-2c2d-4a56-bdde-98848cdd9f17": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "da161082-1679-4dd6-be4b-10b68b79faf5": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "97c2e92c-b8f2-4181-bf04-614f08d72324": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "2439d6d3-4b16-41f0-a98b-1c08a302e152": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "857eb14e-b026-4e62-bd5b-e188011169bf": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "f08d48f7-d58d-46b3-b4d9-dad4d2cd1ade": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "5886667d-7e9d-4f83-93a7-14a716e73ae5": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "56013cd4-04bf-452d-b4e0-aac874aa9114": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        },
-        "0a4db3eb-5d99-4bac-ab03-ae71c196f24f": {
-          "type": "song",
-          "settings": {
-            "song-title": "Young Again",
-            "artist": "Hak Baker"
-          }
-        }
-      },
-      "block_order": [
-        "601ba29e-aeb2-44bc-bdb7-1004bf44088e",
-        "234b902a-b94d-460b-a9cf-ca77ee63963c",
-        "d1819126-47ff-42e9-9cf7-d28a22e01d52",
-        "a37663cc-040a-4e7b-adbb-601938284c59",
-        "2dd9ed14-2c2d-4a56-bdde-98848cdd9f17",
-        "da161082-1679-4dd6-be4b-10b68b79faf5",
-        "97c2e92c-b8f2-4181-bf04-614f08d72324",
-        "2439d6d3-4b16-41f0-a98b-1c08a302e152",
-        "857eb14e-b026-4e62-bd5b-e188011169bf",
-        "f08d48f7-d58d-46b3-b4d9-dad4d2cd1ade",
-        "5886667d-7e9d-4f83-93a7-14a716e73ae5",
-        "56013cd4-04bf-452d-b4e0-aac874aa9114",
-        "0a4db3eb-5d99-4bac-ab03-ae71c196f24f"
-      ],
-      "settings": {
-        "radio-image": "shopify:\/\/shop_images\/Radio_Image.png",
-        "image-width": 40,
-        "list-color": "#d67b3d",
-        "list-item-color": "#000000",
-        "list-item-margin": 24
-      }
-    },
     "6532c7af-1c4c-42d2-9b90-42ea39455388": {
       "type": "image-text-tile",
       "blocks": {
@@ -1003,6 +762,223 @@
       ],
       "settings": {
       }
+    },
+    "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb": {
+      "type": "image-disproportional-tile",
+      "blocks": {
+        "aaa97c0e-d63f-44ab-b30c-80a1ed60c566": {
+          "type": "disproportional-image",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "second-image-larger": false,
+            "section-width": 100,
+            "image-width": 56,
+            "image-gap": true,
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url": "",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": "",
+            "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url-right": "",
+            "with-text-1-right": "Dean T Shirt Black",
+            "with-url-1-right": "",
+            "with-text-2-right": "Pleat Trousers Black",
+            "with-url-2-right": ""
+          }
+        }
+      },
+      "block_order": [
+        "aaa97c0e-d63f-44ab-b30c-80a1ed60c566"
+      ],
+      "settings": {
+      }
+    },
+    "0418a8b1-74f0-4821-a387-dca37cb22460": {
+      "type": "faq",
+      "blocks": {
+        "25e44da2-4d2d-408e-94f5-099570cc9501": {
+          "type": "question",
+          "settings": {
+            "text-content": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#d67b3d"
+          }
+        },
+        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc": {
+          "type": "answer",
+          "settings": {
+            "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#d67b3d"
+          }
+        },
+        "977f57d9-644e-4d7f-9a28-282ddf0fcc5e": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        },
+        "2689762d-4498-4c13-bb51-74c5d9407813": {
+          "type": "question",
+          "settings": {
+            "text-content": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#d67b3d"
+          }
+        },
+        "d0b9e44d-f445-4d28-8184-2a791365b891": {
+          "type": "answer",
+          "settings": {
+            "text-content": "<p>Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#d67b3d"
+          }
+        }
+      },
+      "block_order": [
+        "25e44da2-4d2d-408e-94f5-099570cc9501",
+        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc",
+        "977f57d9-644e-4d7f-9a28-282ddf0fcc5e",
+        "2689762d-4498-4c13-bb51-74c5d9407813",
+        "d0b9e44d-f445-4d28-8184-2a791365b891"
+      ],
+      "settings": {
+      }
+    },
+    "716f3f80-3d75-4ec7-b807-0072327a1843": {
+      "type": "wax-radio",
+      "blocks": {
+        "601ba29e-aeb2-44bc-bdb7-1004bf44088e": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "234b902a-b94d-460b-a9cf-ca77ee63963c": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "d1819126-47ff-42e9-9cf7-d28a22e01d52": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "a37663cc-040a-4e7b-adbb-601938284c59": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "2dd9ed14-2c2d-4a56-bdde-98848cdd9f17": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "da161082-1679-4dd6-be4b-10b68b79faf5": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "97c2e92c-b8f2-4181-bf04-614f08d72324": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "2439d6d3-4b16-41f0-a98b-1c08a302e152": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "857eb14e-b026-4e62-bd5b-e188011169bf": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "f08d48f7-d58d-46b3-b4d9-dad4d2cd1ade": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "5886667d-7e9d-4f83-93a7-14a716e73ae5": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "56013cd4-04bf-452d-b4e0-aac874aa9114": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "0a4db3eb-5d99-4bac-ab03-ae71c196f24f": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        }
+      },
+      "block_order": [
+        "601ba29e-aeb2-44bc-bdb7-1004bf44088e",
+        "234b902a-b94d-460b-a9cf-ca77ee63963c",
+        "d1819126-47ff-42e9-9cf7-d28a22e01d52",
+        "a37663cc-040a-4e7b-adbb-601938284c59",
+        "2dd9ed14-2c2d-4a56-bdde-98848cdd9f17",
+        "da161082-1679-4dd6-be4b-10b68b79faf5",
+        "97c2e92c-b8f2-4181-bf04-614f08d72324",
+        "2439d6d3-4b16-41f0-a98b-1c08a302e152",
+        "857eb14e-b026-4e62-bd5b-e188011169bf",
+        "f08d48f7-d58d-46b3-b4d9-dad4d2cd1ade",
+        "5886667d-7e9d-4f83-93a7-14a716e73ae5",
+        "56013cd4-04bf-452d-b4e0-aac874aa9114",
+        "0a4db3eb-5d99-4bac-ab03-ae71c196f24f"
+      ],
+      "settings": {
+        "radio-image": "shopify:\/\/shop_images\/Radio_Image.png",
+        "image-width": 40,
+        "list-color": "#d67b3d",
+        "list-item-color": "#000000",
+        "list-item-margin": 24
+      }
     }
   },
   "order": [
@@ -1017,10 +993,9 @@
     "d1dfdf41-bd9e-4e7e-8769-ac59c79c1636",
     "cc7a3f00-86b1-43db-b072-e938990612e5",
     "bf0dbadb-beac-4b32-bbcf-46ef15c5ec17",
-    "d12d3309-2a82-4b00-8bc0-8d7815449f59",
+    "6532c7af-1c4c-42d2-9b90-42ea39455388",
     "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb",
     "0418a8b1-74f0-4821-a387-dca37cb22460",
-    "716f3f80-3d75-4ec7-b807-0072327a1843",
-    "6532c7af-1c4c-42d2-9b90-42ea39455388"
+    "716f3f80-3d75-4ec7-b807-0072327a1843"
   ]
 }
