@@ -856,6 +856,12 @@
             "text-font-color": "#000000",
             "border-color": "#d67b3d"
           }
+        },
+        "9f72803c-7e86-453a-a870-f24630d687b6": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
         }
       },
       "block_order": [
@@ -863,7 +869,8 @@
         "d46966b3-ee3d-4270-a1f1-c15ce72c04fc",
         "977f57d9-644e-4d7f-9a28-282ddf0fcc5e",
         "2689762d-4498-4c13-bb51-74c5d9407813",
-        "d0b9e44d-f445-4d28-8184-2a791365b891"
+        "d0b9e44d-f445-4d28-8184-2a791365b891",
+        "9f72803c-7e86-453a-a870-f24630d687b6"
       ],
       "settings": {
       }
