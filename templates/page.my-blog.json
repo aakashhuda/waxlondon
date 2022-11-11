@@ -374,6 +374,36 @@
           "settings": {
             "spacer": 45
           }
+        },
+        "cd8cc922-9474-4e04-a286-bb8dba4129c3": {
+          "type": "double-image-with-caption",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "image-width": 500,
+            "gap": 20,
+            "image-1-padding": 0,
+            "image-2-padding": 0,
+            "show-text": false,
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url": "",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": "",
+            "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url-right": "",
+            "with-text-1-right": "Dean T Shirt Black",
+            "with-url-1-right": "",
+            "with-text-2-right": "Pleat Trousers Black",
+            "with-url-2-right": ""
+          }
+        },
+        "522463b6-f943-4c1f-937e-9b2e27b7b0ba": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
         }
       },
       "block_order": [
@@ -386,7 +416,151 @@
         "25270faa-e008-4e68-9919-268ff4239d6a",
         "f3c9c01b-affe-403c-bd21-46ab12000696",
         "516e3631-3281-4c33-b1f3-b41455114c54",
-        "86ab5e09-9583-468c-bb79-d9f4207b0a5f"
+        "86ab5e09-9583-468c-bb79-d9f4207b0a5f",
+        "cd8cc922-9474-4e04-a286-bb8dba4129c3",
+        "522463b6-f943-4c1f-937e-9b2e27b7b0ba"
+      ],
+      "settings": {
+      }
+    },
+    "d4e027a6-5a87-4229-bac6-8793822d838d": {
+      "type": "text-section",
+      "blocks": {
+        "8f4e3970-54bd-42c3-9368-136670854a8c": {
+          "type": "normal",
+          "settings": {
+            "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis, nulla at tempus feugiat, ligula diam tempus velit, quis semper urna sapien eu nunc. Nullam volutpat tellus ac quam convallis, sit amet tincidunt turpis hendrerit. Donec id blandit enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum et diam tincidunt scelerisque. Integer gravida quam nibh, nec sollicitudin metus mollis nec. In vulputate, neque id fermentum scelerisque, nisi neque porttitor velit, id scelerisque purus libero ut nulla. Praesent fringilla convallis egestas. Sed maximus malesuada nibh sed ultrices.<\/p>",
+            "width": 83,
+            "text-font-size": 24,
+            "text-font-picker": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "text-line-height": 1.1,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#000000"
+          }
+        },
+        "48cf33b2-3a72-4f88-bd14-3342869c4d29": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        }
+      },
+      "block_order": [
+        "8f4e3970-54bd-42c3-9368-136670854a8c",
+        "48cf33b2-3a72-4f88-bd14-3342869c4d29"
+      ],
+      "settings": {
+      }
+    },
+    "d1dfdf41-bd9e-4e7e-8769-ac59c79c1636": {
+      "type": "image-tile-with-caption",
+      "blocks": {
+        "cc70cbf0-3a3d-459c-8fd7-8fcd370a950a": {
+          "type": "double-image-with-caption",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "image-width": 500,
+            "gap": 0,
+            "image-1-padding": 0,
+            "image-2-padding": 50,
+            "show-text": false,
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url": "",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": "",
+            "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url-right": "",
+            "with-text-1-right": "Dean T Shirt Black",
+            "with-url-1-right": "",
+            "with-text-2-right": "Pleat Trousers Black",
+            "with-url-2-right": ""
+          }
+        },
+        "5092a117-f324-423e-9065-41ee15b5a546": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        }
+      },
+      "block_order": [
+        "cc70cbf0-3a3d-459c-8fd7-8fcd370a950a",
+        "5092a117-f324-423e-9065-41ee15b5a546"
+      ],
+      "settings": {
+      }
+    },
+    "cc7a3f00-86b1-43db-b072-e938990612e5": {
+      "type": "text-section",
+      "blocks": {
+        "5f8b2044-9d01-43f0-aad0-053f5a072a36": {
+          "type": "normal",
+          "settings": {
+            "text-content": "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis, nulla at tempus feugiat, ligula diam tempus velit, quis semper urna sapien eu nunc. Nullam volutpat tellus ac quam convallis, sit amet tincidunt turpis hendrerit. Donec id blandit enim. Sed maximus malesuada nibh sed ultrices.”<\/p>",
+            "width": 55,
+            "text-font-size": 24,
+            "text-font-picker": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "text-line-height": 1.1,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#000000"
+          }
+        },
+        "5da87a9f-c68e-4cd3-82d1-9ba8e53039e7": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        }
+      },
+      "block_order": [
+        "5f8b2044-9d01-43f0-aad0-053f5a072a36",
+        "5da87a9f-c68e-4cd3-82d1-9ba8e53039e7"
+      ],
+      "settings": {
+      }
+    },
+    "bf0dbadb-beac-4b32-bbcf-46ef15c5ec17": {
+      "type": "image-tile-with-caption",
+      "blocks": {
+        "f0cc8319-59d8-4540-b1fe-4685360753f5": {
+          "type": "double-image-with-caption",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "image-width": 500,
+            "gap": 0,
+            "image-1-padding": 50,
+            "image-2-padding": 0,
+            "show-text": true,
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url": "",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": "",
+            "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url-right": "",
+            "with-text-1-right": "Dean T Shirt Black",
+            "with-url-1-right": "",
+            "with-text-2-right": "Pleat Trousers Black",
+            "with-url-2-right": ""
+          }
+        },
+        "e58820e7-4b7f-44a1-87d5-bf61fd720f00": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        }
+      },
+      "block_order": [
+        "f0cc8319-59d8-4540-b1fe-4685360753f5",
+        "e58820e7-4b7f-44a1-87d5-bf61fd720f00"
       ],
       "settings": {
       }
@@ -631,6 +805,146 @@
         "list-item-color": "#000000",
         "list-item-margin": 24
       }
+    },
+    "6532c7af-1c4c-42d2-9b90-42ea39455388": {
+      "type": "image-text-tile",
+      "blocks": {
+        "9002dad6-d263-4650-a6ad-b11782d17884": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "900",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "make-image-larger": false,
+            "text-layout-center": false,
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "bg-color": "#f3f3f3",
+            "text-font-size": 18,
+            "text-line-height": 1.1,
+            "text-letter-spacing": 0,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        },
+        "2de1c888-01f9-459f-87b8-519a274f2faf": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        },
+        "c64018e0-8900-4f49-b1fd-6f2ac78bbf74": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "900",
+            "selected-layout": "text-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "make-image-larger": false,
+            "text-layout-center": false,
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "bg-color": "#f3f3f3",
+            "text-font-size": 18,
+            "text-line-height": 1.1,
+            "text-letter-spacing": 0,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        },
+        "f1e4e2de-1518-4b85-a7ae-ce1ecacd6ff2": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        },
+        "27173f81-e8c1-4ab7-be6c-b715c9e98019": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "900",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "make-image-larger": false,
+            "text-layout-center": true,
+            "text": "<p><strong>Whiting Overshirt<\/strong><br\/><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p>",
+            "bg-color": "#FFFFFF",
+            "text-font-size": 16,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        },
+        "9bc2993f-a093-4491-afae-2645e208b118": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "900",
+            "selected-layout": "text-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "make-image-larger": false,
+            "text-layout-center": true,
+            "text": "<p>Whiting Overshirt<br\/><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat.<\/p>",
+            "bg-color": "#4d4e3e",
+            "text-font-size": 16,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#ffffff",
+            "show-button": true,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#333333"
+          }
+        },
+        "d7ce1b62-2cdb-4468-8bcb-7127e5be2d6e": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "900",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "make-image-larger": false,
+            "text-layout-center": true,
+            "text": "<p><strong>Whiting Overshirt<\/strong> <br\/><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero.<\/p>",
+            "bg-color": "#a7a896",
+            "text-font-size": 16,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        },
+        "7682a2b3-b3ef-4426-88d5-126ecf44ddee": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 45
+          }
+        }
+      },
+      "block_order": [
+        "9002dad6-d263-4650-a6ad-b11782d17884",
+        "2de1c888-01f9-459f-87b8-519a274f2faf",
+        "c64018e0-8900-4f49-b1fd-6f2ac78bbf74",
+        "f1e4e2de-1518-4b85-a7ae-ce1ecacd6ff2",
+        "27173f81-e8c1-4ab7-be6c-b715c9e98019",
+        "9bc2993f-a093-4491-afae-2645e208b118",
+        "d7ce1b62-2cdb-4468-8bcb-7127e5be2d6e",
+        "7682a2b3-b3ef-4426-88d5-126ecf44ddee"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -641,9 +955,14 @@
     "99014a98-f133-4cec-b37e-672287917482",
     "be108d2a-552e-40e1-9d4c-9b2d3ce3bc00",
     "65a5ebf3-e463-485d-abac-be2617fc066e",
+    "d4e027a6-5a87-4229-bac6-8793822d838d",
+    "d1dfdf41-bd9e-4e7e-8769-ac59c79c1636",
+    "cc7a3f00-86b1-43db-b072-e938990612e5",
+    "bf0dbadb-beac-4b32-bbcf-46ef15c5ec17",
     "d12d3309-2a82-4b00-8bc0-8d7815449f59",
     "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb",
     "0418a8b1-74f0-4821-a387-dca37cb22460",
-    "716f3f80-3d75-4ec7-b807-0072327a1843"
+    "716f3f80-3d75-4ec7-b807-0072327a1843",
+    "6532c7af-1c4c-42d2-9b90-42ea39455388"
   ]
 }
