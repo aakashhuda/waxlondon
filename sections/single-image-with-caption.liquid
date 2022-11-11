@@ -13,6 +13,10 @@
                     </p>
                 </div>
             </section>
+        {% when 'spacer' %}
+            <section class="custom-spacer-{{ block.id }}">
+
+            </section>
     {% endcase %}
 {% endfor %}
 <style>
@@ -58,6 +62,10 @@
                 }
                 .text-container-image-section-{{ block.id }} p {
                     position: relative;
+                }
+            {% when 'spacer' %}
+                .custom-spacer-{{ block.id }} {
+                    height: {{ block.settings.spacer }}px;
                 }
         {% endcase %}
     {% endfor %}
@@ -196,6 +204,22 @@
                     "type": "url",
                     "id": "with-url-2",
                     "label": "Wearing With URL 2"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
                 }
             ]
         }

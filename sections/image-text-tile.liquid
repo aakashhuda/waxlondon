@@ -1,129 +1,144 @@
 {% for block in section.blocks %}
-    <section class="block-parent-{{ block.id }}">
-        <div class="image-text-tile-container-{{ block.id }}">
-            {% if block.settings.selected-layout == "image-first" %}
-                <div class="image-text-tile-image-container-{{ block.id }} item-{{ block.id }}">
-                    <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: 'master' }}">
+    {% case block.type %}
+        {% when "image-and-text-tile" %}
+            <section class="block-parent-{{ block.id }}">
+                <div class="image-text-tile-container-{{ block.id }}">
+                    {% if block.settings.selected-layout == "image-first" %}
+                        <div class="image-text-tile-image-container-{{ block.id }} item-{{ block.id }}">
+                            <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: 'master' }}">
+                        </div>
+                        <div class="image-text-tile-text-container-{{ block.id }} item-{{ block.id }}">
+                            {{ block.settings.text }}
+                            <a class="text-tile-btn-{{ block.id }}" href="{{ block.settings.button-url | url_encode }}">
+                                {{ block.settings.button-label }}
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="image-text-tile-text-container-{{ block.id }} item-{{ block.id }}">
+                            {{ block.settings.text }}
+                            <a class="text-tile-btn-{{ block.id }}" href="{{ block.settings.button-url | url_encode }}">
+                                {{ block.settings.button-label }}
+                            </a>
+                        </div>
+                        <div class="image-text-tile-image-container-{{ block.id }} item-{{ block.id }}">
+                            <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: 'master' }}">
+                        </div>
+                    {% endif %}
                 </div>
-                <div class="image-text-tile-text-container-{{ block.id }} item-{{ block.id }}">
-                    {{ block.settings.text }}
-                    <a class="text-tile-btn-{{ block.id }}" href="{{ block.settings.button-url | url_encode }}">
-                        {{ block.settings.button-label }}
-                    </a>
-                </div>
-            {% else %}
-                <div class="image-text-tile-text-container-{{ block.id }} item-{{ block.id }}">
-                    {{ block.settings.text }}
-                    <a class="text-tile-btn-{{ block.id }}" href="{{ block.settings.button-url | url_encode }}">
-                        {{ block.settings.button-label }}
-                    </a>
-                </div>
-                <div class="image-text-tile-image-container-{{ block.id }} item-{{ block.id }}">
-                    <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: 'master' }}">
-                </div>
-            {% endif %}
-        </div>
-    </section>
+            </section>
+        {% when 'spacer' %}
+            <section class="custom-spacer-{{ block.id }}">
+
+            </section>
+    {% endcase %}
 {% endfor %}
 
 <style>
 {% for block in section.blocks %}
-    .block-parent-{{ block.id }}{
-        display: flex;
-        justify-content: center;
-    }
-    .image-text-tile-container-{{ block.id }} {
-        display: flex;
-    }
-
-    {% if block.settings.width == "600" %}
-        .image-text-tile-container-{{ block.id }} {
-            width: 600px;
-        }
-        
-    {% elsif block.settings.width == "900" %}
-        .image-text-tile-container-{{ block.id }} {
-            width: 900px;
-        }
-        
-    {% else %}
-        .image-text-tile-container-{{ block.id }} {
-            width: 100%;
-        }
-    {% endif %}
-
-    .item-{{ block.id }} {
-        width: 50%;
-    }
-    .image-{{ block.id }}{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .image-text-tile-text-container-{{ block.id }} {
-        height: inherit;
-        overflow: hidden;
-        font-size: {{ block.settings.text-font-size }}px;
-        line-height: {{ block.settings.text-line-height }};
-        letter-spacing: {{ block.settings.text-letter-spacing }}px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 45px;
-        background-color: {{ block.settings.bg-color }};
-        color: {{ block.settings.text-font-color }};
-    }
-    {% if block.settings.text-layout-center == false %}
-        .image-text-tile-text-container-{{ block.id }} {
-            justify-content: start;
-        }
-        .image-text-tile-text-container-{{ block.id }} {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-
-        {% if block.settings.selected-layout == "image-first" %}
-            .image-text-tile-text-container-{{ block.id }} {
-                padding-right: 0px;
+    {% case block.type %}
+        {% when "image-and-text-tile" %}
+            .block-parent-{{ block.id }}{
+                display: flex;
+                justify-content: center;
             }
-        {% else %}
-            .image-text-tile-text-container-{{ block.id }} {
-                padding-left: 0px;
+            .image-text-tile-container-{{ block.id }} {
+                display: flex;
             }
-        {% endif %}
-    {% endif %}
-    .image-text-tile-text-container-{{ block.id }} p {
-        margin: 0;
-    }
-    .text-tile-btn-{{ block.id }} {
-        background-color: {{ block.settings.button-background-color }};
-        color: {{ block.settings.button-text-color }};
-        border: none;
-        border-radius: 30px;
-        padding: 0.5em 1.5em;
-        text-decoration: none;
-        font-weight: bold;
-        font-size:{{ block.settings.text-font-size }}px;
-        align-self: flex-start;
-        margin-top: 40px;
-    }
 
-    {% if block.settings.show-button == false %}
-        .text-tile-btn-{{ block.id }} {
-            display: none;
-        }
-    {% endif %}
+            {% if block.settings.width == "600" %}
+                .image-text-tile-container-{{ block.id }} {
+                    width: 600px;
+                }
+                
+            {% elsif block.settings.width == "900" %}
+                .image-text-tile-container-{{ block.id }} {
+                    width: 900px;
+                }
+                
+            {% else %}
+                .image-text-tile-container-{{ block.id }} {
+                    width: 100%;
+                }
+            {% endif %}
 
-    {% if block.settings.make-image-larger == true %}
-        .image-text-tile-image-container-{{ block.id }} {
-            width: 65%;
-        }
-        .image-text-tile-text-container-{{ block.id }} {
-            width: 35%;
-        }
+            .item-{{ block.id }} {
+                width: 50%;
+            }
+            .image-{{ block.id }}{
+                width: 100%;
+                height: 100%;
+            }
+            
+            .image-text-tile-text-container-{{ block.id }} {
+                height: inherit;
+                overflow: hidden;
+                font-size: {{ block.settings.text-font-size }}px;
+                line-height: {{ block.settings.text-line-height }};
+                letter-spacing: {{ block.settings.text-letter-spacing }}px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 45px;
+                background-color: {{ block.settings.bg-color }};
+                color: {{ block.settings.text-font-color }};
+            }
+            {% if block.settings.text-layout-center == false %}
+                .image-text-tile-text-container-{{ block.id }} {
+                    justify-content: start;
+                }
+                .image-text-tile-text-container-{{ block.id }} {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
 
-    {% endif %}
+                {% if block.settings.selected-layout == "image-first" %}
+                    .image-text-tile-text-container-{{ block.id }} {
+                        padding-right: 0px;
+                    }
+                {% else %}
+                    .image-text-tile-text-container-{{ block.id }} {
+                        padding-left: 0px;
+                    }
+                {% endif %}
+            {% endif %}
+            .image-text-tile-text-container-{{ block.id }} p {
+                margin: 0;
+            }
+            .text-tile-btn-{{ block.id }} {
+                background-color: {{ block.settings.button-background-color }};
+                color: {{ block.settings.button-text-color }};
+                border: none;
+                border-radius: 30px;
+                padding: 0.5em 1.5em;
+                text-decoration: none;
+                font-weight: bold;
+                font-size:{{ block.settings.text-font-size }}px;
+                align-self: flex-start;
+                margin-top: 40px;
+            }
+
+            {% if block.settings.show-button == false %}
+                .text-tile-btn-{{ block.id }} {
+                    display: none;
+                }
+            {% endif %}
+
+            {% if block.settings.make-image-larger == true %}
+                .image-text-tile-image-container-{{ block.id }} {
+                    width: 65%;
+                }
+                .image-text-tile-text-container-{{ block.id }} {
+                    width: 35%;
+                }
+
+            {% endif %}
+        {% when 'spacer' %}
+            .custom-spacer-{{ block.id }} {
+                height: {{ block.settings.spacer }}px;
+            }
+    {% endcase %}
+        
 {% endfor %}
 
 </style>    
@@ -264,6 +279,22 @@
                     "id": "button-background-color",
                     "label": "Button Background Color",
                     "default": "#000000"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
                 }
             ]
         }

@@ -1,92 +1,106 @@
 {% for block in section.blocks %}
-    <section class="image-tile-container-{{ block.id }}">
-        <div class="image-container-{{ block.id }} image-container-1-{{ block.id }}">
-            <img class="image{{ block.id }} image-1-{{ block.id }}" src="{{ block.settings.image-1 | img_url: 'master' }}">
-        </div>
+    {% case block.type %}
+        {% when 'double-image-with-caption' %}
+            <section class="image-tile-container-{{ block.id }}">
+                <div class="image-container-{{ block.id }} image-container-1-{{ block.id }}">
+                    <img class="image{{ block.id }} image-1-{{ block.id }}" src="{{ block.settings.image-1 | img_url: 'master' }}">
+                </div>
 
-        <div class="image-container-{{ block.id }} image-container-2-{{ block.id }}">
-            <img class="image{{ block.id }} image-2-{{ block.id }}" src="{{ block.settings.image-2 | img_url: 'master' }}">
-        </div>
-    </section>
+                <div class="image-container-{{ block.id }} image-container-2-{{ block.id }}">
+                    <img class="image{{ block.id }} image-2-{{ block.id }}" src="{{ block.settings.image-2 | img_url: 'master' }}">
+                </div>
+            </section>
 
-    <section class="text-container-{{ block.id }}">
-        <div class="tile-text-container-{{ block.id }}">
-            Model wears <a href="{{ block.settings.wearing-url | url_encode }}">{{ block.settings.wearing-text }}</a>
-            with <a href="{{ block.settings.with-url-1 | url_encode }}">{{ block.settings.with-text-1 }}</a> and
-            <a href="{{ block.settings.with-url-2 | url_encode }}">{{ block.settings.with-text-2 }}</a>
-        </div>
-        <div class="tile-text-container-{{ block.id }}">
-            Model wears <a href="{{ block.settings.wearing-url-right | url_encode }}">{{ block.settings.wearing-text-right }}</a>
-            with <a href="{{ block.settings.with-url-1-right | url_encode }}">{{ block.settings.with-text-1-right }}</a> and
-            <a href="{{ block.settings.with-url-2-right | url_encode }}">{{ block.settings.with-text-2-right }}</a>
-        </div>
-    </section>
+            <section class="text-container-{{ block.id }}">
+                <div class="tile-text-container-{{ block.id }}">
+                    Model wears <a href="{{ block.settings.wearing-url | url_encode }}">{{ block.settings.wearing-text }}</a>
+                    with <a href="{{ block.settings.with-url-1 | url_encode }}">{{ block.settings.with-text-1 }}</a> and
+                    <a href="{{ block.settings.with-url-2 | url_encode }}">{{ block.settings.with-text-2 }}</a>
+                </div>
+                <div class="tile-text-container-{{ block.id }}">
+                    Model wears <a href="{{ block.settings.wearing-url-right | url_encode }}">{{ block.settings.wearing-text-right }}</a>
+                    with <a href="{{ block.settings.with-url-1-right | url_encode }}">{{ block.settings.with-text-1-right }}</a> and
+                    <a href="{{ block.settings.with-url-2-right | url_encode }}">{{ block.settings.with-text-2-right }}</a>
+                </div>
+            </section>
+        {% when 'spacer' %}
+            <section class="custom-spacer-{{ block.id }}">
+
+            </section>
+    {% endcase %}
 {% endfor %}
 
 <style>
 
 {% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'double-image-with-caption' %}
 
-    .image-tile-container-{{ block.id }} {
-        display: flex;
-        justify-content: center;
-        gap: {{ block.settings.gap }}px;
-    }
+            .image-tile-container-{{ block.id }} {
+                display: flex;
+                justify-content: center;
+                gap: {{ block.settings.gap }}px;
+            }
 
-    .text-container-{{ block.id }} {
-        display: flex;
-        justify-content: center;
-        gap: {{ block.settings.gap }}px;
-    }
-    
-    .image-container-{{ block.id }} {
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        height: auto;
-    }
-    .image{{ block.id }} {
-        width: 100%;
-        height: 100%;
-    }
-    
-    .image-container-1-{{ block.id }}, .image-container-2-{{ block.id }} {
-        width: {{ block.settings.image-width }}px;
-    }
-    
-    .tile-text-container-{{ block.id }} {
-        word-wrap: break-word;
-        border: none;
-        padding: 0;
-        margin: 0;
-        font-size: 12px;
-        width: {{ block.settings.image-width }}px;
-    }
-    
-    .tile-text-container-{{ block.id }} a {
-        color: #000000;
-    }
-    
-    .image-1-{{ block.id }} {
-        padding: {{ block.settings.image-1-padding }}px;
-    }
-    
-    .image-2-{{ block.id }} {
-        padding: {{ block.settings.image-2-padding }}px;
-    }
-    
-    {% if block.settings.show-text == false %}
-        .text-container-{{ block.id }}{
-            display: none;
-        }
-    {% endif %}
+            .text-container-{{ block.id }} {
+                display: flex;
+                justify-content: center;
+                gap: {{ block.settings.gap }}px;
+            }
+            
+            .image-container-{{ block.id }} {
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                justify-content: stretch;
+                height: auto;
+            }
+            .image{{ block.id }} {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .image-container-1-{{ block.id }}, .image-container-2-{{ block.id }} {
+                width: {{ block.settings.image-width }}px;
+            }
+            
+            .tile-text-container-{{ block.id }} {
+                word-wrap: break-word;
+                border: none;
+                padding: 0;
+                margin: 0;
+                font-size: 12px;
+                width: {{ block.settings.image-width }}px;
+            }
+            
+            .tile-text-container-{{ block.id }} a {
+                color: #000000;
+            }
+            
+            .image-1-{{ block.id }} {
+                padding: {{ block.settings.image-1-padding }}px;
+            }
+            
+            .image-2-{{ block.id }} {
+                padding: {{ block.settings.image-2-padding }}px;
+            }
+            
+            {% if block.settings.show-text == false %}
+                .text-container-{{ block.id }}{
+                    display: none;
+                }
+            {% endif %}
 
-    {% if block.settings.gap > 0 %}
-        .tile-text-container-{{ block.id }}, .image-container-1-{{ block.id }}, .image-container-2-{{ block.id }} {
-            width: calc( {{ block.settings.image-width }}px - {{ block.settings.gap }}px/2 );
-        }
-    {% endif %}
+            {% if block.settings.gap > 0 %}
+                .tile-text-container-{{ block.id }}, .image-container-1-{{ block.id }}, .image-container-2-{{ block.id }} {
+                    width: calc( {{ block.settings.image-width }}px - {{ block.settings.gap }}px/2 );
+                }
+            {% endif %}
+        {% when 'spacer' %}
+            .custom-spacer-{{ block.id }} {
+                height: {{ block.settings.spacer }}px;
+            }
+    {% endcase %}
     
 {% endfor %}
 
@@ -221,6 +235,22 @@
                     "type": "url",
                     "id": "with-url-2-right",
                     "label": "Wearing With URL 2 (Right Image)"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
                 }
             ]
         }

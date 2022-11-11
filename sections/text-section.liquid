@@ -12,6 +12,10 @@
             <section class="text-container-{{ block.id }} decorated">
                 <p>{{ block.settings.text-content }}</p>
             </section>
+        {% when 'spacer' %}
+            <section class="custom-spacer-{{ block.id }}">
+
+            </section>
         
     {% endcase %}
 {% endfor %}
@@ -46,6 +50,10 @@
                 .text-container-{{ block.id }}.decorated > p {
                     border-left: 2px solid {{ block.settings.border-color }};
                     padding-left: 20px;
+                }
+            {% when 'spacer' %}
+                .custom-spacer-{{ block.id }} {
+                    height: {{ block.settings.spacer }}px;
                 }
         {% endcase %}
     {% endfor %}
@@ -256,6 +264,22 @@
                     "id": "border-color",
                     "label": "Border Color",
                     "default": "#000000"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
                 }
             ]
         }
