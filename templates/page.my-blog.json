@@ -422,6 +422,37 @@
       "settings": {
         "spacer": 45
       }
+    },
+    "6a00276c-7ed7-4db0-8e8f-53881d0aabdd": {
+      "type": "image-text-tile",
+      "blocks": {
+        "b32a6417-3cc8-4195-9da3-79b9fa593422": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "100",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "make-image-larger": true,
+            "text-layout-center": false,
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "bg-color": "#f3f3f3",
+            "text-font-size": 16,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "b32a6417-3cc8-4195-9da3-79b9fa593422"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -448,6 +479,7 @@
     "0fb6e911-ea1a-4f4b-874f-443bfbd55360",
     "dbbcde91-9850-4b96-b9ff-b2e7e8757db9",
     "d12d3309-2a82-4b00-8bc0-8d7815449f59",
-    "5313974b-080a-4ce8-9b1a-02178302c2a3"
+    "5313974b-080a-4ce8-9b1a-02178302c2a3",
+    "6a00276c-7ed7-4db0-8e8f-53881d0aabdd"
   ]
 }
