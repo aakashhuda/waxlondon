@@ -1,0 +1,75 @@
+<section class="main-{{ section.id }}">
+    <div class="title-{{ section.id }}">{{ section.settings.title }}</div>
+    <div class="links-{{ section.id }}">
+        {% for block in section.blocks %}
+            <a href="{{ block.settings.link-url | url_encode }}">{{ block.settings.link-name }}</a>
+        {% endfor %}
+    </div>
+    <hr class="hr">
+</section>
+
+<style>
+    .main-{{ section.id }} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-{{ section.id }} {
+        font-size: 24px;
+        color: #000000;
+        font-weight: bold;
+    }
+    .links-{{ section.id }} a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #000000;
+    }
+    hr.hr {
+        display: block;
+        margin: 0;
+        border: 1px solid #d8d8d8;
+        width: 60%;
+        margin-top: 10px;
+    }
+    {% for block in section.blocks %}
+    {% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "Navigation",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Journal",
+            "label": "Navigation Title"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Link",
+            "type": "links",
+            "settings": [
+                {
+                    "type": "url",
+                    "id": "link-url",
+                    "label": "Link URL"
+                },
+                {
+                    "type": "text",
+                    "id": "link-name",
+                    "label": "Link Name",
+                    "default": "Latest"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Navigation"
+        }
+    ]
+}
+{% endschema %}
