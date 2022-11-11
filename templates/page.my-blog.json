@@ -405,12 +405,6 @@
       "settings": {
       }
     },
-    "5313974b-080a-4ce8-9b1a-02178302c2a3": {
-      "type": "spacer",
-      "settings": {
-        "spacer": 45
-      }
-    },
     "6a00276c-7ed7-4db0-8e8f-53881d0aabdd": {
       "type": "image-text-tile",
       "blocks": {
@@ -533,6 +527,60 @@
       ],
       "settings": {
       }
+    },
+    "716f3f80-3d75-4ec7-b807-0072327a1843": {
+      "type": "wax-radio",
+      "blocks": {
+        "601ba29e-aeb2-44bc-bdb7-1004bf44088e": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "234b902a-b94d-460b-a9cf-ca77ee63963c": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "d1819126-47ff-42e9-9cf7-d28a22e01d52": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "a37663cc-040a-4e7b-adbb-601938284c59": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        },
+        "2dd9ed14-2c2d-4a56-bdde-98848cdd9f17": {
+          "type": "song",
+          "settings": {
+            "song-title": "Young Again",
+            "artist": "Hak Baker"
+          }
+        }
+      },
+      "block_order": [
+        "601ba29e-aeb2-44bc-bdb7-1004bf44088e",
+        "234b902a-b94d-460b-a9cf-ca77ee63963c",
+        "d1819126-47ff-42e9-9cf7-d28a22e01d52",
+        "a37663cc-040a-4e7b-adbb-601938284c59",
+        "2dd9ed14-2c2d-4a56-bdde-98848cdd9f17"
+      ],
+      "settings": {
+        "radio-image": "shopify:\/\/shop_images\/Radio_Image.png",
+        "image-width": 45,
+        "list-color": "#d67b3d",
+        "list-item-color": "#000000",
+        "list-item-margin": 5
+      }
     }
   },
   "order": [
@@ -557,9 +605,9 @@
     "0fb6e911-ea1a-4f4b-874f-443bfbd55360",
     "dbbcde91-9850-4b96-b9ff-b2e7e8757db9",
     "d12d3309-2a82-4b00-8bc0-8d7815449f59",
-    "5313974b-080a-4ce8-9b1a-02178302c2a3",
     "6a00276c-7ed7-4db0-8e8f-53881d0aabdd",
     "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb",
-    "0418a8b1-74f0-4821-a387-dca37cb22460"
+    "0418a8b1-74f0-4821-a387-dca37cb22460",
+    "716f3f80-3d75-4ec7-b807-0072327a1843"
   ]
 }
