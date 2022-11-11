@@ -237,6 +237,28 @@
       "settings": {
         "spacer": 45
       }
+    },
+    "013a6558-cce3-4384-8125-1f80b4fe2622": {
+      "type": "single-image-with-caption",
+      "blocks": {
+        "3dc2eb15-b6ea-4587-99f3-5c2dd82442b6": {
+          "type": "large",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "wearing-url": "",
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": ""
+          }
+        }
+      },
+      "block_order": [
+        "3dc2eb15-b6ea-4587-99f3-5c2dd82442b6"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -253,6 +275,7 @@
     "be108d2a-552e-40e1-9d4c-9b2d3ce3bc00",
     "1a041ad6-4a96-4410-8c38-5fa6a46c193c",
     "6e138f70-04ec-4d07-8e14-9bb257e627d3",
-    "2a6711bd-73af-40c0-a221-557503a4a4aa"
+    "2a6711bd-73af-40c0-a221-557503a4a4aa",
+    "013a6558-cce3-4384-8125-1f80b4fe2622"
   ]
 }
