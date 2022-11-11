@@ -102,10 +102,10 @@
           "type": "normal",
           "settings": {
             "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
-            "width": 44,
-            "text-font-size": 16,
-            "text-font-picker": "Helvetica, Arial, sans-serif",
-            "text-line-height": 1.5,
+            "width": 45,
+            "text-font-size": 30,
+            "text-font-picker": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "text-line-height": 1.1,
             "text-letter-spacing": 0.5,
             "text-font-color": "#000000",
             "border-color": "#000000"
