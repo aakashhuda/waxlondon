@@ -500,11 +500,23 @@
             "text-font-color": "#000000",
             "border-color": "#d67b3d"
           }
+        },
+        "2689762d-4498-4c13-bb51-74c5d9407813": {
+          "type": "question",
+          "settings": {
+            "text-content": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#d67b3d"
+          }
         }
       },
       "block_order": [
         "25e44da2-4d2d-408e-94f5-099570cc9501",
-        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc"
+        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc",
+        "2689762d-4498-4c13-bb51-74c5d9407813"
       ],
       "settings": {
       }
