@@ -385,6 +385,37 @@
       "settings": {
         "spacer": 45
       }
+    },
+    "d12d3309-2a82-4b00-8bc0-8d7815449f59": {
+      "type": "image-text-tile",
+      "blocks": {
+        "43c74943-c6a0-48f7-b8bf-d370896ac107": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "900",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "make-image-larger": false,
+            "text-layout-center": true,
+            "text": "<p><strong>Whiting Overshirt<br\/><\/strong><br\/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat.<\/p>",
+            "bg-color": "#4d4e3e",
+            "text-font-size": 18,
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#FFFFFF",
+            "show-button": true,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#FFFFFF",
+            "button-background-color": "#333333"
+          }
+        }
+      },
+      "block_order": [
+        "43c74943-c6a0-48f7-b8bf-d370896ac107"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -409,6 +440,7 @@
     "64fe5fe9-41ea-4cd0-88d2-24cc3236a8f3",
     "e1e0f2ee-ab51-404a-82a4-19a477bc8963",
     "0fb6e911-ea1a-4f4b-874f-443bfbd55360",
-    "dbbcde91-9850-4b96-b9ff-b2e7e8757db9"
+    "dbbcde91-9850-4b96-b9ff-b2e7e8757db9",
+    "d12d3309-2a82-4b00-8bc0-8d7815449f59"
   ]
 }
