@@ -102,7 +102,7 @@
           "type": "normal",
           "settings": {
             "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
-            "width": 45,
+            "width": 50,
             "text-font-size": 30,
             "text-font-picker": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
             "text-line-height": 1.1,
@@ -117,6 +117,35 @@
       ],
       "settings": {
       }
+    },
+    "8dad1f82-6f6c-4047-94a0-1e1ce2432a55": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 45
+      }
+    },
+    "ad22e647-0308-4d2c-aa69-412b6364cdc3": {
+      "type": "text-section",
+      "blocks": {
+        "14b46e2c-4705-4c3b-b2f7-ff3ecaa222e8": {
+          "type": "normal",
+          "settings": {
+            "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. <br\/><\/p><p>Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada.<\/p>",
+            "width": 50,
+            "text-font-size": 18,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "14b46e2c-4705-4c3b-b2f7-ff3ecaa222e8"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -124,6 +153,8 @@
     "3f02c6b9-c323-46dd-bdb5-3abd76b9b3f5",
     "header",
     "5bd4d3c7-c126-44bc-8f80-be6e7c8f13e2",
-    "99014a98-f133-4cec-b37e-672287917482"
+    "99014a98-f133-4cec-b37e-672287917482",
+    "8dad1f82-6f6c-4047-94a0-1e1ce2432a55",
+    "ad22e647-0308-4d2c-aa69-412b6364cdc3"
   ]
 }
