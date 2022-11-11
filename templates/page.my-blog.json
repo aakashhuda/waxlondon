@@ -24,15 +24,29 @@
             "link-url": "",
             "link-name": "Integrity At Wax"
           }
+        },
+        "d753e20d-b42f-466c-b93b-c85d05ada002": {
+          "type": "links",
+          "settings": {
+            "link-url": "",
+            "link-name": "Wax Radio"
+          }
         }
       },
       "block_order": [
         "f4f6807d-c280-4847-b0f4-7375db0528a5",
         "ce7ca18a-2a3c-407b-b435-0007de97ce9e",
-        "7cbf9d31-96b9-443e-a37b-c3e0ed431561"
+        "7cbf9d31-96b9-443e-a37b-c3e0ed431561",
+        "d753e20d-b42f-466c-b93b-c85d05ada002"
       ],
       "settings": {
         "title": "Journal"
+      }
+    },
+    "3f02c6b9-c323-46dd-bdb5-3abd76b9b3f5": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 80
       }
     },
     "header": {
@@ -78,6 +92,7 @@
   },
   "order": [
     "f7150ba0-97be-43a7-b6b2-38fd5b5517e0",
+    "3f02c6b9-c323-46dd-bdb5-3abd76b9b3f5",
     "header"
   ]
 }
