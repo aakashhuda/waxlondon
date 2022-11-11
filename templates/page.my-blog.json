@@ -175,6 +175,68 @@
       ],
       "settings": {
       }
+    },
+    "ae37a34c-615f-4246-af32-d6ca72cb2416": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 45
+      }
+    },
+    "be108d2a-552e-40e1-9d4c-9b2d3ce3bc00": {
+      "type": "single-image-with-caption",
+      "blocks": {
+        "ebe4166c-4d5b-4c8a-972f-050eb1e868ed": {
+          "type": "small",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "wearing-url": "",
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": ""
+          }
+        }
+      },
+      "block_order": [
+        "ebe4166c-4d5b-4c8a-972f-050eb1e868ed"
+      ],
+      "settings": {
+      }
+    },
+    "1a041ad6-4a96-4410-8c38-5fa6a46c193c": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 45
+      }
+    },
+    "6e138f70-04ec-4d07-8e14-9bb257e627d3": {
+      "type": "single-image-with-caption",
+      "blocks": {
+        "cfcd0e05-ce1f-421e-9ce8-43e378c3e708": {
+          "type": "medium",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "wearing-url": "",
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": ""
+          }
+        }
+      },
+      "block_order": [
+        "cfcd0e05-ce1f-421e-9ce8-43e378c3e708"
+      ],
+      "settings": {
+      }
+    },
+    "2a6711bd-73af-40c0-a221-557503a4a4aa": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 45
+      }
     }
   },
   "order": [
@@ -186,6 +248,11 @@
     "8dad1f82-6f6c-4047-94a0-1e1ce2432a55",
     "ad22e647-0308-4d2c-aa69-412b6364cdc3",
     "ef32cd7d-c321-45d7-8c73-b3849613dee8",
-    "1ec03e09-e2c6-46aa-8acc-d677c4460267"
+    "1ec03e09-e2c6-46aa-8acc-d677c4460267",
+    "ae37a34c-615f-4246-af32-d6ca72cb2416",
+    "be108d2a-552e-40e1-9d4c-9b2d3ce3bc00",
+    "1a041ad6-4a96-4410-8c38-5fa6a46c193c",
+    "6e138f70-04ec-4d07-8e14-9bb257e627d3",
+    "2a6711bd-73af-40c0-a221-557503a4a4aa"
   ]
 }
