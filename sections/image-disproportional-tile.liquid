@@ -1,0 +1,210 @@
+{% for block in section.blocks %}
+    {% if block.settings.second-image-larger == false %}
+        <div class="wrapper-{{ block.id }}">
+            <section class="main-{{ block.id }}">
+                <figure class="image-1-container-{{ block.id }} primary-image-{{ block.id }}">
+                    <img src="{{ block.settings.image-1 | img_url: 'master' }}" class="image-{{ block.id }}">
+                    <figcaption>
+                        Model wears <a href="{{ block.settings.wearing-url | url_encode }}">{{ block.settings.wearing-text }}</a>
+                        with <a href="{{ block.settings.with-url-1 | url_encode }}">{{ block.settings.with-text-1 }}</a> and
+                        <a href="{{ block.settings.with-url-2 | url_encode }}">{{ block.settings.with-text-2 }}</a>
+                    </figcaption>
+                </figure>
+                <figure class="image-2-container-{{ block.id }} secondary-image-{{ block.id }}">
+                    <img src="{{ block.settings.image-2 | img_url: 'master' }}" class="image-{{ block.id }}">
+                    <figcaption>
+                        Model wears <a href="{{ block.settings.wearing-url-right | url_encode }}">{{ block.settings.wearing-text-right }}</a>
+                        with <a href="{{ block.settings.with-url-1-right | url_encode }}">{{ block.settings.with-text-1-right }}</a> and
+                        <a href="{{ block.settings.with-url-2-right | url_encode }}">{{ block.settings.with-text-2-right }}</a>
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    {% else %}
+        <div class="wrapper-{{ block.id }}">
+            <section class="main-{{ block.id }}">
+                <figure class="image-1-container-{{ block.id }} secondary-image-{{ block.id }}">
+                    <img src="{{ block.settings.image-1 | img_url: 'master' }}" class="image-{{ block.id }}">
+                    <figcaption>
+                        Model wears <a href="{{ block.settings.wearing-url | url_encode }}">{{ block.settings.wearing-text }}</a>
+                        with <a href="{{ block.settings.with-url-1 | url_encode }}">{{ block.settings.with-text-1 }}</a> and
+                        <a href="{{ block.settings.with-url-2 | url_encode }}">{{ block.settings.with-text-2 }}</a>
+                    </figcaption>
+                </figure>
+                <figure class="image-2-container-{{ block.id }} primary-image-{{ block.id }}">
+                    <img src="{{ block.settings.image-2 | img_url: 'master' }}" class="image-{{ block.id }}">
+                    <figcaption>
+                        Model wears <a href="{{ block.settings.wearing-url-right | url_encode }}">{{ block.settings.wearing-text-right }}</a>
+                        with <a href="{{ block.settings.with-url-1-right | url_encode }}">{{ block.settings.with-text-1-right }}</a> and
+                        <a href="{{ block.settings.with-url-2-right | url_encode }}">{{ block.settings.with-text-2-right }}</a>
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    {% endif %}
+{% endfor %}
+
+<style>
+{% for block in section.blocks %}
+    .wrapper-{{ block.id }} {
+        display: flex;
+        justify-content: center;
+    }
+    .main-{{ block.id }} {
+        display: flex;
+        width: {{ block.settings.section-width }}%;
+    }
+    .main-{{ block.id }} figure {
+        margin: 0;
+    }
+    .primary-image-{{ block.id }}{
+        width: {{ block.settings.image-width }}%;
+    }
+    .secondary-image-{{ block.id }} {
+        width: calc(100% - {{ block.settings.image-width }}%);
+    }
+    .main-{{ block.id }} figure a {
+        color: #000000;
+    }
+    .image-{{ block.id }} {
+        width: 100%;
+    }
+    {% if block.settings.image-gap == true %}
+        .main-{{ block.id }} {
+            gap: 1.7%;
+        }
+        .primary-image-{{ block.id }}{
+            width: calc({{ block.settings.image-width }}% - 0.85%);
+        }
+        .secondary-image-{{ block.id }} {
+            width: calc(100% - {{ block.settings.image-width }}% - 0.85%);
+        }
+    {% endif %}
+{% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "Disproportional Image",
+    "blocks": [
+        {
+            "name": "Disproportional Image",
+            "type": "disproportional-image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image-1",
+                    "label": "Image 1"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image-2",
+                    "label": "Image 2"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "second-image-larger",
+                    "label": "Make Second Image Larger",
+                    "default": false
+                },
+                {
+                    "type": "range",
+                    "id": "section-width",
+                    "label": "Section Width",
+                    "min": 50,
+                    "max": 100,
+                    "unit": "%",
+                    "step": 1,
+                    "default": 100
+                },
+                {
+                    "type": "range",
+                    "id": "image-width",
+                    "label": "Image Width",
+                    "min": 50,
+                    "max": 70,
+                    "unit": "%",
+                    "default": 60
+                },
+                {
+                    "type": "checkbox",
+                    "id": "image-gap",
+                    "label": "Image Gap",
+                    "default": false
+                },
+                {
+                    "type": "text",
+                    "id": "wearing-text",
+                    "label": "Wearing Text (Left Image)",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "url",
+                    "id": "wearing-url",
+                    "label": "Wearing URL (Left Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1",
+                    "label": "Wearing With Name 1 (Left Image)",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1",
+                    "label": "Wearing With URL 1 (Left Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2",
+                    "label": "Wearing With Name 2 (Left Image)",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2",
+                    "label": "Wearing With URL 2 (Left Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "wearing-text-right",
+                    "label": "Wearing Text (Right Image)",
+                    "default": "Whiting Shirt Cosmic Papaya Check"
+                },
+                {
+                    "type": "url",
+                    "id": "wearing-url-right",
+                    "label": "Wearing URL (Right Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-1-right",
+                    "label": "Wearing With 1 (Right Image)",
+                    "default": "Dean T Shirt Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-1-right",
+                    "label": "Wearing With URL 1 (Right Image)"
+                },
+                {
+                    "type": "text",
+                    "id": "with-text-2-right",
+                    "label": "Wearing With 2 (Right Image)",
+                    "default": "Pleat Trousers Black"
+                },
+                {
+                    "type": "url",
+                    "id": "with-url-2-right",
+                    "label": "Wearing With URL 2 (Right Image)"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image Disproportional Tile"
+        }
+    ]
+}
+{% endschema %}
