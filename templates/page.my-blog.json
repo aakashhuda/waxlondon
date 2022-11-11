@@ -447,6 +447,39 @@
       "settings": {
         "spacer": 45
       }
+    },
+    "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb": {
+      "type": "image-disproportional-tile",
+      "blocks": {
+        "aaa97c0e-d63f-44ab-b30c-80a1ed60c566": {
+          "type": "disproportional-image",
+          "settings": {
+            "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1307.jpg",
+            "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
+            "second-image-larger": false,
+            "section-width": 100,
+            "image-width": 56,
+            "image-gap": true,
+            "wearing-text": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url": "",
+            "with-text-1": "Dean T Shirt Black",
+            "with-url-1": "",
+            "with-text-2": "Pleat Trousers Black",
+            "with-url-2": "",
+            "wearing-text-right": "Whiting Shirt Cosmic Papaya Check",
+            "wearing-url-right": "",
+            "with-text-1-right": "Dean T Shirt Black",
+            "with-url-1-right": "",
+            "with-text-2-right": "Pleat Trousers Black",
+            "with-url-2-right": ""
+          }
+        }
+      },
+      "block_order": [
+        "aaa97c0e-d63f-44ab-b30c-80a1ed60c566"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -473,6 +506,7 @@
     "d12d3309-2a82-4b00-8bc0-8d7815449f59",
     "5313974b-080a-4ce8-9b1a-02178302c2a3",
     "6a00276c-7ed7-4db0-8e8f-53881d0aabdd",
-    "430fe64b-4255-45a0-bbcc-e71ddac4e32a"
+    "430fe64b-4255-45a0-bbcc-e71ddac4e32a",
+    "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb"
   ]
 }
