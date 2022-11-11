@@ -1,6 +1,12 @@
 {
   "wrapper": "div.blog-page-wrapper",
   "sections": {
+    "77f94e45-0a20-42df-8190-60e4ad4a4e2a": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 10
+      }
+    },
     "f7150ba0-97be-43a7-b6b2-38fd5b5517e0": {
       "type": "navigation",
       "blocks": {
@@ -995,6 +1001,7 @@
     }
   },
   "order": [
+    "77f94e45-0a20-42df-8190-60e4ad4a4e2a",
     "f7150ba0-97be-43a7-b6b2-38fd5b5517e0",
     "3f02c6b9-c323-46dd-bdb5-3abd76b9b3f5",
     "header",
