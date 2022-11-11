@@ -118,12 +118,6 @@
       "settings": {
       }
     },
-    "8dad1f82-6f6c-4047-94a0-1e1ce2432a55": {
-      "type": "spacer",
-      "settings": {
-        "spacer": 45
-      }
-    },
     "ad22e647-0308-4d2c-aa69-412b6364cdc3": {
       "type": "text-section",
       "blocks": {
@@ -145,12 +139,6 @@
         "14b46e2c-4705-4c3b-b2f7-ff3ecaa222e8"
       ],
       "settings": {
-      }
-    },
-    "ef32cd7d-c321-45d7-8c73-b3849613dee8": {
-      "type": "spacer",
-      "settings": {
-        "spacer": 20
       }
     },
     "1ec03e09-e2c6-46aa-8acc-d677c4460267": {
@@ -402,11 +390,11 @@
             "text-font-size": 18,
             "text-line-height": 1.5,
             "text-letter-spacing": 0.5,
-            "text-font-color": "#FFFFFF",
+            "text-font-color": "#ffffff",
             "show-button": true,
             "button-label": "Shop The Look",
             "button-url": "",
-            "button-text-color": "#FFFFFF",
+            "button-text-color": "#ffffff",
             "button-background-color": "#333333"
           }
         }
@@ -443,7 +431,7 @@
             "show-button": false,
             "button-label": "Shop The Look",
             "button-url": "",
-            "button-text-color": "#FFFFFF",
+            "button-text-color": "#ffffff",
             "button-background-color": "#000000"
           }
         }
@@ -453,6 +441,12 @@
       ],
       "settings": {
       }
+    },
+    "430fe64b-4255-45a0-bbcc-e71ddac4e32a": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 45
+      }
     }
   },
   "order": [
@@ -461,9 +455,7 @@
     "header",
     "5bd4d3c7-c126-44bc-8f80-be6e7c8f13e2",
     "99014a98-f133-4cec-b37e-672287917482",
-    "8dad1f82-6f6c-4047-94a0-1e1ce2432a55",
     "ad22e647-0308-4d2c-aa69-412b6364cdc3",
-    "ef32cd7d-c321-45d7-8c73-b3849613dee8",
     "1ec03e09-e2c6-46aa-8acc-d677c4460267",
     "ae37a34c-615f-4246-af32-d6ca72cb2416",
     "be108d2a-552e-40e1-9d4c-9b2d3ce3bc00",
@@ -480,6 +472,7 @@
     "dbbcde91-9850-4b96-b9ff-b2e7e8757db9",
     "d12d3309-2a82-4b00-8bc0-8d7815449f59",
     "5313974b-080a-4ce8-9b1a-02178302c2a3",
-    "6a00276c-7ed7-4db0-8e8f-53881d0aabdd"
+    "6a00276c-7ed7-4db0-8e8f-53881d0aabdd",
+    "430fe64b-4255-45a0-bbcc-e71ddac4e32a"
   ]
 }
