@@ -10,10 +10,18 @@
             "link-url": "",
             "link-name": "Latest"
           }
+        },
+        "ce7ca18a-2a3c-407b-b435-0007de97ce9e": {
+          "type": "links",
+          "settings": {
+            "link-url": "",
+            "link-name": "Wax Meets"
+          }
         }
       },
       "block_order": [
-        "f4f6807d-c280-4847-b0f4-7375db0528a5"
+        "f4f6807d-c280-4847-b0f4-7375db0528a5",
+        "ce7ca18a-2a3c-407b-b435-0007de97ce9e"
       ],
       "settings": {
         "title": "Journal"
