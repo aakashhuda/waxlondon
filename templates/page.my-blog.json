@@ -355,7 +355,7 @@
             "image-1": "shopify:\/\/shop_images\/04-10-2022-WAX1517.jpg",
             "image-2": "shopify:\/\/shop_images\/04-10-2022-WAX2264.jpg",
             "image-width": 500,
-            "gap": 20,
+            "gap": 18,
             "image-1-padding": 0,
             "image-2-padding": 0,
             "show-text": false,
