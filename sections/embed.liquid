@@ -1,0 +1,129 @@
+<section class="youtube-spotify-{{ section.id }}">
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when "youtube-spotify-block" %}
+                <div class="block-{{ block.id }} block-width-{{ block.settings.block-width }}">
+                        {{ block.settings.embedded-code }}
+                </div>
+            {% when 'spacer-block' %}
+                <section class="spacer-{{ block.id }}">
+                </section>
+        {% endcase %}
+    {% endfor %}
+</section>
+
+<style>
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when "youtube-spotify-block" %}
+                .block-{{ block.id }}.block-width-small {
+                    max-width: 600px !important;
+                    margin: 0 auto;
+                 }
+                 .block-{{ block.id }}.block-width-medium {
+                    max-width: 900px !important;
+                    margin: 0 auto;
+                 }
+                 .block-{{ block.id }}.block-width-full {
+                    max-width: 100% !important;
+                 }
+                 .block-{{ block.id }}.block-width-custom {
+                    max-width: {{ block.settings.custom-block-width | append: "px" }} !important;
+                    margin: 0 auto;
+                 }
+                 .block-{{ block.id }} {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                 }
+                 .block-{{ block.id }} iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                 }
+            {% when 'spacer-block' %}
+                .youtube-spotify-{{ section.id }}  .spacer-{{ block.id }} {
+                    height: {{ block.settings.spacer-height }}px;
+                }
+        {% endcase %}
+    {% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "Embed",
+    "settings": [
+    ],
+    "blocks": [
+        {
+            "type": "youtube-spotify-block",
+            "name": "youtube-spotify-block",
+            "settings": [
+                {
+           "type":"text",
+           "id":"embedded-code",
+           "label":"embedded-code"
+        },
+        {
+                "type": "select",
+                "id": "block-width",
+                "label": "Block width",
+                "options": [
+                {
+                "value": "small",
+                "label": "Small"
+                },
+                {
+                "value": "medium",
+                "label": "Medium"
+                },
+                {
+                "value": "full",
+                "label": "Full"
+                },
+                {
+                "value": "custom",
+                "label": "Custom"
+                }
+            ],
+            "default": "medium"
+            },
+            {  
+                "type": "range",
+                "id": "custom-block-width",
+                "label": "Custom block width",
+                "min": 200,
+                "max": 1900,
+                "step": 50,
+                "unit": "px",
+                "default": 800
+            }
+            ]
+        },
+        {
+            "type": "spacer-block",
+            "name": "Spacer",
+              "settings":[
+                {
+                    "type": "range",
+                    "id": "spacer-height",
+                    "label": "Spacer Height",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 30
+                }
+              ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Embed"
+        }
+    ]
+}
+
+{% endschema %}
