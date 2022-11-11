@@ -442,12 +442,6 @@
       "settings": {
       }
     },
-    "430fe64b-4255-45a0-bbcc-e71ddac4e32a": {
-      "type": "spacer",
-      "settings": {
-        "spacer": 45
-      }
-    },
     "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb": {
       "type": "image-disproportional-tile",
       "blocks": {
@@ -480,6 +474,40 @@
       ],
       "settings": {
       }
+    },
+    "0418a8b1-74f0-4821-a387-dca37cb22460": {
+      "type": "faq",
+      "blocks": {
+        "25e44da2-4d2d-408e-94f5-099570cc9501": {
+          "type": "question",
+          "settings": {
+            "text-content": "<p>This is the question, commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla?<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#d67b3d"
+          }
+        },
+        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc": {
+          "type": "answer",
+          "settings": {
+            "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam. Aenean iaculis ligula a quam vehicula mattis. Nulla fringilla bibendum erat id molestie. Quisque id arcu in libero euismod rutrum sed ut libero. Nunc et dolor non ex elementum varius vel ut ligula. Sed id felis ex. Aenean tristique lobortis est, vitae consequat turpis sagittis varius. Quisque pharetra, dui ornare iaculis consectetur, magna velit condimentum nulla, non tristique nisl lorem ac risus. Cras accumsan eu est in dignissim. Aenean ligula felis, rutrum in augue quis, consectetur porta libero. Nunc faucibus ornare risus nec accumsan. Donec sed nisi rutrum, mattis diam a, tempus risus. Morbi at lectus elementum, laoreet orci sit amet, rutrum ipsum. Integer vel aliquet risus, sed pharetra justo. Pellentesque commodo eu quam vel hendrerit. Mauris non turpis fermentum, faucibus nulla quis, convallis nulla. Ut efficitur metus eros, quis consequat nunc tincidunt et. Sed eleifend arcu vel porta cursus. Mauris ultrices mauris vel lacus hendrerit sodales. Quisque a mattis turpis. Sed nisl purus, malesuada ac ultricies iaculis, iaculis id tellus. Morbi hendrerit ipsum sit amet lacus convallis tincidunt. Praesent quis libero rutrum, pharetra ex non, tincidunt justo. Nulla facilisi.<\/p>",
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#d67b3d"
+          }
+        }
+      },
+      "block_order": [
+        "25e44da2-4d2d-408e-94f5-099570cc9501",
+        "d46966b3-ee3d-4270-a1f1-c15ce72c04fc"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -506,7 +534,7 @@
     "d12d3309-2a82-4b00-8bc0-8d7815449f59",
     "5313974b-080a-4ce8-9b1a-02178302c2a3",
     "6a00276c-7ed7-4db0-8e8f-53881d0aabdd",
-    "430fe64b-4255-45a0-bbcc-e71ddac4e32a",
-    "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb"
+    "85d15a8a-27fc-4e9e-af4c-b2d7227ecaeb",
+    "0418a8b1-74f0-4821-a387-dca37cb22460"
   ]
 }
