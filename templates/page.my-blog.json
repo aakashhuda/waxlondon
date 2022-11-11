@@ -88,11 +88,42 @@
         "article-published-in": "Integrity",
         "title-padding": 30
       }
+    },
+    "5bd4d3c7-c126-44bc-8f80-be6e7c8f13e2": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 70
+      }
+    },
+    "99014a98-f133-4cec-b37e-672287917482": {
+      "type": "text-section",
+      "blocks": {
+        "777e4eaf-3682-46c2-a02b-46d95710f7e6": {
+          "type": "normal",
+          "settings": {
+            "text-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu euismod ante, quis finibus odio. Aenean scelerisque consectetur pharetra. In condimentum est eu eros malesuada aliquam.<\/p>",
+            "width": 44,
+            "text-font-size": 16,
+            "text-font-picker": "Helvetica, Arial, sans-serif",
+            "text-line-height": 1.5,
+            "text-letter-spacing": 0.5,
+            "text-font-color": "#000000",
+            "border-color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "777e4eaf-3682-46c2-a02b-46d95710f7e6"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "f7150ba0-97be-43a7-b6b2-38fd5b5517e0",
     "3f02c6b9-c323-46dd-bdb5-3abd76b9b3f5",
-    "header"
+    "header",
+    "5bd4d3c7-c126-44bc-8f80-be6e7c8f13e2",
+    "99014a98-f133-4cec-b37e-672287917482"
   ]
 }
