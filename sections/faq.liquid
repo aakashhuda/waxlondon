@@ -1,0 +1,166 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'question' %}
+            <section class="text-container-{{ block.id }} normal">
+                <div class="text-{{ block.id }}">{{ block.settings.text-content }}</div>
+            </section>
+        {% when 'answer' %}
+            <section class="text-container-{{ block.id }} decorated">
+                <p>{{ block.settings.text-content }}</p>
+            </section>
+    {% endcase %}
+{% endfor %}
+
+<style>
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when "question", "answer" %}
+                .text-container-{{ block.id }} {
+                    font-size: {{ block.settings.text-font-size }}px;
+                    font-family: {{ block.settings.text-font-picker }};
+                    color: {{ block.settings.text-font-color }};
+                    line-height: {{ block.settings.text-line-height }};
+                    letter-spacing: {{ block.settings.text-letter-spacing }}px;
+                    display: flex;
+                    justify-content: center;
+                }
+                {% comment %} .text-container-{{ block.id }} div, .text-container-{{ block.id }} > p {
+                    width: {{ block.settings.width }}%;
+                } {% endcomment %}
+                .text-container-{{ block.id }}.decorated p {
+                    margin: 0;
+                }
+                .text-container-{{ block.id }}.decorated > p {
+                    border-left: 2px solid {{ block.settings.border-color }};
+                    padding-left: 25px;
+                    max-width: 600px;
+                }
+                .text-{{ block.id }} {
+                    max-width: 600px;
+                }
+        {% endcase %}
+    {% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "FAQ",
+    "blocks": [
+        {
+            "name": "Question",
+            "type": "question",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text-content",
+                    "label": "Text Content"
+                },
+                {
+                    "type": "range",
+                    "id": "text-font-size",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Font Size"
+                },
+                {
+                    "type": "font",
+                    "id": "text-font-picker",
+                    "label": "Font"
+                },
+                {
+                    "type": "range",
+                    "id": "text-line-height",
+                    "min": 1,
+                    "max": 4,
+                    "step": 0.1,
+                    "unit": "num",
+                    "default": 1.5,
+                    "label": "Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "text-letter-spacing",
+                    "min": 0,
+                    "max": 5,
+                    "step": 0.50,
+                    "unit": "px",
+                    "default": 0.50,
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Font Color",
+                    "default": "#000000"
+                }
+            ]
+        },
+        {
+            "name": "Answer",
+            "type": "answer",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "text-content",
+                    "label": "Text Content"
+                },
+                {
+                    "type": "range",
+                    "id": "text-font-size",
+                    "min": 0,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Font Size"
+                },
+                {
+                    "type": "font",
+                    "id": "text-font-picker",
+                    "label": "Font"
+                },
+                {
+                    "type": "range",
+                    "id": "text-line-height",
+                    "min": 1,
+                    "max": 4,
+                    "step": 0.1,
+                    "unit": "num",
+                    "default": 1.5,
+                    "label": "Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "text-letter-spacing",
+                    "min": 0,
+                    "max": 5,
+                    "step": 0.50,
+                    "unit": "px",
+                    "default": 0.50,
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Font Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "border-color",
+                    "label": "Border Color",
+                    "default": "#000000"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "FAQ Section"
+        }
+    ]
+}
+{% endschema %}
