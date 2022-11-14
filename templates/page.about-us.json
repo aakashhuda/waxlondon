@@ -2,9 +2,13 @@
     "sections": {
         "main": {
             "type": "hero-about-us"
+        },
+        "double_image": {
+            "type": "double-image-text"
         }
     },
     "order": [
-        "main "
+        "main",
+        "double_image"
     ]
 }

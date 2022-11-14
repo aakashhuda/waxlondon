@@ -1,0 +1,115 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'double-image-with-text' %} 
+            <div class="wrapper-{{ block.id }}">
+                <section class="double-image-container-{{ block.id }}">
+
+                    <div class="potrait-image-container-{{ block.id }}">
+                        <img src="{{ block.settings.image-portrait | img_url: "master" }}" class="image-p-{{ block.id }}">
+                    </div>
+
+                    <div class="image-with-text-container-{{ block.id }}">
+                        <div class="landscape-image-container-{{ block.id }}">
+                            <img src="{{ block.settings.image-landscape | img_url: "master" }}" class="image-l-{{ block.id }}">
+                        </div>
+                        <div class="title-{{ block.id }}">{{ block.settings.title }}</div>
+                        <div class="description-{{ block.id }}">{{ block.settings.description }}</div>
+                        <div class="link-{{ block.id }}">
+                            <a href="{{ block.settings.url }}">{{ block.settings.url-text }}</a>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+    {% endcase %}
+{% endfor %}
+
+<style>
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'double-image-with-text' %}
+            #wrapper-{{ block.id }} {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .double-image-container-{{ block.id }} {
+                display: flex;
+            }
+            .potrait-image-container-{{ block.id }} {
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 12%; 
+            }
+            .image-with-text-container-{{ block.id }} {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+            .landscape-image-container-{{ block.id }} {
+                width: 100%;
+            }
+            .image-p-{{ block.id }} {
+                width: 100%;
+                height: auto;
+                max-width: 651px;
+                max-height: 868px;
+            }
+            .image-l-{{ block.id }} {
+                width: 100%;
+                max-width: 720px;
+                max-height: 480px;
+            }
+    {% endcase %}
+{% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "Double Image with Text",
+    "settings": [
+
+    ],
+    "blocks": [
+        {
+            "name": "Double Image with Text",
+            "type": "double-image-with-text",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image-portrait",
+                    "label": "Choose Portrait Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image-landscape",
+                    "label": "Choose Landscape Image"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "url-text",
+                    "label": "URL Name"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
