@@ -44,13 +44,13 @@
                 width: {{ block.settings.section-width }}%;
             }
             .potrait-image-container-{{ block.id }} {
-                width: 50%;
+                width: 100%%;
                 display: flex;
                 justify-content: space-evenly;
                 padding-top: {{ block.settings.padding-top }}%; 
             }
             .image-with-text-container-{{ block.id }} {
-                width: 50%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -60,13 +60,13 @@
                 width: 100%;
             }
             .image-p-{{ block.id }} {
-                width: 100%;
+                width: {{ block.settings.image-p-width }}%;
                 height: auto;
                 max-width: 651px;
                 max-height: 868px;
             }
             .image-l-{{ block.id }} {
-                width: 100%;
+                width: {{ block.settings.image-l-width }}%;
                 max-width: 720px;
                 max-height: 480px;
             }
@@ -90,10 +90,10 @@
             }
             {% if block.settings.gap > 0 %}
                 .potrait-image-container-{{ block.id }} {
-                    width: calc(50% - ({{ block.settings.gap }}%/2));
+                    width: calc(100% - ({{ block.settings.gap }}%/2));
                 }
                 .image-with-text-container-{{ block.id }} {
-                    width: calc(50% - ({{ block.settings.gap }}%/2));
+                    width: calc(100% - ({{ block.settings.gap }}%/2));
                 }
             {% endif %}
             {% if block.settings.title-italic == true %}
@@ -137,9 +137,29 @@
                     "label": "Choose Portrait Image"
                 },
                 {
+                    "type": "range",
+                    "id": "image-p-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Portrait Image Width"
+                },
+                {
                     "type": "image_picker",
                     "id": "image-landscape",
                     "label": "Choose Landscape Image"
+                },
+                {
+                    "type": "range",
+                    "id": "image-l-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Landscape Image Width"
                 },
                 {
                     "type": "text",
