@@ -1,0 +1,188 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'text-image' %} 
+            <div id="wrapper-{{ block.id }}">
+                <section class="text-image-container-{{ block.id }}">
+                    <div class="text-container-{{ block.id }}">
+                        <div>
+                            <p>{{ block.settings.description }}</p>
+                            <a href="{{ block.settings.url }}">{{ block.settings.url-text }}</a>
+                        </div>
+                    </div>
+                    <div class="image-container-{{ block.id }}">
+                        <img src="{{ block.settings.image | img_url: "master" }}" class="image-{{ block.id }}">
+                    </div>
+                </section>
+            </div>
+        
+        {% when 'spacer' %}
+            <section class="custom-spacer-{{ block.id }}">
+
+            </section>
+    {% endcase %}
+{% endfor %}
+
+<style>
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'text-image' %}
+            #wrapper-{{ block.id }} {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .text-image-container-{{ block.id }} {
+                display: flex;
+                justify-content: space-evenly;
+                width: {{ block.settings.block-width }}%;
+            }
+            .text-container-{{ block.id }} {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .text-container-{{ block.id }} div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: justify;
+                width: {{ block.settings.text-width }}%;
+            }
+            .text-container-{{ block.id }} a {
+                text-decoration: none;
+                color: #2b2724;
+                font-size: 14px;
+                text-transform: uppercase;
+                padding-bottom: 7px;
+                border-bottom: 1px solid #2b2724;
+                padding-top: 40px;
+            }
+            .image-container-{{ block.id }} {
+                width: 100%;
+            }
+            .image-{{ block.id }} {
+                width: {{ block.settings.image-width }}%;
+            }
+        {% when 'spacer' %}
+            .custom-spacer-{{ block.id }} {
+                height: {{ block.settings.spacer }}px;
+            }    
+
+    {% endcase %}
+{% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "Text Image",
+    "settings": [
+
+    ],
+    "blocks": [
+        {
+            "name": "Text Image",
+            "type": "text-image",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "block-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Block Width"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Choose Portrait Image"
+                },
+                {
+                    "type": "range",
+                    "id": "image-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Image Width"
+                },
+                {
+                    "type": "range",
+                    "id": "text-width",
+                    "label": "Text Width",
+                    "min": 50,
+                    "max": 100,
+                    "default": 100,
+                    "step": 1,
+                    "unit": "%"
+                },
+                {
+                    "type": "text",
+                    "id": "url-text",
+                    "label": "URL Name",
+                    "default": "On Design"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                },
+                {
+                    "type": "font",
+                    "id": "description-font",
+                    "label": "Description Font"
+                },
+                {
+                    "type": "range",
+                    "id": "description-font-size",
+                    "min": 14,
+                    "max": 20,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "description-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Description Width"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text Image"
+        }
+    ]
+}
+{% endschema %}
