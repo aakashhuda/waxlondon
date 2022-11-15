@@ -1,14 +1,43 @@
 {
-    "sections": {
-        "main": {
-            "type": "hero-about-us"
-        },
-        "double_image": {
-            "type": "double-image-text"
-        }
+  "sections": {
+    "main": {
+      "type": "hero-about-us",
+      "settings": {
+        "section-width": 100
+      }
     },
-    "order": [
-        "main",
-        "double_image"
-    ]
+    "double_image": {
+      "type": "double-image-text",
+      "blocks": {
+        "eb04fee7-12a3-4690-99e5-6604ef08d45a": {
+          "type": "double-image-with-text",
+          "settings": {
+            "image-portrait": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_20_172_R2_1.png",
+            "image-landscape": "shopify:\/\/shop_images\/lighter_1.png",
+            "title": "Tangible Strides",
+            "description": "Each year 90% of our distributable profits are shared between charitablecauses and the people that make our collections happen. The pieces we make are cut in thefinest vegan materials, selected to have the lowest impacton our global environment. We‘re putting care for people and planet at the heart of our endeavors.",
+            "url-text": "learn more about our way",
+            "url": "",
+            "padding-top": 12,
+            "gap": 0,
+            "title-font": "Helvetica, Arial, sans-serif",
+            "description-font": "Helvetica, Arial, sans-serif",
+            "title-font-size": 26,
+            "description-font-size": 16,
+            "description-width": 100,
+            "title-italic": true
+          }
+        }
+      },
+      "block_order": [
+        "eb04fee7-12a3-4690-99e5-6604ef08d45a"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "double_image"
+  ]
 }
