@@ -35,12 +35,13 @@
             }
             .double-image-container-{{ block.id }} {
                 display: flex;
+                gap: {{ block.settings.gap }}%;
             }
             .potrait-image-container-{{ block.id }} {
                 width: 50%;
                 display: flex;
                 justify-content: space-evenly;
-                padding-top: 12%; 
+                padding-top: {{ block.settings.padding-top }}%; 
             }
             .image-with-text-container-{{ block.id }} {
                 width: 50%;
@@ -63,6 +64,39 @@
                 max-width: 720px;
                 max-height: 480px;
             }
+            .link-{{ block.id }} a {
+                text-decoration: none;
+                color: #2b2724;
+                font-size: 14px;
+                text-transform: uppercase;
+                padding-top-bottom: 7px;
+                border-bottom: 1px solid #2b2724;
+            }
+            .title-{{ block.id }} {
+                font-family: {{ block.settings.title-font }};
+                font-size: {{ block.settings.title-font-size }}px;
+            }
+            .description-{{ block.id }} {
+                font-family: {{ block.settings.description-font }};
+                font-size: {{ block.settings.description-font-size }}px;
+                text-align: justify;
+                width: {{ block.settings.description-width }}%;
+            }
+            {% if block.settings.gap > 0 %}
+                .potrait-image-container-{{ block.id }} {
+                    width: calc(50% - ({{ block.settings.gap }}%/2));
+                }
+                .image-with-text-container-{{ block.id }} {
+                    width: calc(50% - ({{ block.settings.gap }}%/2));
+                }
+            {% endif %}
+            {% if block.settings.title-italic == true %}
+                .title-{{ block.id }} {
+                    font-style: italic;
+                }
+            {% endif %}
+            
+
     {% endcase %}
 {% endfor %}
 </style>
@@ -107,6 +141,72 @@
                     "type": "url",
                     "id": "url",
                     "label": "URL"
+                },
+                {
+                    "type": "range",
+                    "id": "padding-top",
+                    "label": "Portrait Image Position",
+                    "min": 0,
+                    "max": 20,
+                    "default": 12,
+                    "unit": "%",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "gap",
+                    "label": "Column Gap",
+                    "min": 0,
+                    "max": 20,
+                    "default": 0,
+                    "unit": "%",
+                    "step": 1
+                },
+                {
+                    "type": "font",
+                    "id": "title-font",
+                    "label": "Title Font"
+                },
+                {
+                    "type": "font",
+                    "id": "description-font",
+                    "label": "Description Font"
+                },
+                {
+                    "type": "range",
+                    "id": "title-font-size",
+                    "min": 14,
+                    "max": 30,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 26,
+                    "label": "Title Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "description-font-size",
+                    "min": 14,
+                    "max": 20,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "description-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Description Width"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "title-italic",
+                    "label": "Title Italic",
+                    "default": true
                 }
             ]
         }
