@@ -1,7 +1,7 @@
 {% for block in section.blocks %}
     {% case block.type %}
         {% when 'double-image-with-text' %} 
-            <div class="wrapper-{{ block.id }}">
+            <div id="wrapper-{{ block.id }}">
                 <section class="double-image-container-{{ block.id }}">
 
                     <div class="potrait-image-container-{{ block.id }}">
@@ -36,6 +36,7 @@
             .double-image-container-{{ block.id }} {
                 display: flex;
                 gap: {{ block.settings.gap }}%;
+                width: {{ block.settings.section-width }}%;
             }
             .potrait-image-container-{{ block.id }} {
                 width: 50%;
@@ -112,6 +113,16 @@
             "name": "Double Image with Text",
             "type": "double-image-with-text",
             "settings": [
+                {
+                    "type": "range",
+                    "id": "section-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Section Width"
+                },
                 {
                     "type": "image_picker",
                     "id": "image-portrait",
