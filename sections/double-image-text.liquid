@@ -9,6 +9,7 @@
                     </div>
 
                     <div class="image-with-text-container-{{ block.id }}">
+                        <div class="mobile-description-{{ block.id }}">{{ block.settings.mobile-description }}</div>
                         <div class="landscape-image-container-{{ block.id }}">
                             <img src="{{ block.settings.image-landscape | img_url: "master" }}" class="image-l-{{ block.id }}">
                         </div>
@@ -44,7 +45,7 @@
                 width: {{ block.settings.section-width }}%;
             }
             .potrait-image-container-{{ block.id }} {
-                width: 100%%;
+                width: 100%;
                 display: flex;
                 justify-content: space-evenly;
                 padding-top: {{ block.settings.padding-top }}%; 
@@ -62,13 +63,13 @@
             .image-p-{{ block.id }} {
                 width: {{ block.settings.image-p-width }}%;
                 height: auto;
-                max-width: 651px;
-                max-height: 868px;
+                {% comment %} max-width: 651px;
+                max-height: 868px; {% endcomment %}
             }
             .image-l-{{ block.id }} {
                 width: {{ block.settings.image-l-width }}%;
-                max-width: 720px;
-                max-height: 480px;
+                {% comment %} max-width: 720px;
+                max-height: 480px; {% endcomment %}
             }
             .link-{{ block.id }} a {
                 text-decoration: none;
@@ -88,6 +89,12 @@
                 text-align: justify;
                 width: {{ block.settings.description-width }}%;
             }
+            .mobile-description-{{ block.id }} {
+                display: none;
+                font-family: {{ block.settings.mobile-description-font }};
+                font-size: {{ block.settings.mobile-description-font-size }}px;
+                width: {{ block.settings.mobile-description-width }}%;
+            }
             {% if block.settings.gap > 0 %}
                 .potrait-image-container-{{ block.id }} {
                     width: calc(100% - ({{ block.settings.gap }}%/2));
@@ -101,6 +108,56 @@
                     font-style: italic;
                 }
             {% endif %}
+            @media (max-width: 768px) {
+                .double-image-container-{{ block.id }} {
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+                .potrait-image-container-{{ block.id }} {
+                    width: 100%;
+                }
+                .image-with-text-container-{{ block.id }} {
+                    width: 100%;
+                }
+                .image-p-{{ block.id }} {
+                    width: 100%;
+                }
+                .landscape-image-container-{{ block.id }} {
+                    width: 100%;
+                }
+                .image-l-{{ block.id }} {
+                    width: 130%;
+                }
+                .title-{{ block.id }}, .mobile-description-{{ block.id }}, .description-{{ block.id }}, .link-{{ block.id }} {
+                    padding: 0 4%;
+                }
+                .title-{{ block.id }} {
+                    padding-top: 14px;
+                    font-size: 36px;
+                }
+                .description-{{ block.id }} {
+                    padding-top: 60px;
+                    padding-bottom: 30px;
+                }
+                .link-{{ block.id }} {
+                    width: 100%;
+                }
+                .link-{{ block.id }} a {
+                    display: block;
+                    color: #2b2724;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    padding: 0.7em 0;
+                    padding-left: 1.7em;
+                    border: 1px solid #2b2724;
+                    width: 100%;
+                }
+                .mobile-description-{{ block.id }} {
+                    display: block;
+                    padding-top: 16px;
+                    padding-bottom: 40px;
+                }
+            }
         {% when 'spacer' %}
             .custom-spacer-{{ block.id }} {
                 height: {{ block.settings.spacer }}px;
@@ -184,6 +241,11 @@
                     "label": "URL"
                 },
                 {
+                    "type": "text",
+                    "id": "mobile-description",
+                    "label": "Mobile Description"
+                },
+                {
                     "type": "range",
                     "id": "padding-top",
                     "label": "Portrait Image Position",
@@ -248,6 +310,31 @@
                     "unit": "%",
                     "default": 100,
                     "label": "Description Width"
+                },
+                {
+                    "type": "font",
+                    "id": "mobile-description-font",
+                    "label": "Mobile Description Font"
+                },
+                {
+                    "type": "range",
+                    "id": "mobile-description-font-size",
+                    "min": 14,
+                    "max": 20,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Mobile Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "mobile-description-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Moblie Description Width"
                 }
             ]
         },
