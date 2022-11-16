@@ -13,6 +13,9 @@
                     <div class="image-container-{{ block.id }}">
                         <img src="{{ block.settings.image | img_url: "master" }}" class="image-{{ block.id }}">
                     </div>
+                    <div class="hr-parent-{{ block.id }}">
+                        <hr class="hr-{{ block.id }}">
+                    </div>
                 </section>
             </div>
         
@@ -74,6 +77,22 @@
             .image-{{ block.id }} {
                 width: {{ block.settings.image-width }}%;
             }
+            .hr-parent-{{ block.id }}{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                order: 2;
+                width: 100%;
+            }
+            hr.hr-{{ block.id }}{
+                display: none;
+                width: 93%;
+                margin: 1rem 0;
+            }
+            hr.hr-{{ block.id }} {
+                margin-top: 105px;
+            }
             @media (max-width: 768px) {
                 .text-image-container-{{ block.id }} {
                     flex-wrap: wrap;
@@ -100,6 +119,9 @@
                     padding-left: 1.7em;
                     border: 1px solid #2b2724;
                     width: 100%;
+                }
+                hr.hr-{{ block.id }} {
+                    display: block;
                 }
             }
         {% when 'spacer' %}

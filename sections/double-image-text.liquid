@@ -10,6 +10,9 @@
 
                     <div class="image-with-text-container-{{ block.id }}">
                         <div class="mobile-description-{{ block.id }}">{{ block.settings.mobile-description }}</div>
+                        <div class="hr-parent-{{ block.id }}">
+                            <hr class="hr-{{ block.id }}">
+                        </div>
                         <div class="landscape-image-container-{{ block.id }}">
                             <img src="{{ block.settings.image-landscape | img_url: "master" }}" class="image-l-{{ block.id }}">
                         </div>
@@ -17,6 +20,9 @@
                         <div class="description-{{ block.id }}">{{ block.settings.description }}</div>
                         <div class="link-{{ block.id }}">
                             <a href="{{ block.settings.url }}">{{ block.settings.url-text }}</a>
+                        </div>
+                        <div class="hr-parent-{{ block.id }}">
+                            <hr class="hr1-{{ block.id }}">
                         </div>
                     </div>
 
@@ -95,6 +101,20 @@
                 font-size: {{ block.settings.mobile-description-font-size }}px;
                 width: {{ block.settings.mobile-description-width }}%;
             }
+            .hr-parent-{{ block.id }}{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            hr.hr-{{ block.id }}, hr.hr1-{{ block.id }} {
+                display: none;
+                width: 93%;
+                margin: 1rem 0;
+            }
+            hr.hr1-{{ block.id }} {
+                margin-top: 65px;
+            }
             {% if block.settings.gap > 0 %}
                 .potrait-image-container-{{ block.id }} {
                     width: calc(100% - ({{ block.settings.gap }}%/2));
@@ -115,9 +135,11 @@
                 }
                 .potrait-image-container-{{ block.id }} {
                     width: 100%;
+                    padding: 0;
                 }
                 .image-with-text-container-{{ block.id }} {
                     width: 100%;
+                    display: block;
                 }
                 .image-p-{{ block.id }} {
                     width: 100%;
@@ -133,10 +155,10 @@
                 }
                 .title-{{ block.id }} {
                     padding-top: 14px;
-                    font-size: 36px;
+                    font-size: 30px;
                 }
                 .description-{{ block.id }} {
-                    padding-top: 60px;
+                    padding-top: 35px;
                     padding-bottom: 30px;
                 }
                 .link-{{ block.id }} {
@@ -156,6 +178,9 @@
                     display: block;
                     padding-top: 16px;
                     padding-bottom: 40px;
+                }
+                hr.hr-{{ block.id }}, hr.hr1-{{ block.id }} {
+                    display: block;
                 }
             }
         {% when 'spacer' %}

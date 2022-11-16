@@ -24,7 +24,9 @@
             </section>
     {% endcase %}
 {% endfor %}
-
+<div class="hr-parent-{{ section.id }}">
+    <hr class="hr-{{ section.id }}">
+</div>
 <style>
     {% for block in section.blocks %}
         {% case block.type %}
@@ -47,7 +49,7 @@
                 }
                 .text-{{ block.id }} h1 {
                     margin-bottom: 28px;
-                    margin-top: 0;
+                    margin-top: 10px;
                 }
                 .image-container-{{ block.id }} {
                     display: flex;
@@ -77,6 +79,17 @@
                     width: {{ block.settings.history-width }}%;
                     text-align: justify;
                 }
+                .hr-parent-{{ section.id }}{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                } 
+                hr.hr-{{ section.id }} {
+                    display: none;
+                    width: 93%;
+                    margin: 1rem 0;
+                }
                 @media (max-width: 768px) {
                     .about-us-{{ block.id }} {
                         flex-wrap: wrap;
@@ -87,10 +100,6 @@
                     }
                     .image-container-{{ block.id }} {
                         order: 0;
-                    }
-                    .text-{{ block.id }} h1 {
-                        margin-bottom: 23px;
-                        margin-top: 16px;
                     }
                     .description-{{ block.id }} p {
                         margin: 0;
@@ -115,6 +124,9 @@
                     }
                     .about-us-{{ block.id }} {
                         width: 100%;
+                    }
+                    hr.hr-{{ section.id }} {
+                        display: block;
                     }
                 }
             {% when 'spacer' %}
