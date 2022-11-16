@@ -23,10 +23,17 @@
             "description-width": 89,
             "history-width": 70
           }
+        },
+        "7cf0071d-775c-4247-b55f-dc32f8e62124": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 20
+          }
         }
       },
       "block_order": [
-        "c79d82b9-a9a1-44d0-86bd-a186f5aad6aa"
+        "c79d82b9-a9a1-44d0-86bd-a186f5aad6aa",
+        "7cf0071d-775c-4247-b55f-dc32f8e62124"
       ],
       "settings": {
         "section-width": 100
