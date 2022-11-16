@@ -67,10 +67,17 @@
             "mobile-description-font-size": 16,
             "mobile-description-width": 96
           }
+        },
+        "424d8ad5-661d-43fa-a5d3-bd54b5c3ea8b": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 80
+          }
         }
       },
       "block_order": [
-        "eb04fee7-12a3-4690-99e5-6604ef08d45a"
+        "eb04fee7-12a3-4690-99e5-6604ef08d45a",
+        "424d8ad5-661d-43fa-a5d3-bd54b5c3ea8b"
       ],
       "settings": {
       }
