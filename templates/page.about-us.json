@@ -45,26 +45,27 @@
         "eb04fee7-12a3-4690-99e5-6604ef08d45a": {
           "type": "double-image-with-text",
           "settings": {
-            "section-width": 100,
+            "section-width": 97,
             "image-portrait": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_20_172_R2_1.png",
-            "image-p-width": 100,
+            "image-p-width": 75,
             "image-landscape": "shopify:\/\/shop_images\/lighter_1.png",
             "image-l-width": 100,
             "title": "Tangible Strides",
             "description": "Each year 90% of our distributable profits are shared between charitablecauses and the people that make our collections happen. The pieces we make are cut in thefinest vegan materials, selected to have the lowest impacton our global environment. We‘re putting care for people and planet at the heart of our endeavors.",
             "url-text": "learn more about our way",
             "url": "",
-            "mobile-description": "",
+            "mobile-description": "Back in 1988, Para and Shafiq met in London and bonded over consciousthoughts on wildlife, anti-poverty, world musicand disappearing tribesmen and crafts. For over30 years, their shared values have powered theirfriendship and business endeavours. Now with Ninety Percent they’re taking tangible strides for the world we want.",
             "padding-top": 12,
             "gap": 0,
-            "title-font": "Helvetica, Arial, sans-serif",
+            "title-font": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
             "title-font-size": 26,
             "title-italic": true,
-            "description-font": "Helvetica, Arial, sans-serif",
+            "description-font": "'Times New Roman', Times, serif",
             "description-font-size": 16,
             "description-width": 100,
+            "mobile-description-font": "'Times New Roman', Times, serif",
             "mobile-description-font-size": 16,
-            "mobile-description-width": 100
+            "mobile-description-width": 96
           }
         }
       },
