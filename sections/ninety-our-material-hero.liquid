@@ -1,0 +1,200 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'our-material-hero' %} 
+            <div id="wrapper-{{ block.id }}"> 
+                <section class="our-material-{{ block.id }}">
+                    
+                </section>
+            </div>
+
+        {% when 'spacer' %}
+            <section class="custom-spacer-{{ block.id }}">
+
+            </section>
+    {% endcase %}
+{% endfor %}
+
+<style>
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when 'our-material-hero' %}
+                
+                @media (max-width: 768px) {
+                    
+                }
+            {% when 'spacer' %}
+                .custom-spacer-{{ block.id }} {
+                    height: {{ block.settings.spacer }}px;
+                }
+        {% endcase %}
+    {% endfor %}
+</style>
+
+{% schema %}
+{
+    "name": "Hero - About Us",
+    "settings": [
+        
+    ],
+    "blocks": [
+        {
+            "name": "Our Material Hero",
+            "type": "our-material-hero",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "block-width",
+                    "min": 30,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 85,
+                    "label": "Block Width"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select Image"
+                },
+                {
+                    "type": "text",
+                    "id": "header-title",
+                    "label": "Title",
+                    "default": "Sustainability & Materials"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description"
+                },
+                {
+                    "type": "text",
+                    "id": "purpose",
+                    "label": "Purpose Description"
+                },
+                {
+                    "type": "range",
+                    "id": "title-font-size",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 100,
+                    "label": "Title Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "description-font-size",
+                    "min": 18,
+                    "max": 30,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 26,
+                    "label": "Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "purpose-font-size",
+                    "min": 12,
+                    "max": 30,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Purpose Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "description-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 37,
+                    "label": "Description Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "description-letter-spacing",
+                    "min": -1,
+                    "max": 5,
+                    "step": 0.1,
+                    "unit": "em",
+                    "default": 0,
+                    "label": "Description Letter Spacing"
+                },
+                {
+                    "type": "range",
+                    "id": "purpose-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Purpose Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "purpose-letter-spacing",
+                    "min": -1,
+                    "max": 5,
+                    "step": 0.1,
+                    "unit": "em",
+                    "default": 0.2,
+                    "label": "Purpose Letter Spacing"
+                },
+                {
+                    "type": "font",
+                    "id": "title-font",
+                    "label": "Title Font"
+                },
+                {
+                    "type": "font",
+                    "id": "description-font",
+                    "label": "Description Font"
+                },
+                {
+                    "type": "font",
+                    "id": "purpose-font",
+                    "label": "Purpose Font"
+                },
+                {
+                    "type": "range",
+                    "id": "description-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Description Width"
+                },
+                {
+                    "type": "range",
+                    "id": "purpose-width",
+                    "min": 50,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Purpose Width"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

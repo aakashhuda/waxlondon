@@ -1,0 +1,10 @@
+{
+    "sections": {
+        "hero": {
+            "type": "ninety-our-material-hero"
+        }
+    },
+    "order": [
+        "hero"
+    ]
+}
