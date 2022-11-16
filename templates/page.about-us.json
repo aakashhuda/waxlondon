@@ -81,10 +81,47 @@
       ],
       "settings": {
       }
+    },
+    "6eb2fc80-6fa6-4775-84ea-1e3dc80784be": {
+      "type": "text-image",
+      "blocks": {
+        "e1a8af96-a2f1-4e2e-a794-136bb1213bbf": {
+          "type": "text-image",
+          "settings": {
+            "block-width": 97,
+            "description": "In 2022, creative director Elliot Atkinson joined Ninety Percent,elevating our aesthetic language into a sophisticated vision for ourcustomers and connecting the clothes back to nature. Capturingthe sensuality of visiting uncharted destinations and feeling thesea, the earth – thus designing pieces that ultimately fit into theebbs and flow of our current lifestyles.",
+            "description-font": "'Times New Roman', Times, serif",
+            "description-font-size": 16,
+            "line-height": 28,
+            "letter-spacing": 0.1,
+            "image": "shopify:\/\/shop_images\/IMG_5622_1.png",
+            "image-width": 100,
+            "text-width": 60,
+            "url-text": "On Design",
+            "url": "",
+            "mobile-url-text": "Meet Elliot",
+            "mobile-url": "",
+            "description-width": 100
+          }
+        },
+        "ca469ae5-92ad-4f91-b31c-325921683351": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 10
+          }
+        }
+      },
+      "block_order": [
+        "e1a8af96-a2f1-4e2e-a794-136bb1213bbf",
+        "ca469ae5-92ad-4f91-b31c-325921683351"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "double_image"
+    "double_image",
+    "6eb2fc80-6fa6-4775-84ea-1e3dc80784be"
   ]
 }
