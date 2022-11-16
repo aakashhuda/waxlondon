@@ -46,8 +46,8 @@
             }
             .potrait-image-container-{{ block.id }} {
                 width: 100%;
-                display: flex;
-                justify-content: space-evenly;
+                {% comment %} display: flex;
+                justify-content: space-evenly; {% endcomment %}
                 padding-top: {{ block.settings.padding-top }}%; 
             }
             .image-with-text-container-{{ block.id }} {
