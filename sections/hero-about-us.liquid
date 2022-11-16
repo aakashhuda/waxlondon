@@ -40,7 +40,7 @@
                     display: flex;
                     justify-content: space-evenly;
                     align-items: stretch;
-                    width: {{ section.settings.section-width }}%;
+                    width: {{ block.settings.block-width }}%;
                 }
                 .text-{{ block.id }} {
                     display: flex;
@@ -141,22 +141,23 @@
 {
     "name": "Hero - About Us",
     "settings": [
-        {
-            "type": "range",
-            "id": "section-width",
-            "min": 30,
-            "max": 100,
-            "step": 1,
-            "unit": "%",
-            "default": 100,
-            "label": "Section Width"
-        }
+        
     ],
     "blocks": [
         {
             "name": "Hero - About Us",
             "type": "hero-about-us",
             "settings": [
+                {
+                    "type": "range",
+                    "id": "block-width",
+                    "min": 30,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 85,
+                    "label": "Section Width"
+                },
                 {
                     "type": "text",
                     "id": "header-title",
