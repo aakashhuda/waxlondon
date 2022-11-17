@@ -15,10 +15,10 @@
                         {% when 'button-link' %}
                             <div class="button-link">
                                 <a href="{{ block.settings.button-link | url_encode }}">{{ block.settings.button-link-name }}</a>
+                            </div>
                         {% when 'bullet-point' %}
                             <div class="bullet-point">
                                 <span class="point">{{ block.settings.point }}</span>:    <span class="point-text">{{ block.settings.point-text }}</span>
-                            </div>
                             </div>
                         {% when 'spacer' %}
                             <section class="custom-spacer-{{ block.id }}">
@@ -38,10 +38,10 @@
                         {% when 'button-link' %}
                             <div class="button-link">
                                 <a href="{{ block.settings.button-link | url_encode }}">{{ block.settings.button-link-name }}</a>
+                            </div>
                         {% when 'bullet-point' %}
                             <div class="bullet-point">
                                 <span class="point">{{ block.settings.point }}</span>:    <span class="point-text">{{ block.settings.point-text }}</span>
-                            </div>
                             </div>
                         {% when 'spacer' %}
                             <section class="custom-spacer-{{ block.id }}">
