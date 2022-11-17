@@ -1,0 +1,132 @@
+<div id="wrapper-{{ section.id }}"> 
+    <section class="product-with-info-{{ section.id }}">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'product-card' %}
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{{ block.settings.product-image | img_url: 'master' }}">
+                        </div>
+                        <div class="product-name">{{ block.settings.product-name }}</div>
+                        <div class="product-orgin"><span>ORIGIN</span>: <span>{{ block.settings.product-origin }}</span></div>
+                        <div class="product-description">{{ block.settings.product-description }}</div>
+                        <div class="url">
+                            <a href="{{ block.settings.url }}">{{ block.settings.url-name }}</a>
+                        </div>
+                    </div>
+            {% endcase %}
+        {% endfor %}
+    </section>
+</div>
+
+<style>
+    #wrapper-{{ section.id }} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-with-info-{{ section.id }} {
+        display: flex;
+        width: {{ section.settings.section-width }}%;
+    }
+
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when 'product-card' %}
+                .url a {
+                    text-decoration: none;
+                    color: #2b2724;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    padding-bottom: 7px;
+                    border-bottom: 1px solid #2b2724;
+                    padding-top: 40px;
+                }
+
+            {% when 'spacer' %}
+                .custom-spacer-{{ block.id }} {
+                    height: {{ block.settings.spacer }}px;
+                }
+        {% endcase %}
+    {% endfor %}
+</style>
+
+{% schema %}
+
+{
+    "name": "Ninety Product With Info",
+    "settings": [
+        {
+            "type": "range",
+            "id": "section-width",
+            "min": 30,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "default": 100,
+            "label": "Section Width"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Product",
+            "type": "product-card",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "Image",
+                    "id": "product-image"
+                },
+                {
+                    "type": "richtext",
+                    "id": "product-name",
+                    "label": "Product Name"
+                },
+                {
+                    "type": "text",
+                    "id": "product-origin",
+                    "label": "Product Origin",
+                    "default": "Country, Country, Country"
+                },
+                {
+                    "type": "text",
+                    "id": "product-description",
+                    "label": "Product Description"
+                },
+                {
+                    "type": "text",
+                    "id": "url-name",
+                    "label": "URL Text",
+                    "default": "Learn More"          
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                }
+            ]
+        },
+        {
+            "name": "Spacer",
+            "type": "spacer",
+            "settings": [
+                {
+                    "type": "range",
+                    "id": "spacer",
+                    "min": 0,
+                    "max": 300,
+                    "step": 5,
+                    "unit": "px",
+                    "default": 10,
+                    "label": "Height"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product With Info"
+        }
+    ]
+}
+{% endschema %}
