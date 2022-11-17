@@ -1,24 +1,54 @@
-{% for block in section.blocks %}
-    {% case block.type %}
-        {% when 'our-material-hero' %} 
-            <div id="wrapper-{{ block.id }}"> 
-                <section class="our-material-{{ block.id }}">
-                    
-                </section>
-            </div>
 
-        {% when 'spacer' %}
-            <section class="custom-spacer-{{ block.id }}">
-
-            </section>
-    {% endcase %}
-{% endfor %}
+<div id="wrapper-{{ section.id }}"> 
+    <section class="our-material-{{ section.id }}">
+        <div class="image-container-{{ section.id }}">
+            <img class="image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
+        </div>
+        <div class="text-container-{{ block.id }}">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'text' %} 
+                        <div class="text-{{ block.id }}">
+                            {{ block.settings.text }}
+                        </div>
+                    {% when 'spacer' %}
+                        <section class="custom-spacer-{{ block.id }}">
+            
+                        </section>
+                {% endcase %}
+            {% endfor %}
+        </div>
+    </section>
+</div>
 
 <style>
+    .our-material-{{ section.id }} {
+        display: flex;
+    }
+    .image-{{ section.id }} {
+        width: {{ section.settings.image-width }}%;
+    }
+    .image-container-{{ section.id }} {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     {% for block in section.blocks %}
         {% case block.type %}
-            {% when 'our-material-hero' %}
-                
+            {% when 'text' %}
+                .text-container-{{ block.id }} {
+                    width: 100%;
+                }
+                .text-{{ block.id }} {
+                    font-size: {{ block.settings.font-size }}px;
+                    line-height: {{ block.settings.line-height }}px;
+                    letter-spacing: {{ block.settings.letter-spacing }}em;
+                    font-family: {{ block.settings.font }};
+                    width: {{ block.settings.text-width }}%;
+                }
+
                 @media (max-width: 768px) {
                     
                 }
@@ -32,14 +62,28 @@
 
 {% schema %}
 {
-    "name": "Hero - About Us",
+    "name": "Our Material - Hero",
     "settings": [
-        
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select Image"
+        },
+        {
+            "type": "range",
+            "id": "image-width",
+            "min": 30,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "default": 70,
+            "label": "Image Width"
+        }
     ],
     "blocks": [
         {
-            "name": "Our Material Hero",
-            "type": "our-material-hero",
+            "name": "Text",
+            "type": "text",
             "settings": [
                 {
                     "type": "range",
@@ -52,130 +96,55 @@
                     "label": "Block Width"
                 },
                 {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Select Image"
-                },
-                {
                     "type": "text",
-                    "id": "header-title",
-                    "label": "Title",
-                    "default": "Sustainability & Materials"
+                    "id": "text",
+                    "label": "Text"
                 },
-                {
-                    "type": "text",
-                    "id": "description",
-                    "label": "Description"
-                },
-                {
-                    "type": "text",
-                    "id": "purpose",
-                    "label": "Purpose Description"
-                },
+                
                 {
                     "type": "range",
-                    "id": "title-font-size",
-                    "min": 50,
+                    "id": "font-size",
+                    "min": 14,
                     "max": 100,
                     "step": 1,
                     "unit": "px",
-                    "default": 100,
-                    "label": "Title Font Size"
-                },
-                {
-                    "type": "range",
-                    "id": "description-font-size",
-                    "min": 18,
-                    "max": 30,
-                    "step": 1,
-                    "unit": "px",
-                    "default": 26,
-                    "label": "Description Font Size"
-                },
-                {
-                    "type": "range",
-                    "id": "purpose-font-size",
-                    "min": 12,
-                    "max": 30,
-                    "step": 1,
-                    "unit": "px",
                     "default": 16,
-                    "label": "Purpose Font Size"
+                    "label": "Font Size"
                 },
                 {
                     "type": "range",
-                    "id": "description-line-height",
-                    "min": 20,
-                    "max": 50,
+                    "id": "line-height",
+                    "min": 10,
+                    "max": 100,
                     "step": 1,
                     "unit": "px",
                     "default": 37,
-                    "label": "Description Line Height"
+                    "label": "Line Height"
                 },
                 {
                     "type": "range",
-                    "id": "description-letter-spacing",
+                    "id": "letter-spacing",
                     "min": -1,
                     "max": 5,
                     "step": 0.1,
                     "unit": "em",
                     "default": 0,
-                    "label": "Description Letter Spacing"
+                    "label": "Letter Spacing"
+                },
+                {
+                    "type": "font",
+                    "id": "font",
+                    "label": "Font"
                 },
                 {
                     "type": "range",
-                    "id": "purpose-line-height",
+                    "id": "text-width",
                     "min": 20,
-                    "max": 50,
-                    "step": 1,
-                    "unit": "px",
-                    "default": 28,
-                    "label": "Purpose Line Height"
-                },
-                {
-                    "type": "range",
-                    "id": "purpose-letter-spacing",
-                    "min": -1,
-                    "max": 5,
-                    "step": 0.1,
-                    "unit": "em",
-                    "default": 0.2,
-                    "label": "Purpose Letter Spacing"
-                },
-                {
-                    "type": "font",
-                    "id": "title-font",
-                    "label": "Title Font"
-                },
-                {
-                    "type": "font",
-                    "id": "description-font",
-                    "label": "Description Font"
-                },
-                {
-                    "type": "font",
-                    "id": "purpose-font",
-                    "label": "Purpose Font"
-                },
-                {
-                    "type": "range",
-                    "id": "description-width",
-                    "min": 50,
                     "max": 100,
                     "step": 1,
                     "unit": "%",
                     "default": 100,
-                    "label": "Description Width"
-                },
-                {
-                    "type": "range",
-                    "id": "purpose-width",
-                    "min": 50,
-                    "max": 100,
-                    "step": 1,
-                    "unit": "%",
-                    "default": 100,
-                    "label": "Purpose Width"
+                    "label": "Width"
                 }
             ]
         },
@@ -187,13 +156,18 @@
                     "type": "range",
                     "id": "spacer",
                     "min": 0,
-                    "max": 200,
+                    "max": 300,
                     "step": 5,
                     "unit": "px",
                     "default": 10,
                     "label": "Height"
                 }
             ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Our Material"
         }
     ]
 }
