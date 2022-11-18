@@ -201,12 +201,6 @@
     "ea8911aa-bc92-49c4-a3b4-d1f498881329": {
       "type": "np-double-column-text-style2",
       "blocks": {
-        "c175c577-37c5-4e18-a22d-8f64156d4908": {
-          "type": "spacer-block",
-          "settings": {
-            "spacer-height": 100
-          }
-        },
         "47a7a989-2ee6-4054-9c47-e442019b64a2": {
           "type": "double-column-text-block",
           "settings": {
@@ -260,7 +254,6 @@
         }
       },
       "block_order": [
-        "c175c577-37c5-4e18-a22d-8f64156d4908",
         "47a7a989-2ee6-4054-9c47-e442019b64a2",
         "4b12645a-7b70-45f9-aa97-48e5ec673326"
       ],
