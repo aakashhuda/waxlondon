@@ -469,6 +469,39 @@
       ],
       "settings": {
       }
+    },
+    "99768ac2-09eb-40a4-a014-3e47cad3bd4f": {
+      "type": "np-single-image",
+      "blocks": {
+        "4ac59d8f-6494-4312-b464-08f84797ce6a": {
+          "type": "image-block",
+          "settings": {
+            "bg-image": "shopify:\/\/shop_images\/lighter_1_f47c9f92-7fe5-4dac-92d3-bffbdfa21c66.png",
+            "title": "",
+            "title-text-size": 10,
+            "title-color": "",
+            "title-font-family": "Helvetica, Arial, sans-serif",
+            "desc": "",
+            "desc-text-size": 10,
+            "desc-color": "",
+            "desc-font-family": "Helvetica, Arial, sans-serif",
+            "caption": "<p>(above) factory workers in bangladesh putting the finishing touches to collection 20<\/p>",
+            "caption-text-size": 12,
+            "caption-color": "",
+            "caption-font-family": "Helvetica, Arial, sans-serif",
+            "block-width": "medium",
+            "custom-block-width": 800,
+            "show-title": false,
+            "show-desc": false,
+            "show-caption": true
+          }
+        }
+      },
+      "block_order": [
+        "4ac59d8f-6494-4312-b464-08f84797ce6a"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -478,6 +511,7 @@
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
     "5888c222-629c-4403-bec1-d629050270e1",
     "64e01452-034f-4a0b-8351-dca5927476f5",
-    "ea8911aa-bc92-49c4-a3b4-d1f498881329"
+    "ea8911aa-bc92-49c4-a3b4-d1f498881329",
+    "99768ac2-09eb-40a4-a014-3e47cad3bd4f"
   ]
 }
