@@ -672,10 +672,38 @@
             "button-url": "",
             "button-text-color": "#2b2724"
           }
+        },
+        "f2d2f45b-b8ba-4104-ab44-65d004dd850c": {
+          "type": "image-and-text-tile",
+          "settings": {
+            "width": "100",
+            "selected-layout": "image-first",
+            "image": "shopify:\/\/shop_images\/362499-800w_2.png",
+            "make-image-larger": false,
+            "text-layout-center": true,
+            "title": "Packaging",
+            "title-font-size": 26,
+            "title-line-height": 37,
+            "title-letter-spacing": 0,
+            "title-font-color": "#000000",
+            "title-font-weight": 400,
+            "text": "<p>The impact every aspect of our product has on the environment is an issue close to our heart. Beyond our items, our voile labels are organic cotton, our care labels are organic cotton ribbon and our woven neck label is a recycled polyester and organic cotton. All of our organic cotton is Global Organic Textile Standard (GOTS) certified. <br\/><br\/>The tags are on unbleached FSC certified card, their thread is Organic Cotton. The garment bags our items arrive in are biodegradable – please pop them into your recycle bin to return them to the Earth.<\/p>",
+            "bg-color": "#FFFFFF",
+            "text-font-size": 16,
+            "text-line-height": 28,
+            "text-letter-spacing": 0,
+            "text-width": 100,
+            "text-font-color": "#000000",
+            "show-button": false,
+            "button-label": "Shop The Look",
+            "button-url": "",
+            "button-text-color": "#2b2724"
+          }
         }
       },
       "block_order": [
-        "2c9524f3-c018-46a6-a4c8-f89c5224f375"
+        "2c9524f3-c018-46a6-a4c8-f89c5224f375",
+        "f2d2f45b-b8ba-4104-ab44-65d004dd850c"
       ],
       "settings": {
       }
