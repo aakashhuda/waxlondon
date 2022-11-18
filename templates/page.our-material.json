@@ -376,7 +376,7 @@
             "caption-text-size": 12,
             "caption-color": "",
             "caption-font-family": "Helvetica, Arial, sans-serif",
-            "block-width": "full",
+            "block-width": "medium",
             "custom-block-width": 800,
             "show-title": false,
             "show-desc": false,
@@ -386,7 +386,7 @@
         "4c891f0f-9ad6-4969-9aef-c090a47cc662": {
           "type": "spacer-block",
           "settings": {
-            "spacer-height": 150
+            "spacer-height": 100
           }
         }
       },
