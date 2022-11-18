@@ -414,6 +414,61 @@
       "settings": {
         "section-width": 100
       }
+    },
+    "ea8911aa-bc92-49c4-a3b4-d1f498881329": {
+      "type": "np-double-column-text-style2",
+      "blocks": {
+        "47a7a989-2ee6-4054-9c47-e442019b64a2": {
+          "type": "double-column-text-block",
+          "settings": {
+            "left-pre-title": "",
+            "left-title": "",
+            "left-desc": "",
+            "left-btn-text": "",
+            "left-pre-title-text-size": 10,
+            "left-title-text-size": 10,
+            "left-desc-text-size": 10,
+            "left-btn-text-size": 10,
+            "left-pre-title-color": "",
+            "left-title-color": "",
+            "left-desc-color": "",
+            "left-btn-color": "#000000",
+            "left-text-bg-color": "",
+            "left-pre-title-font-family": "Helvetica, Arial, sans-serif",
+            "left-title-font-family": "Helvetica, Arial, sans-serif",
+            "left-desc-font-family": "Helvetica, Arial, sans-serif",
+            "left-btn-font-family": "Helvetica, Arial, sans-serif",
+            "left-btn-url": "",
+            "right-pre-title": "",
+            "right-title": "<p>Our Finishes<\/p>",
+            "right-desc": "<p>Blurb needed. We prioritise the use of low-impact, renewable and<br\/>certified organic materials when designing our collections.<br\/>All of our fabrics are vegan, selected to have the lowest impact on our global environment.<\/p>",
+            "right-btn-text": "",
+            "right-pre-title-text-size": 10,
+            "right-title-text-size": 40,
+            "right-desc-text-size": 26,
+            "right-btn-text-size": 10,
+            "right-pre-title-color": "",
+            "right-title-color": "",
+            "right-desc-color": "",
+            "right-btn-color": "#000000",
+            "right-text-bg-color": "",
+            "right-pre-title-font-family": "Helvetica, Arial, sans-serif",
+            "right-title-font-family": "Helvetica, Arial, sans-serif",
+            "right-desc-font-family": "Helvetica, Arial, sans-serif",
+            "right-btn-font-family": "Helvetica, Arial, sans-serif",
+            "right-btn-url": "",
+            "block-width": "medium",
+            "custom-block-width": 800,
+            "show-divider": false,
+            "block-height": 305
+          }
+        }
+      },
+      "block_order": [
+        "47a7a989-2ee6-4054-9c47-e442019b64a2"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -422,6 +477,7 @@
     "9612169f-ad2c-4324-84d6-e4222461c9e9",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
     "5888c222-629c-4403-bec1-d629050270e1",
-    "64e01452-034f-4a0b-8351-dca5927476f5"
+    "64e01452-034f-4a0b-8351-dca5927476f5",
+    "ea8911aa-bc92-49c4-a3b4-d1f498881329"
   ]
 }
