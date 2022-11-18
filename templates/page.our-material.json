@@ -66,6 +66,12 @@
         "section-width": 90
       }
     },
+    "de96053a-bb27-4c8a-b995-d82fbe958907": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 80
+      }
+    },
     "9612169f-ad2c-4324-84d6-e4222461c9e9": {
       "type": "ninety-product-with-info",
       "blocks": {
@@ -160,6 +166,7 @@
   },
   "order": [
     "3065cf15-2b96-4126-8e51-e1abd50f919b",
+    "de96053a-bb27-4c8a-b995-d82fbe958907",
     "9612169f-ad2c-4324-84d6-e4222461c9e9"
   ]
 }
