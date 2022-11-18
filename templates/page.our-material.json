@@ -191,10 +191,37 @@
             "product-text-right-padding": 45,
             "enable-border": true
           }
+        },
+        "560baa95-1d52-4c84-a406-c16501827a5a": {
+          "type": "product-card",
+          "settings": {
+            "product-image": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_19_155_R1_1.png",
+            "product-name": "<p>Linen<\/p>",
+            "product-name-font": "Helvetica, Arial, sans-serif",
+            "product-name-font-size": 26,
+            "product-name-font-weight": 400,
+            "product-name-line-height": 37,
+            "product-origin": "Country, Country, Country",
+            "product-origin-font": "Helvetica, Arial, sans-serif",
+            "product-origin-font-size": 12,
+            "product-origin-font-weight": 400,
+            "product-origin-line-height": 21,
+            "product-description": "Linen is typically grown without the use of pesticides and fertiliser as naturally the flax plant requires less than other crops. However this is not always the case, so as we strive for traceability we have sourced European Flax® Linen.",
+            "product-description-font": "Helvetica, Arial, sans-serif",
+            "product-description-font-size": 16,
+            "product-description-font-weight": 400,
+            "product-description-line-height": 28,
+            "url-name": "Learn More",
+            "url": "",
+            "product-text-left-padding": 20,
+            "product-text-right-padding": 45,
+            "enable-border": false
+          }
         }
       },
       "block_order": [
-        "942f8a6f-f29a-463d-b4fc-9bcc6b79b148"
+        "942f8a6f-f29a-463d-b4fc-9bcc6b79b148",
+        "560baa95-1d52-4c84-a406-c16501827a5a"
       ],
       "settings": {
         "section-width": 100
