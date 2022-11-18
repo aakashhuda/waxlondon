@@ -489,8 +489,8 @@
             "caption-text-size": 12,
             "caption-color": "",
             "caption-font-family": "Helvetica, Arial, sans-serif",
-            "block-width": "medium",
-            "custom-block-width": 800,
+            "block-width": "full",
+            "custom-block-width": 900,
             "show-title": false,
             "show-desc": false,
             "show-caption": true
