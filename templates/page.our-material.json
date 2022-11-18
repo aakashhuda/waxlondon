@@ -32,12 +32,32 @@
             "font-weight": 400,
             "text-width": 100
           }
+        },
+        "cfc65272-05a7-4da3-9c8a-b5905be8ce57": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 35
+          }
+        },
+        "f31a965b-2ad0-4975-bc95-edccc286cd3e": {
+          "type": "text",
+          "settings": {
+            "text": "Our purpose has been to create ready-to-wear clothing, cut in thefinest vegan materials, selected to have the lowest impacton our global environment. Pieces designed for longevity,made with purpose – for the world we want.",
+            "font-size": 16,
+            "line-height": 28,
+            "letter-spacing": 0,
+            "font": "Helvetica, Arial, sans-serif",
+            "font-weight": 400,
+            "text-width": 100
+          }
         }
       },
       "block_order": [
         "5d926568-3167-4408-8a0c-0810562591c8",
         "4934b2a9-78d7-48f3-a944-36b41330a72b",
-        "e63b71c2-5bc8-402f-b5a2-5e52c249da20"
+        "e63b71c2-5bc8-402f-b5a2-5e52c249da20",
+        "cfc65272-05a7-4da3-9c8a-b5905be8ce57",
+        "f31a965b-2ad0-4975-bc95-edccc286cd3e"
       ],
       "settings": {
         "image-first-layout": true,
