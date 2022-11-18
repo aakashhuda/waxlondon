@@ -28,7 +28,7 @@
             "font-size": 26,
             "line-height": 37,
             "letter-spacing": 0,
-            "font": "Helvetica, Arial, sans-serif",
+            "font": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
             "font-weight": 400,
             "text-width": 100
           }
@@ -46,7 +46,7 @@
             "font-size": 16,
             "line-height": 28,
             "letter-spacing": 0,
-            "font": "Helvetica, Arial, sans-serif",
+            "font": "'Times New Roman', Times, serif",
             "font-weight": 400,
             "text-width": 100
           }
