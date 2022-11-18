@@ -34,8 +34,14 @@
     }
 
     {% for block in section.blocks %}
+
         {% case block.type %}
             {% when 'product-card' %}
+                {% if forloop.length < 3 %}
+                    .product-with-info-{{ section.id }} {
+                        justify-content: flex-start;
+                    }   
+                {% endif %}
                 .url-{{ block.id }} a {
                     text-decoration: none;
                     color: #2b2724;
@@ -95,12 +101,10 @@
                     }
                 {% endif %}
 
-            {% when 'spacer' %}
-                .custom-spacer-{{ block.id }} {
-                    height: {{ block.settings.spacer }}px;
-                }
         {% endcase %}
+
     {% endfor %}
+
 </style>
 
 {% schema %}
@@ -286,22 +290,6 @@
                     "id": "enable-border",
                     "label": "Enable Right Line",
                     "default": false
-                }
-            ]
-        },
-        {
-            "name": "Spacer",
-            "type": "spacer",
-            "settings": [
-                {
-                    "type": "range",
-                    "id": "spacer",
-                    "min": 0,
-                    "max": 300,
-                    "step": 5,
-                    "unit": "px",
-                    "default": 10,
-                    "label": "Height"
                 }
             ]
         }
