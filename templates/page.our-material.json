@@ -14,10 +14,30 @@
             "font-weight": 400,
             "text-width": 80
           }
+        },
+        "4934b2a9-78d7-48f3-a944-36b41330a72b": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 230
+          }
+        },
+        "e63b71c2-5bc8-402f-b5a2-5e52c249da20": {
+          "type": "text",
+          "settings": {
+            "text": "From the beginning, we’ve questioned traditional ways of doing in the fashion industry and the impact we have on our planet.",
+            "font-size": 26,
+            "line-height": 37,
+            "letter-spacing": 0,
+            "font": "Helvetica, Arial, sans-serif",
+            "font-weight": 400,
+            "text-width": 100
+          }
         }
       },
       "block_order": [
-        "5d926568-3167-4408-8a0c-0810562591c8"
+        "5d926568-3167-4408-8a0c-0810562591c8",
+        "4934b2a9-78d7-48f3-a944-36b41330a72b",
+        "e63b71c2-5bc8-402f-b5a2-5e52c249da20"
       ],
       "settings": {
         "image-first-layout": true,
