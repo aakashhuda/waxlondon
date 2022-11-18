@@ -162,11 +162,49 @@
       "settings": {
         "section-width": 100
       }
+    },
+    "74c1a040-e888-4c50-801a-593c3a2b7edf": {
+      "type": "ninety-product-with-info",
+      "blocks": {
+        "942f8a6f-f29a-463d-b4fc-9bcc6b79b148": {
+          "type": "product-card",
+          "settings": {
+            "product-image": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_11_085_1_R1_1.png",
+            "product-name": "<p>MicroModal<\/p>",
+            "product-name-font": "Helvetica, Arial, sans-serif",
+            "product-name-font-size": 26,
+            "product-name-font-weight": 400,
+            "product-name-line-height": 37,
+            "product-origin": "Country, Country, Country",
+            "product-origin-font": "Helvetica, Arial, sans-serif",
+            "product-origin-font-size": 12,
+            "product-origin-font-weight": 400,
+            "product-origin-line-height": 21,
+            "product-description": "Cotton is a natural crop, both biodegradable and hypoallergenic. It’s comfortable, breathable and durable. We only use Global Organic Textile Standard (GOTS) certified organic cotton fabric, grown without the use of pesticides, so it’s less harmful on your skin and on the planet.",
+            "product-description-font": "Helvetica, Arial, sans-serif",
+            "product-description-font-size": 16,
+            "product-description-font-weight": 400,
+            "product-description-line-height": 28,
+            "url-name": "Learn More",
+            "url": "",
+            "product-text-left-padding": 20,
+            "product-text-right-padding": 45,
+            "enable-border": true
+          }
+        }
+      },
+      "block_order": [
+        "942f8a6f-f29a-463d-b4fc-9bcc6b79b148"
+      ],
+      "settings": {
+        "section-width": 100
+      }
     }
   },
   "order": [
     "3065cf15-2b96-4126-8e51-e1abd50f919b",
     "de96053a-bb27-4c8a-b995-d82fbe958907",
-    "9612169f-ad2c-4324-84d6-e4222461c9e9"
+    "9612169f-ad2c-4324-84d6-e4222461c9e9",
+    "74c1a040-e888-4c50-801a-593c3a2b7edf"
   ]
 }
