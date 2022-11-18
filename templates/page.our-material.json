@@ -468,6 +468,68 @@
         "spacer": 140
       }
     },
+    "9bfe33f4-efb1-4d89-93d5-3a1179d78328": {
+      "type": "np-double-column-text-style2",
+      "blocks": {
+        "0ab9828e-6218-433d-9eaa-dc0a5d98e272": {
+          "type": "double-column-text-block",
+          "settings": {
+            "left-pre-title": "",
+            "left-title": "",
+            "left-desc": "",
+            "left-btn-text": "",
+            "left-pre-title-text-size": 10,
+            "left-title-text-size": 10,
+            "left-desc-text-size": 10,
+            "left-btn-text-size": 10,
+            "left-pre-title-color": "",
+            "left-title-color": "",
+            "left-desc-color": "",
+            "left-btn-color": "#000000",
+            "left-text-bg-color": "",
+            "left-pre-title-font-family": "Helvetica, Arial, sans-serif",
+            "left-title-font-family": "Helvetica, Arial, sans-serif",
+            "left-desc-font-family": "Helvetica, Arial, sans-serif",
+            "left-btn-font-family": "Helvetica, Arial, sans-serif",
+            "left-btn-url": "",
+            "right-pre-title": "",
+            "right-title": "<p>Our Finishes<\/p>",
+            "right-desc": "<p>Blurb needed. We prioritise the use of low-impact, renewable and<br\/>certified organic materials when designing our collections.<br\/>All of our fabrics are vegan, selected to have the lowest impact on our global environment.<\/p>",
+            "right-btn-text": "",
+            "right-pre-title-text-size": 10,
+            "right-title-text-size": 40,
+            "right-desc-text-size": 26,
+            "right-btn-text-size": 10,
+            "right-pre-title-color": "",
+            "right-title-color": "",
+            "right-desc-color": "",
+            "right-btn-color": "#000000",
+            "right-text-bg-color": "",
+            "right-pre-title-font-family": "Helvetica, Arial, sans-serif",
+            "right-title-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "right-desc-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "right-btn-font-family": "Helvetica, Arial, sans-serif",
+            "right-btn-url": "",
+            "block-width": "medium",
+            "custom-block-width": 800,
+            "show-divider": false,
+            "block-height": 250
+          }
+        },
+        "1e9ef6ef-e36e-4033-b11d-6cb2fe73b07f": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer-height": 180
+          }
+        }
+      },
+      "block_order": [
+        "0ab9828e-6218-433d-9eaa-dc0a5d98e272",
+        "1e9ef6ef-e36e-4033-b11d-6cb2fe73b07f"
+      ],
+      "settings": {
+      }
+    },
     "5888c222-629c-4403-bec1-d629050270e1": {
       "type": "ninety-product-with-info",
       "blocks": {
@@ -557,6 +619,46 @@
       ],
       "settings": {
         "section-width": 100
+      }
+    },
+    "99768ac2-09eb-40a4-a014-3e47cad3bd4f": {
+      "type": "np-single-image",
+      "blocks": {
+        "e4fa9727-450e-47c5-b1d1-04de97b54639": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer-height": 120
+          }
+        },
+        "4ac59d8f-6494-4312-b464-08f84797ce6a": {
+          "type": "image-block",
+          "settings": {
+            "bg-image": "shopify:\/\/shop_images\/lighter_1_f47c9f92-7fe5-4dac-92d3-bffbdfa21c66.png",
+            "title": "",
+            "title-text-size": 10,
+            "title-color": "",
+            "title-font-family": "Helvetica, Arial, sans-serif",
+            "desc": "",
+            "desc-text-size": 10,
+            "desc-color": "",
+            "desc-font-family": "Helvetica, Arial, sans-serif",
+            "caption": "<p>(above) factory workers in bangladesh putting the finishing touches to collection 20<\/p>",
+            "caption-text-size": 12,
+            "caption-color": "",
+            "caption-font-family": "Helvetica, Arial, sans-serif",
+            "block-width": "full",
+            "custom-block-width": 900,
+            "show-title": false,
+            "show-desc": false,
+            "show-caption": true
+          }
+        }
+      },
+      "block_order": [
+        "e4fa9727-450e-47c5-b1d1-04de97b54639",
+        "4ac59d8f-6494-4312-b464-08f84797ce6a"
+      ],
+      "settings": {
       }
     },
     "64e01452-034f-4a0b-8351-dca5927476f5": {
@@ -656,39 +758,6 @@
         "section-width": 100
       }
     },
-    "99768ac2-09eb-40a4-a014-3e47cad3bd4f": {
-      "type": "np-single-image",
-      "blocks": {
-        "4ac59d8f-6494-4312-b464-08f84797ce6a": {
-          "type": "image-block",
-          "settings": {
-            "bg-image": "shopify:\/\/shop_images\/lighter_1_f47c9f92-7fe5-4dac-92d3-bffbdfa21c66.png",
-            "title": "",
-            "title-text-size": 10,
-            "title-color": "",
-            "title-font-family": "Helvetica, Arial, sans-serif",
-            "desc": "",
-            "desc-text-size": 10,
-            "desc-color": "",
-            "desc-font-family": "Helvetica, Arial, sans-serif",
-            "caption": "<p>(above) factory workers in bangladesh putting the finishing touches to collection 20<\/p>",
-            "caption-text-size": 12,
-            "caption-color": "",
-            "caption-font-family": "Helvetica, Arial, sans-serif",
-            "block-width": "full",
-            "custom-block-width": 900,
-            "show-title": false,
-            "show-desc": false,
-            "show-caption": true
-          }
-        }
-      },
-      "block_order": [
-        "4ac59d8f-6494-4312-b464-08f84797ce6a"
-      ],
-      "settings": {
-      }
-    },
     "b15834fe-c472-4960-8cb6-7a2c1f471e96": {
       "type": "ninety-image-text-tile",
       "blocks": {
@@ -761,59 +830,10 @@
       "settings": {
       }
     },
-    "9bfe33f4-efb1-4d89-93d5-3a1179d78328": {
-      "type": "np-double-column-text-style2",
-      "blocks": {
-        "0ab9828e-6218-433d-9eaa-dc0a5d98e272": {
-          "type": "double-column-text-block",
-          "settings": {
-            "left-pre-title": "",
-            "left-title": "",
-            "left-desc": "",
-            "left-btn-text": "",
-            "left-pre-title-text-size": 10,
-            "left-title-text-size": 10,
-            "left-desc-text-size": 10,
-            "left-btn-text-size": 10,
-            "left-pre-title-color": "",
-            "left-title-color": "",
-            "left-desc-color": "",
-            "left-btn-color": "#000000",
-            "left-text-bg-color": "",
-            "left-pre-title-font-family": "Helvetica, Arial, sans-serif",
-            "left-title-font-family": "Helvetica, Arial, sans-serif",
-            "left-desc-font-family": "Helvetica, Arial, sans-serif",
-            "left-btn-font-family": "Helvetica, Arial, sans-serif",
-            "left-btn-url": "",
-            "right-pre-title": "",
-            "right-title": "<p>Our Finishes<\/p>",
-            "right-desc": "<p>Blurb needed. We prioritise the use of low-impact, renewable and<br\/>certified organic materials when designing our collections.<br\/>All of our fabrics are vegan, selected to have the lowest impact on our global environment.<\/p>",
-            "right-btn-text": "",
-            "right-pre-title-text-size": 10,
-            "right-title-text-size": 40,
-            "right-desc-text-size": 26,
-            "right-btn-text-size": 10,
-            "right-pre-title-color": "",
-            "right-title-color": "",
-            "right-desc-color": "",
-            "right-btn-color": "#000000",
-            "right-text-bg-color": "",
-            "right-pre-title-font-family": "Helvetica, Arial, sans-serif",
-            "right-title-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
-            "right-desc-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
-            "right-btn-font-family": "Helvetica, Arial, sans-serif",
-            "right-btn-url": "",
-            "block-width": "medium",
-            "custom-block-width": 800,
-            "show-divider": false,
-            "block-height": 250
-          }
-        }
-      },
-      "block_order": [
-        "0ab9828e-6218-433d-9eaa-dc0a5d98e272"
-      ],
+    "129e153f-0358-4af0-a14d-ceea7e5b9d9d": {
+      "type": "spacer",
       "settings": {
+        "spacer": 10
       }
     }
   },
@@ -826,10 +846,11 @@
     "a3309f4c-58e2-45ec-857f-cdb6b5a06b51",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
     "45a9c284-3da2-4dc6-a26f-9b23a085a91d",
+    "9bfe33f4-efb1-4d89-93d5-3a1179d78328",
     "5888c222-629c-4403-bec1-d629050270e1",
-    "64e01452-034f-4a0b-8351-dca5927476f5",
     "99768ac2-09eb-40a4-a014-3e47cad3bd4f",
+    "64e01452-034f-4a0b-8351-dca5927476f5",
     "b15834fe-c472-4960-8cb6-7a2c1f471e96",
-    "9bfe33f4-efb1-4d89-93d5-3a1179d78328"
+    "129e153f-0358-4af0-a14d-ceea7e5b9d9d"
   ]
 }
