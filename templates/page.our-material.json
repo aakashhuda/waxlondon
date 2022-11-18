@@ -358,6 +358,46 @@
         "section-width": 100
       }
     },
+    "a3309f4c-58e2-45ec-857f-cdb6b5a06b51": {
+      "type": "np-single-image",
+      "blocks": {
+        "1b743c6d-7823-4c97-bf33-e2218204542a": {
+          "type": "image-block",
+          "settings": {
+            "bg-image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
+            "title": "",
+            "title-text-size": 10,
+            "title-color": "",
+            "title-font-family": "Helvetica, Arial, sans-serif",
+            "desc": "",
+            "desc-text-size": 10,
+            "desc-color": "",
+            "desc-font-family": "Helvetica, Arial, sans-serif",
+            "caption": "<p>(above) look 00 from collection 20 made of x material. shop here<\/p>",
+            "caption-text-size": 12,
+            "caption-color": "",
+            "caption-font-family": "Helvetica, Arial, sans-serif",
+            "block-width": "full",
+            "custom-block-width": 800,
+            "show-title": false,
+            "show-desc": false,
+            "show-caption": true
+          }
+        },
+        "4c891f0f-9ad6-4969-9aef-c090a47cc662": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer-height": 150
+          }
+        }
+      },
+      "block_order": [
+        "1b743c6d-7823-4c97-bf33-e2218204542a",
+        "4c891f0f-9ad6-4969-9aef-c090a47cc662"
+      ],
+      "settings": {
+      }
+    },
     "74c1a040-e888-4c50-801a-593c3a2b7edf": {
       "type": "ninety-product-with-info",
       "blocks": {
@@ -715,37 +755,10 @@
       "settings": {
       }
     },
-    "a3309f4c-58e2-45ec-857f-cdb6b5a06b51": {
-      "type": "np-single-image",
-      "blocks": {
-        "1b743c6d-7823-4c97-bf33-e2218204542a": {
-          "type": "image-block",
-          "settings": {
-            "bg-image": "shopify:\/\/shop_images\/04-10-2022-WAX1465-Square.jpg",
-            "title": "",
-            "title-text-size": 10,
-            "title-color": "",
-            "title-font-family": "Helvetica, Arial, sans-serif",
-            "desc": "",
-            "desc-text-size": 10,
-            "desc-color": "",
-            "desc-font-family": "Helvetica, Arial, sans-serif",
-            "caption": "<p>(above) look 00 from collection 20 made of x material. shop here<\/p>",
-            "caption-text-size": 12,
-            "caption-color": "",
-            "caption-font-family": "Helvetica, Arial, sans-serif",
-            "block-width": "full",
-            "custom-block-width": 800,
-            "show-title": false,
-            "show-desc": false,
-            "show-caption": true
-          }
-        }
-      },
-      "block_order": [
-        "1b743c6d-7823-4c97-bf33-e2218204542a"
-      ],
+    "45a9c284-3da2-4dc6-a26f-9b23a085a91d": {
+      "type": "spacer",
       "settings": {
+        "spacer": 140
       }
     }
   },
@@ -755,11 +768,12 @@
     "4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04",
     "ea8911aa-bc92-49c4-a3b4-d1f498881329",
     "9612169f-ad2c-4324-84d6-e4222461c9e9",
+    "a3309f4c-58e2-45ec-857f-cdb6b5a06b51",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
     "5888c222-629c-4403-bec1-d629050270e1",
     "64e01452-034f-4a0b-8351-dca5927476f5",
     "99768ac2-09eb-40a4-a014-3e47cad3bd4f",
     "b15834fe-c472-4960-8cb6-7a2c1f471e96",
-    "a3309f4c-58e2-45ec-857f-cdb6b5a06b51"
+    "45a9c284-3da2-4dc6-a26f-9b23a085a91d"
   ]
 }
