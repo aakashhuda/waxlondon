@@ -317,6 +317,45 @@
       "settings": {
         "section-width": 100
       }
+    },
+    "64e01452-034f-4a0b-8351-dca5927476f5": {
+      "type": "ninety-mutlicolumn-company",
+      "blocks": {
+        "82de8901-ca9b-44a8-8157-e6bd23c5063c": {
+          "type": "company-card",
+          "settings": {
+            "company-name": "<p>Echotex<\/p>",
+            "company-name-font": "Helvetica, Arial, sans-serif",
+            "company-name-font-size": 26,
+            "company-name-font-weight": 400,
+            "company-name-line-height": 37,
+            "company-origin": "Country, Country, Country",
+            "company-origin-font": "Helvetica, Arial, sans-serif",
+            "company-origin-font-size": 12,
+            "company-origin-font-weight": 400,
+            "company-origin-line-height": 21,
+            "company-description": "Echotex operates with planet, people and product at its heart. Industry-leading, it was the first factory in Bangladesh to offer health insurance for all workers, fair wages and a free lunch, every day.",
+            "company-description-font": "Helvetica, Arial, sans-serif",
+            "company-description-font-size": 16,
+            "company-description-font-weight": 400,
+            "company-description-line-height": 28,
+            "list-content-1": "Its pioneering ethical practices help to safeguard and improve the wellbeing of the workforce.",
+            "list-content-2": "Sustainable production processes produce excellent quality products without compromising the environment or our brand values.",
+            "list-font": "Helvetica, Arial, sans-serif",
+            "list-font-size": 16,
+            "list-font-weight": 400,
+            "list-line-height": 28,
+            "list-letter-spacing": 0,
+            "enable-border": true
+          }
+        }
+      },
+      "block_order": [
+        "82de8901-ca9b-44a8-8157-e6bd23c5063c"
+      ],
+      "settings": {
+        "section-width": 100
+      }
     }
   },
   "order": [
@@ -324,6 +363,7 @@
     "de96053a-bb27-4c8a-b995-d82fbe958907",
     "9612169f-ad2c-4324-84d6-e4222461c9e9",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
-    "5888c222-629c-4403-bec1-d629050270e1"
+    "5888c222-629c-4403-bec1-d629050270e1",
+    "64e01452-034f-4a0b-8351-dca5927476f5"
   ]
 }
