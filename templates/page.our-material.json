@@ -281,11 +281,38 @@
             "product-text-right-padding": 45,
             "enable-border": true
           }
+        },
+        "c5ff250a-b359-4be1-b2be-c9c689140833": {
+          "type": "product-card",
+          "settings": {
+            "product-image": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_13_130_R1_1.png",
+            "product-name": "<p>Buttons<\/p>",
+            "product-name-font": "Helvetica, Arial, sans-serif",
+            "product-name-font-size": 26,
+            "product-name-font-weight": 400,
+            "product-name-line-height": 37,
+            "product-origin": "Country, Country, Country",
+            "product-origin-font": "Helvetica, Arial, sans-serif",
+            "product-origin-font-size": 12,
+            "product-origin-font-weight": 400,
+            "product-origin-line-height": 21,
+            "product-description": "We choose to use hemp for its environmentally friendly properties as well as its durability and drape. Hemp from the Cannabis sativa plant, is considered to be one of the most environmentally friendly fabrics.",
+            "product-description-font": "Helvetica, Arial, sans-serif",
+            "product-description-font-size": 16,
+            "product-description-font-weight": 400,
+            "product-description-line-height": 28,
+            "url-name": "Learn More",
+            "url": "",
+            "product-text-left-padding": 20,
+            "product-text-right-padding": 45,
+            "enable-border": false
+          }
         }
       },
       "block_order": [
         "bf3d8aea-c64c-4a13-b639-7f3e6671830f",
-        "f002cc93-82e4-452a-8275-d0415b752277"
+        "f002cc93-82e4-452a-8275-d0415b752277",
+        "c5ff250a-b359-4be1-b2be-c9c689140833"
       ],
       "settings": {
         "section-width": 100
