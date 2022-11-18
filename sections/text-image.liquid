@@ -78,12 +78,7 @@
                 width: {{ block.settings.image-width }}%;
             }
             .hr-parent-{{ block.id }}{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                order: 2;
-                width: 100%;
+                display: none;
             }
             hr.hr-{{ block.id }}{
                 display: none;
@@ -118,6 +113,14 @@
                     padding: 0.7em 0;
                     padding-left: 1.7em;
                     border: 1px solid #2b2724;
+                    width: 100%;
+                }
+                .hr-parent-{{ block.id }}{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    order: 2;
                     width: 100%;
                 }
                 hr.hr-{{ block.id }} {
