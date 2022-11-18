@@ -36,10 +36,64 @@
             "product-text-right-padding": 45,
             "enable-border": true
           }
+        },
+        "50bc7d14-1f08-43d7-9f9d-0047255c2dad": {
+          "type": "product-card",
+          "settings": {
+            "product-image": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_13_217_1.png",
+            "product-name": "<p>TENCELTM<\/p>",
+            "product-name-font": "Helvetica, Arial, sans-serif",
+            "product-name-font-size": 26,
+            "product-name-font-weight": 400,
+            "product-name-line-height": 37,
+            "product-origin": "Country, Country, Country",
+            "product-origin-font": "Helvetica, Arial, sans-serif",
+            "product-origin-font-size": 12,
+            "product-origin-font-weight": 400,
+            "product-origin-line-height": 21,
+            "product-description": "Linen is typically grown without the use of pesticides and fertiliser as naturally the flax plant requires less than other crops. However this is not always the case, so as we strive for traceability we have sourced European Flax® Linen.",
+            "product-description-font": "Helvetica, Arial, sans-serif",
+            "product-description-font-size": 16,
+            "product-description-font-weight": 400,
+            "product-description-line-height": 28,
+            "url-name": "Learn More",
+            "url": "",
+            "product-text-left-padding": 20,
+            "product-text-right-padding": 45,
+            "enable-border": true
+          }
+        },
+        "3a691553-82d6-4752-831d-f997fb113225": {
+          "type": "product-card",
+          "settings": {
+            "product-image": "shopify:\/\/shop_images\/220818_NinetyPercent_SS22_18_079_2.png",
+            "product-name": "<p>ENKAR Viscose<\/p>",
+            "product-name-font": "Helvetica, Arial, sans-serif",
+            "product-name-font-size": 26,
+            "product-name-font-weight": 400,
+            "product-name-line-height": 37,
+            "product-origin": "Country, Country, Country",
+            "product-origin-font": "Helvetica, Arial, sans-serif",
+            "product-origin-font-size": 12,
+            "product-origin-font-weight": 400,
+            "product-origin-line-height": 21,
+            "product-description": "We choose to use hemp for its environmentally friendly properties as well as its durability and drape. Hemp from the Cannabis sativa plant, is considered to be one of the most environmentally friendly fabrics.",
+            "product-description-font": "Helvetica, Arial, sans-serif",
+            "product-description-font-size": 16,
+            "product-description-font-weight": 400,
+            "product-description-line-height": 28,
+            "url-name": "Learn More",
+            "url": "",
+            "product-text-left-padding": 20,
+            "product-text-right-padding": 45,
+            "enable-border": false
+          }
         }
       },
       "block_order": [
-        "6bf0f87d-74a2-41ca-98e2-2a85f14f4a65"
+        "6bf0f87d-74a2-41ca-98e2-2a85f14f4a65",
+        "50bc7d14-1f08-43d7-9f9d-0047255c2dad",
+        "3a691553-82d6-4752-831d-f997fb113225"
       ],
       "settings": {
         "section-width": 100
