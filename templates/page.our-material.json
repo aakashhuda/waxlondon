@@ -461,15 +461,15 @@
         "section-width": 100
       }
     },
-    "45a9c284-3da2-4dc6-a26f-9b23a085a91d": {
-      "type": "spacer",
-      "settings": {
-        "spacer": 140
-      }
-    },
     "9bfe33f4-efb1-4d89-93d5-3a1179d78328": {
       "type": "np-double-column-text-style2",
       "blocks": {
+        "45c0fc9f-a411-4079-b13a-be30d8bd59c0": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer-height": 120
+          }
+        },
         "0ab9828e-6218-433d-9eaa-dc0a5d98e272": {
           "type": "double-column-text-block",
           "settings": {
@@ -523,6 +523,7 @@
         }
       },
       "block_order": [
+        "45c0fc9f-a411-4079-b13a-be30d8bd59c0",
         "0ab9828e-6218-433d-9eaa-dc0a5d98e272",
         "1e9ef6ef-e36e-4033-b11d-6cb2fe73b07f"
       ],
@@ -921,7 +922,6 @@
     "af04b12c-ee46-480d-b0a9-6d5837f918ad",
     "a3309f4c-58e2-45ec-857f-cdb6b5a06b51",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
-    "45a9c284-3da2-4dc6-a26f-9b23a085a91d",
     "9bfe33f4-efb1-4d89-93d5-3a1179d78328",
     "5888c222-629c-4403-bec1-d629050270e1",
     "99768ac2-09eb-40a4-a014-3e47cad3bd4f",
