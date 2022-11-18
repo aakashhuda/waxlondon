@@ -673,6 +673,12 @@
             "button-text-color": "#2b2724"
           }
         },
+        "8577ccb1-bc6e-46b6-969c-ccbfa9b1974c": {
+          "type": "spacer",
+          "settings": {
+            "spacer": 50
+          }
+        },
         "2c9524f3-c018-46a6-a4c8-f89c5224f375": {
           "type": "image-and-text-tile",
           "settings": {
@@ -703,6 +709,7 @@
       },
       "block_order": [
         "f2d2f45b-b8ba-4104-ab44-65d004dd850c",
+        "8577ccb1-bc6e-46b6-969c-ccbfa9b1974c",
         "2c9524f3-c018-46a6-a4c8-f89c5224f375"
       ],
       "settings": {
