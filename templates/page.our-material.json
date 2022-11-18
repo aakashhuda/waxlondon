@@ -72,6 +72,201 @@
         "spacer": 80
       }
     },
+    "4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04": {
+      "type": "ninety-multicolumn",
+      "blocks": {
+        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/362499-800w_2.png",
+            "custom-image-width": 400,
+            "caption": "",
+            "caption-font-family": "",
+            "caption-font-weight": 100,
+            "caption-font-color": "",
+            "caption-size": 16,
+            "caption-line-height": 1.2,
+            "caption-spacer-height": 5,
+            "image-vertical-alignment": "top",
+            "heading": "",
+            "heading-font-family": "",
+            "heading-font-weight": 700,
+            "heading-font-color": "",
+            "heading-size": 28,
+            "heading-line-height": 1.2,
+            "heading-spacer-height": 15,
+            "sub-heading": "",
+            "sub-heading-font-family": "",
+            "sub-heading-font-weight": 300,
+            "sub-heading-font-color": "",
+            "sub-heading-size": 16,
+            "sub-heading-line-height": 1.2,
+            "sub-heading-spacer-height": 5,
+            "description": "",
+            "text-font-family": "",
+            "text-font-weight": 300,
+            "text-font-color": "",
+            "description-size": 16,
+            "description-line-height": 1.2,
+            "description-spacer-height": 0
+          }
+        },
+        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2022-07-22_at_18.38_1.png",
+            "custom-image-width": 225,
+            "caption": "",
+            "caption-font-family": "",
+            "caption-font-weight": 100,
+            "caption-font-color": "",
+            "caption-size": 16,
+            "caption-line-height": 1.2,
+            "caption-spacer-height": 5,
+            "image-vertical-alignment": "bottom",
+            "heading": "",
+            "heading-font-family": "",
+            "heading-font-weight": 700,
+            "heading-font-color": "",
+            "heading-size": 28,
+            "heading-line-height": 1.2,
+            "heading-spacer-height": 15,
+            "sub-heading": "",
+            "sub-heading-font-family": "",
+            "sub-heading-font-weight": 300,
+            "sub-heading-font-color": "",
+            "sub-heading-size": 16,
+            "sub-heading-line-height": 1.2,
+            "sub-heading-spacer-height": 5,
+            "description": "",
+            "text-font-family": "",
+            "text-font-weight": 300,
+            "text-font-color": "",
+            "description-size": 16,
+            "description-line-height": 1.2,
+            "description-spacer-height": 0
+          }
+        },
+        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/c593cd03ba706677b70b9ff3cd107147--laundry-lines-skor_1.png",
+            "custom-image-width": 400,
+            "caption": "",
+            "caption-font-family": "",
+            "caption-font-weight": 100,
+            "caption-font-color": "",
+            "caption-size": 16,
+            "caption-line-height": 1.2,
+            "caption-spacer-height": 5,
+            "image-vertical-alignment": "top",
+            "heading": "",
+            "heading-font-family": "",
+            "heading-font-weight": 700,
+            "heading-font-color": "",
+            "heading-size": 28,
+            "heading-line-height": 1.2,
+            "heading-spacer-height": 15,
+            "sub-heading": "",
+            "sub-heading-font-family": "",
+            "sub-heading-font-weight": 300,
+            "sub-heading-font-color": "",
+            "sub-heading-size": 16,
+            "sub-heading-line-height": 1.2,
+            "sub-heading-spacer-height": 5,
+            "description": "",
+            "text-font-family": "",
+            "text-font-weight": 300,
+            "text-font-color": "",
+            "description-size": 16,
+            "description-line-height": 1.2,
+            "description-spacer-height": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-0",
+        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-1",
+        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-2"
+      ],
+      "settings": {
+        "section-width": "custom",
+        "custom-section-width": 1400,
+        "column-gap": 90,
+        "multicolumn-style": "style2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ea8911aa-bc92-49c4-a3b4-d1f498881329": {
+      "type": "np-double-column-text-style2",
+      "blocks": {
+        "c175c577-37c5-4e18-a22d-8f64156d4908": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer-height": 100
+          }
+        },
+        "47a7a989-2ee6-4054-9c47-e442019b64a2": {
+          "type": "double-column-text-block",
+          "settings": {
+            "left-pre-title": "",
+            "left-title": "",
+            "left-desc": "",
+            "left-btn-text": "",
+            "left-pre-title-text-size": 10,
+            "left-title-text-size": 10,
+            "left-desc-text-size": 10,
+            "left-btn-text-size": 10,
+            "left-pre-title-color": "",
+            "left-title-color": "",
+            "left-desc-color": "",
+            "left-btn-color": "#000000",
+            "left-text-bg-color": "",
+            "left-pre-title-font-family": "Helvetica, Arial, sans-serif",
+            "left-title-font-family": "Helvetica, Arial, sans-serif",
+            "left-desc-font-family": "Helvetica, Arial, sans-serif",
+            "left-btn-font-family": "Helvetica, Arial, sans-serif",
+            "left-btn-url": "",
+            "right-pre-title": "",
+            "right-title": "<p>Our Finishes<\/p>",
+            "right-desc": "<p>Blurb needed. We prioritise the use of low-impact, renewable and certified organic materials when designing our collections. All of our fabrics are vegan, selected to have the lowest impact on our global environment.<\/p>",
+            "right-btn-text": "",
+            "right-pre-title-text-size": 10,
+            "right-title-text-size": 40,
+            "right-desc-text-size": 26,
+            "right-btn-text-size": 10,
+            "right-pre-title-color": "",
+            "right-title-color": "",
+            "right-desc-color": "",
+            "right-btn-color": "#000000",
+            "right-text-bg-color": "",
+            "right-pre-title-font-family": "Helvetica, Arial, sans-serif",
+            "right-title-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "right-desc-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "right-btn-font-family": "Helvetica, Arial, sans-serif",
+            "right-btn-url": "",
+            "block-width": "medium",
+            "custom-block-width": 800,
+            "show-divider": false,
+            "block-height": 230
+          }
+        },
+        "4b12645a-7b70-45f9-aa97-48e5ec673326": {
+          "type": "spacer-block",
+          "settings": {
+            "spacer-height": 140
+          }
+        }
+      },
+      "block_order": [
+        "c175c577-37c5-4e18-a22d-8f64156d4908",
+        "47a7a989-2ee6-4054-9c47-e442019b64a2",
+        "4b12645a-7b70-45f9-aa97-48e5ec673326"
+      ],
+      "settings": {
+      }
+    },
     "9612169f-ad2c-4324-84d6-e4222461c9e9": {
       "type": "ninety-product-with-info",
       "blocks": {
@@ -415,75 +610,6 @@
         "section-width": 100
       }
     },
-    "ea8911aa-bc92-49c4-a3b4-d1f498881329": {
-      "type": "np-double-column-text-style2",
-      "blocks": {
-        "c175c577-37c5-4e18-a22d-8f64156d4908": {
-          "type": "spacer-block",
-          "settings": {
-            "spacer-height": 100
-          }
-        },
-        "47a7a989-2ee6-4054-9c47-e442019b64a2": {
-          "type": "double-column-text-block",
-          "settings": {
-            "left-pre-title": "",
-            "left-title": "",
-            "left-desc": "",
-            "left-btn-text": "",
-            "left-pre-title-text-size": 10,
-            "left-title-text-size": 10,
-            "left-desc-text-size": 10,
-            "left-btn-text-size": 10,
-            "left-pre-title-color": "",
-            "left-title-color": "",
-            "left-desc-color": "",
-            "left-btn-color": "#000000",
-            "left-text-bg-color": "",
-            "left-pre-title-font-family": "Helvetica, Arial, sans-serif",
-            "left-title-font-family": "Helvetica, Arial, sans-serif",
-            "left-desc-font-family": "Helvetica, Arial, sans-serif",
-            "left-btn-font-family": "Helvetica, Arial, sans-serif",
-            "left-btn-url": "",
-            "right-pre-title": "",
-            "right-title": "<p>Our Finishes<\/p>",
-            "right-desc": "<p>Blurb needed. We prioritise the use of low-impact, renewable and certified organic materials when designing our collections. All of our fabrics are vegan, selected to have the lowest impact on our global environment.<\/p>",
-            "right-btn-text": "",
-            "right-pre-title-text-size": 10,
-            "right-title-text-size": 40,
-            "right-desc-text-size": 26,
-            "right-btn-text-size": 10,
-            "right-pre-title-color": "",
-            "right-title-color": "",
-            "right-desc-color": "",
-            "right-btn-color": "#000000",
-            "right-text-bg-color": "",
-            "right-pre-title-font-family": "Helvetica, Arial, sans-serif",
-            "right-title-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
-            "right-desc-font-family": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
-            "right-btn-font-family": "Helvetica, Arial, sans-serif",
-            "right-btn-url": "",
-            "block-width": "medium",
-            "custom-block-width": 800,
-            "show-divider": false,
-            "block-height": 230
-          }
-        },
-        "4b12645a-7b70-45f9-aa97-48e5ec673326": {
-          "type": "spacer-block",
-          "settings": {
-            "spacer-height": 100
-          }
-        }
-      },
-      "block_order": [
-        "c175c577-37c5-4e18-a22d-8f64156d4908",
-        "47a7a989-2ee6-4054-9c47-e442019b64a2",
-        "4b12645a-7b70-45f9-aa97-48e5ec673326"
-      ],
-      "settings": {
-      }
-    },
     "99768ac2-09eb-40a4-a014-3e47cad3bd4f": {
       "type": "np-single-image",
       "blocks": {
@@ -515,132 +641,6 @@
         "4ac59d8f-6494-4312-b464-08f84797ce6a"
       ],
       "settings": {
-      }
-    },
-    "4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04": {
-      "type": "ninety-multicolumn",
-      "blocks": {
-        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-0": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/362499-800w_2.png",
-            "custom-image-width": 400,
-            "caption": "",
-            "caption-font-family": "",
-            "caption-font-weight": 100,
-            "caption-font-color": "",
-            "caption-size": 16,
-            "caption-line-height": 1.2,
-            "caption-spacer-height": 5,
-            "image-vertical-alignment": "top",
-            "heading": "",
-            "heading-font-family": "",
-            "heading-font-weight": 700,
-            "heading-font-color": "",
-            "heading-size": 28,
-            "heading-line-height": 1.2,
-            "heading-spacer-height": 15,
-            "sub-heading": "",
-            "sub-heading-font-family": "",
-            "sub-heading-font-weight": 300,
-            "sub-heading-font-color": "",
-            "sub-heading-size": 16,
-            "sub-heading-line-height": 1.2,
-            "sub-heading-spacer-height": 5,
-            "description": "",
-            "text-font-family": "",
-            "text-font-weight": 300,
-            "text-font-color": "",
-            "description-size": 16,
-            "description-line-height": 1.2,
-            "description-spacer-height": 0
-          }
-        },
-        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2022-07-22_at_18.38_1.png",
-            "custom-image-width": 225,
-            "caption": "",
-            "caption-font-family": "",
-            "caption-font-weight": 100,
-            "caption-font-color": "",
-            "caption-size": 16,
-            "caption-line-height": 1.2,
-            "caption-spacer-height": 5,
-            "image-vertical-alignment": "bottom",
-            "heading": "",
-            "heading-font-family": "",
-            "heading-font-weight": 700,
-            "heading-font-color": "",
-            "heading-size": 28,
-            "heading-line-height": 1.2,
-            "heading-spacer-height": 15,
-            "sub-heading": "",
-            "sub-heading-font-family": "",
-            "sub-heading-font-weight": 300,
-            "sub-heading-font-color": "",
-            "sub-heading-size": 16,
-            "sub-heading-line-height": 1.2,
-            "sub-heading-spacer-height": 5,
-            "description": "",
-            "text-font-family": "",
-            "text-font-weight": 300,
-            "text-font-color": "",
-            "description-size": 16,
-            "description-line-height": 1.2,
-            "description-spacer-height": 0
-          }
-        },
-        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/c593cd03ba706677b70b9ff3cd107147--laundry-lines-skor_1.png",
-            "custom-image-width": 400,
-            "caption": "",
-            "caption-font-family": "",
-            "caption-font-weight": 100,
-            "caption-font-color": "",
-            "caption-size": 16,
-            "caption-line-height": 1.2,
-            "caption-spacer-height": 5,
-            "image-vertical-alignment": "top",
-            "heading": "",
-            "heading-font-family": "",
-            "heading-font-weight": 700,
-            "heading-font-color": "",
-            "heading-size": 28,
-            "heading-line-height": 1.2,
-            "heading-spacer-height": 15,
-            "sub-heading": "",
-            "sub-heading-font-family": "",
-            "sub-heading-font-weight": 300,
-            "sub-heading-font-color": "",
-            "sub-heading-size": 16,
-            "sub-heading-line-height": 1.2,
-            "sub-heading-spacer-height": 5,
-            "description": "",
-            "text-font-family": "",
-            "text-font-weight": 300,
-            "text-font-color": "",
-            "description-size": 16,
-            "description-line-height": 1.2,
-            "description-spacer-height": 0
-          }
-        }
-      },
-      "block_order": [
-        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-0",
-        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-1",
-        "template--16973643874580__4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04-1668776313c06b7504-2"
-      ],
-      "settings": {
-        "section-width": "custom",
-        "custom-section-width": 1400,
-        "column-gap": 90,
-        "multicolumn-style": "style2",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "b15834fe-c472-4960-8cb6-7a2c1f471e96": {
@@ -719,13 +719,13 @@
   "order": [
     "3065cf15-2b96-4126-8e51-e1abd50f919b",
     "de96053a-bb27-4c8a-b995-d82fbe958907",
+    "4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04",
+    "ea8911aa-bc92-49c4-a3b4-d1f498881329",
     "9612169f-ad2c-4324-84d6-e4222461c9e9",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
     "5888c222-629c-4403-bec1-d629050270e1",
     "64e01452-034f-4a0b-8351-dca5927476f5",
-    "ea8911aa-bc92-49c4-a3b4-d1f498881329",
     "99768ac2-09eb-40a4-a014-3e47cad3bd4f",
-    "4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04",
     "b15834fe-c472-4960-8cb6-7a2c1f471e96"
   ]
 }
