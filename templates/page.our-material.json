@@ -1,13 +1,5 @@
 {
   "sections": {
-    "hero": {
-      "type": "ninety-our-material-hero",
-      "settings": {
-        "image-first-layout": true,
-        "image-width": 70,
-        "section-width": 100
-      }
-    },
     "9612169f-ad2c-4324-84d6-e4222461c9e9": {
       "type": "ninety-product-with-info",
       "blocks": {
@@ -101,7 +93,6 @@
     }
   },
   "order": [
-    "hero",
     "9612169f-ad2c-4324-84d6-e4222461c9e9"
   ]
 }
