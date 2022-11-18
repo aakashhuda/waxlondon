@@ -351,6 +351,12 @@
         "section-width": 100
       }
     },
+    "af04b12c-ee46-480d-b0a9-6d5837f918ad": {
+      "type": "spacer",
+      "settings": {
+        "spacer": 130
+      }
+    },
     "a3309f4c-58e2-45ec-857f-cdb6b5a06b51": {
       "type": "np-single-image",
       "blocks": {
@@ -912,6 +918,7 @@
     "4e5fdee4-d9ae-4c0e-a964-fdd8ca4a5b04",
     "ea8911aa-bc92-49c4-a3b4-d1f498881329",
     "9612169f-ad2c-4324-84d6-e4222461c9e9",
+    "af04b12c-ee46-480d-b0a9-6d5837f918ad",
     "a3309f4c-58e2-45ec-857f-cdb6b5a06b51",
     "74c1a040-e888-4c50-801a-593c3a2b7edf",
     "45a9c284-3da2-4dc6-a26f-9b23a085a91d",
