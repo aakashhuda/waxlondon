@@ -6,6 +6,7 @@
         "c79d82b9-a9a1-44d0-86bd-a186f5aad6aa": {
           "type": "hero-about-us",
           "settings": {
+            "block-width": 85,
             "header-title": "About Us",
             "description": "Ninety Percent was founded in London in 2018 – born ofthe friendship between Para Hamilton and Shafiq Hassan.Our label is established on their revolutionary spirit of care,and our business culture focused on profit sharing – thus providing the tools of empowerment for everyone involved in thecreation of our collections.",
             "history-description": "Back in 1988, Para and Shafiq met in London and bonded over consciousthoughts on wildlife, anti-poverty, world musicand disappearing tribesmen and crafts. For over30 years, their shared values have powered theirfriendship and business endeavours. Now with Ninety Percent they’re taking tangible strides for the world we want.",
@@ -36,7 +37,6 @@
         "7cf0071d-775c-4247-b55f-dc32f8e62124"
       ],
       "settings": {
-        "section-width": 85
       }
     },
     "double_image": {
@@ -62,7 +62,7 @@
             "title-italic": true,
             "description-font": "'Times New Roman', Times, serif",
             "description-font-size": 16,
-            "description-width": 85,
+            "description-width": 92,
             "mobile-description-font": "'Times New Roman', Times, serif",
             "mobile-description-font-size": 16,
             "mobile-description-width": 96
