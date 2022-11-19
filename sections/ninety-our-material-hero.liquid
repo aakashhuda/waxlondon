@@ -5,7 +5,7 @@
             <div class="image-container-{{ section.id }}">
                 <img class="image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
             </div>
-            <div class="text-container-{{ block.id }}">
+            <div class="text-container-{{ section.id }}">
                 {% for block in section.blocks %}
                     {% case block.type %}
                         {% when 'text' %} 
@@ -71,18 +71,21 @@
         width: {{ section.settings.image-width }}%;
     }
     .image-container-{{ section.id }} {
-        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .text-container-{{ section.id }} {
+        flex-grow: 1;
+        flex-shrink: 1;
     }
 
     {% for block in section.blocks %}
         {% case block.type %}
             {% when 'text' %}
-                .text-container-{{ block.id }} {
-                    width: 100%;
-                }
+
                 .text-{{ block.id }} {
                     font-size: {{ block.settings.font-size }}px;
                     line-height: {{ block.settings.line-height }}px;
@@ -131,7 +134,7 @@
 
 {% schema %}
 {
-    "name": "Ninety Our Material - Hero",
+    "name": "Ninety - Hero",
     "settings": [
         {
             "type": "checkbox",
