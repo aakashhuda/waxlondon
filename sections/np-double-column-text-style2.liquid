@@ -88,7 +88,8 @@
              .block-{{ block.id }}  {
                 display: flex;
                 justify-content: center;
-                height: {{ block.settings.block-height }}px;
+                flex-direction: row;
+                min-height: {{ block.settings.block-height }}px;
               
              }
              
@@ -145,12 +146,14 @@
                 font-size: {{ block.settings.left-desc-text-size }}px;
                 color: {{ block.settings.left-desc-color }};
                 font-family: {{ block.settings.left-desc-font-family }};
+                line-height: {{ block.settings.left-desc-line-height }}px;
              }
 
              .block-{{ block.id }} .right-text-part .right-desc {
                 font-size: {{ block.settings.right-desc-text-size }}px;
                 color: {{ block.settings.right-desc-color }};
                 font-family: {{ block.settings.right-desc-font-family }};
+                line-height: {{ block.settings.right-desc-line-height }}px;
              }
 
 
@@ -220,7 +223,71 @@
 
 
 
-             
+             @media only screen and (max-width: 768px) { 
+                .block-{{ block.id }}  {
+               
+                    flex-direction: column;
+                    align-items: center;
+           
+                  
+                 }
+                 .block-{{ block.id }} .left-text-part  {
+                    
+                    border-right: 0px;
+                    
+                 }
+                .block-{{ block.id }} .left-text-part .left-title {
+    
+                    font-size: {{ block.settings.mobile-left-title-text-size }}px;
+                    
+                 }
+    
+                 .block-{{ block.id }} .right-text-part .right-title {
+        
+                    font-size: {{ block.settings.mobile-right-title-text-size }}px;
+              
+                 }
+    
+    
+                 .block-{{ block.id }} .left-text-part .left-desc {
+                    font-size: {{ block.settings.mobile-left-desc-text-size }}px;
+               
+                    line-height: {{ block.settings.mobile-left-desc-line-height }}px;
+                 }
+    
+                 .block-{{ block.id }} .right-text-part .right-desc {
+                    font-size: {{ block.settings.mobile-right-desc-text-size }}px;
+     
+                    line-height: {{ block.settings.mobile-right-desc-line-height }}px;
+                 }
+    
+    
+                 .block-{{ block.id }} .left-text-part .left-pre-title {
+                    font-size: {{ block.settings.mobile-left-pre-title-text-size }}px;
+
+                 }
+    
+                 .block-{{ block.id }} .right-text-part .right-pre-title {
+                    font-size: {{ block.settings.mobile-right-pre-title-text-size }}px;
+
+                 }
+    
+    
+                 .block-{{ block.id }} .left-text-part .left-learn-more-btn {
+                    
+                    font-size: {{ block.settings.mobile-left-btn-text-size }}px;
+                   
+
+                    
+                 }
+    
+                 .block-{{ block.id }} .right-text-part .right-learn-more-btn {
+                    
+                    font-size: {{ block.settings.mobile-right-btn-text-size }}px;
+
+                    
+                 }
+             }
 
 
 
@@ -281,6 +348,16 @@
                  "unit":"px",
                  "default":10
               },
+              {
+                 "type":"range",
+                 "id":"mobile-left-pre-title-text-size",
+                 "label":"left pre-title text size for mobile devices",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
                 {
                  "type":"range",
                  "id":"left-title-text-size",
@@ -291,10 +368,30 @@
                  "unit":"px",
                  "default":10
               },
-                {
+              {
+                 "type":"range",
+                 "id":"mobile-left-title-text-size",
+                 "label":"left title text size for mobile devices",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
+              {
                  "type":"range",
                  "id":"left-desc-text-size",
                  "label":"left description text size",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
+              {
+                 "type":"range",
+                 "id":"mobile-left-desc-text-size",
+                 "label":"left description text size for more devices",
                  "min":8,
                  "max":40,
                  "step":1,
@@ -312,19 +409,32 @@
                  "default":10
               },
               {
+                 "type":"range",
+                 "id":"mobile-left-btn-text-size",
+                 "label":"left button text size for mobile devices",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
+              {
                     "type":"color",
                     "id":"left-pre-title-color",
-                    "label":"left pre title text color"
+                    "label":"left pre title text color",
+                    "default": "#000000"
                 },
               {
                     "type":"color",
                     "id":"left-title-color",
-                    "label":"left title text color"
+                    "label":"left title text color",
+                    "default": "#000000"
                 },
                 {
                     "type":"color",
                     "id":"left-desc-color",
-                    "label":"left desc text color"
+                    "label":"left desc text color",
+                    "default": "#000000"
                 },
                 {
                     "type":"color",
@@ -336,6 +446,7 @@
                     "type":"color",
                     "id":"left-text-bg-color",
                     "label":"left text part background color"
+                   
                 },
                 {
                 "type": "font",
@@ -362,7 +473,26 @@
                 "id": "left-btn-url",
                 "label" : "left button URL"
               },
-             
+              {
+                  "type": "range",
+                  "id": "left-desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Left Description Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-left-desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Left Description Line Height for Mobile Devices"
+              },
 
 
 
@@ -396,10 +526,30 @@
                  "unit":"px",
                  "default":10
               },
+              {
+                 "type":"range",
+                 "id":"mobile-right-pre-title-text-size",
+                 "label":"right pre-title text size for mobile devices",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
                 {
                  "type":"range",
                  "id":"right-title-text-size",
                  "label":"right title text size",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
+              {
+                 "type":"range",
+                 "id":"mobile-right-title-text-size",
+                 "label":"right title text size for mobile devices",
                  "min":8,
                  "max":40,
                  "step":1,
@@ -418,6 +568,16 @@
               },
               {
                  "type":"range",
+                 "id":"mobile-right-desc-text-size",
+                 "label":"right description text size for mobile devices",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
+              {
+                 "type":"range",
                  "id":"right-btn-text-size",
                  "label":"right button text size",
                  "min":8,
@@ -427,19 +587,32 @@
                  "default":10
               },
               {
+                 "type":"range",
+                 "id":"mobile-right-btn-text-size",
+                 "label":"right button text size for mobile devices",
+                 "min":8,
+                 "max":40,
+                 "step":1,
+                 "unit":"px",
+                 "default":10
+              },
+              {
                     "type":"color",
                     "id":"right-pre-title-color",
-                    "label":"right pre title text color"
+                    "label":"right pre title text color",
+                    "default": "#000000"
                 },
               {
                     "type":"color",
                     "id":"right-title-color",
-                    "label":"right title text color"
+                    "label":"right title text color",
+                    "default": "#000000"
                 },
                 {
                     "type":"color",
                     "id":"right-desc-color",
-                    "label":"right desc text color"
+                    "label":"right desc text color",
+                    "default": "#000000"
                 },
                 {
                     "type":"color",
@@ -451,6 +624,7 @@
                     "type":"color",
                     "id":"right-text-bg-color",
                     "label":"right text part background color"
+                    
                 },
                 {
                 "type": "font",
@@ -478,6 +652,28 @@
                 "label" : "right button URL"
                 
               },
+
+              {
+                  "type": "range",
+                  "id": "right-desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Right Description Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-right-desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Right Description Line Height for Mobile Devices"
+              },
+
 
 
 

@@ -1,6 +1,6 @@
 
 <div id="wrapper-{{ section.id }}"> 
-    <section class="our-material-{{ section.id }}">
+    <section class="hero-{{ section.id }}">
         {% if section.settings.image-first-layout == true %}
             <div class="image-container-{{ section.id }}">
                 <img class="image-{{ section.id }}" src="{{ section.settings.image | img_url: 'master' }}">
@@ -63,7 +63,7 @@
         justify-content: center;
         align-items: center;
     }
-    .our-material-{{ section.id }} {
+    .hero-{{ section.id }} {
         display: flex;
         gap: 70px;
         width: {{ section.settings.section-width }}%;
@@ -79,12 +79,12 @@
         width: calc(100% - 35px);
     }
     @media (min-width: 1800px) {
-        .our-material-{{ section.id }} {
+        .hero-{{ section.id }} {
             gap: 0px;
         }
     }
     @media (min-width: 2000px) {
-        .our-material-{{ section.id }} {
+        .hero-{{ section.id }} {
             gap: 0px;
         }
     }

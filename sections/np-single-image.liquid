@@ -49,6 +49,9 @@
                     max-width: {{ block.settings.custom-block-width | append: "px" }} !important;
                     margin: 0 auto;
                  }
+                 .block-{{ block.id }} {
+                    padding: 0px {{ block.settings.padding }}px;
+                 }
                  .block-{{ block.id }} .image-block-inner {
         
                     width: 100%;
@@ -79,6 +82,7 @@
                     font-size: {{ block.settings.title-text-size }}px;
                     color: {{ block.settings.title-color }};
                     font-family: {{ block.settings.title-font-family }};
+                    line-height: {{ block.settings.title-line-height }}px;
                  }
                  .block-{{ block.id }} .image-block-text .image-block-title p {
                     margin: 0 auto;
@@ -88,12 +92,14 @@
                     font-size: {{ block.settings.desc-text-size }}px;
                     color: {{ block.settings.desc-color }};
                     font-family: {{ block.settings.desc-font-family }};
+                    line-height: {{ block.settings.desc-line-height }}px;
                  }
 
                  .block-{{ block.id }} .image-block-inner .image-block-caption  {
                     font-size: {{ block.settings.caption-text-size }}px;
                     color: {{ block.settings.caption-color }};
                     font-family: {{ block.settings.caption-font-family }};
+                    line-height: {{ block.settings.caption-line-height }}px;
                  }
                  .block-{{ block.id }} .image-block-inner .image-block-caption p {
                     margin: 0 auto;
@@ -117,6 +123,23 @@
                      }
                  {% endif %}
 
+                 @media only screen and (max-width: 768px) {
+                    .block-{{ block.id }} .image-block-text .image-block-title {
+                    
+                        font-size: {{ block.settings.mobile-title-text-size }}px;                    
+                        line-height: {{ block.settings.mobile-title-line-height }}px;
+                     }
+                     .block-{{ block.id }} .image-block-text .image-block-desc {
+                        font-size: {{ block.settings.mobile-desc-text-size }}px;                    
+                        line-height: {{ block.settings.mobile-desc-line-height }}px;
+                     }
+    
+                     .block-{{ block.id }} .image-block-inner .image-block-caption  {
+                        font-size: {{ block.settings.mobile-caption-text-size }}px;                
+                        line-height: {{ block.settings.mobile-caption-line-height }}px;
+                     }
+                  }
+                  
                 
             {% when 'spacer-block' %}
 
@@ -147,8 +170,7 @@
                 {
                     "type": "richtext",
                     "label": "Add title",
-                    "id": "title",
-                    "default": "<p>Our Way</p>"
+                    "id": "title"
                 },
               
                 {
@@ -162,14 +184,45 @@
                     "default":10
                 }, 
                 {
+                    "type": "range",
+                    "id":"mobile-title-text-size",
+                    "label":"Title text size for mobile devices",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":10
+                }, 
+                {
                     "type":"color",
                     "id":"title-color",
-                    "label":"title text color"
+                    "label":"title text color",
+                    "default": "#000000"
                 },
                 {
                 "type": "font",
                 "id": "title-font-family",
                 "label" : "Title Font Family"
+              },
+              {
+                  "type": "range",
+                  "id": "title-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Title Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-title-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Title Line Height For Mobile Devices"
               },
                
                 {
@@ -189,14 +242,45 @@
                     "default":10
                 }, 
                 {
+                    "type": "range",
+                    "id":"mobile-desc-text-size",
+                    "label":"Description text size for mobile devices",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":10
+                },
+                {
                     "type":"color",
                     "id":"desc-color",
-                    "label":"desc text color"
+                    "label":"desc text color",
+                    "default": "#000000"
                 },
                 {
                 "type": "font",
                 "id": "desc-font-family",
                 "label" : "Description Font Family"
+              },
+              {
+                  "type": "range",
+                  "id": "desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Description Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Description Line Height for Mobile Devices"
               },
               {
                     "type": "richtext",
@@ -215,15 +299,56 @@
                     "default":10
                 }, 
                 {
+                    "type": "range",
+                    "id":"mobile-caption-text-size",
+                    "label":"Caption text size for mobile devices",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":10
+                },
+                {
                     "type":"color",
                     "id":"caption-color",
-                    "label":"caption text color"
+                    "label":"caption text color",
+                    "default": "#000000"
                 },
                 {
                 "type": "font",
                 "id": "caption-font-family",
                 "label" : "caption Font Family"
               },
+              {
+                  "type": "range",
+                  "id": "caption-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Caption Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-caption-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Caption Line Height for Mobile Devices"
+              },
+              {
+                    "type": "range",
+                    "id":"padding",
+                    "label":"Left-Right Space",
+                    "min":0,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":0
+                },
            {
                 "type": "select",
                 "id": "block-width",
