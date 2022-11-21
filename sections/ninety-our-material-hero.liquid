@@ -78,16 +78,6 @@
     .text-container-{{ section.id }} {
         width: calc(100% - 35px);
     }
-    @media (min-width: 1800px) {
-        .hero-{{ section.id }} {
-            gap: 0px;
-        }
-    }
-    @media (min-width: 2000px) {
-        .hero-{{ section.id }} {
-            gap: 0px;
-        }
-    }
 
     {% for block in section.blocks %}
         {% case block.type %}
