@@ -55,7 +55,7 @@
                     font-family: {{ block.settings.company-name-font }};
                     font-size: {{ block.settings.company-name-font-size }}px;
                     font-weight: {{ block.settings.company-name-font-weight }};
-                    line-height: {{ block.settings.company-name-line-weight }}px;
+                    line-height: {{ block.settings.company-name-line-height }}px;
                     text-transform: uppercase;
                 }
                 .company-description-{{ block.id }} {
@@ -64,14 +64,14 @@
                     font-family: {{ block.settings.company-description-font }};
                     font-size: {{ block.settings.company-description-font-size }}px;
                     font-weight: {{ block.settings.company-description-font-weight }};
-                    line-height: {{ block.settings.company-description-line-weight }}px;
+                    line-height: {{ block.settings.company-description-line-height }}px;
                     text-align: justify;
                 }
                 .company-origin-{{ block.id }} {
                     font-family: {{ block.settings.company-origin-font }};
                     font-size: {{ block.settings.company-origin-font-size }}px;
                     font-weight: {{ block.settings.company-origin-font-weight }};
-                    line-height: {{ block.settings.company-origin-line-weight }}px;
+                    line-height: {{ block.settings.company-origin-line-height }}px;
                     text-transform: uppercase;
                 }
                 .company-name-{{ block.id }}, .company-origin-{{ block.id }}, .company-description-{{ block.id }}, .company-speciality-list-{{ block.id }} {
@@ -87,7 +87,6 @@
                     font-family: {{ block.settings.list-font }};
                     font-size: {{ block.settings.list-font-size }}px;
                     line-height: {{ block.settings.list-line-height }}px;
-                    letter-spacing: {{ block.settings.list-letter-spacing }}em;
                 }
 
                 {% if block.settings.enable-border == true %}
@@ -95,6 +94,25 @@
                         border-right: 1px solid #c0bfbd;
                     }
                 {% endif %}
+
+                @media (max-width: 768px) {
+                    .company-name-{{ block.id }} {
+                        font-size: {{ block.settings.company-name-mobile-font-size }}px;
+                        line-height: {{ block.settings.company-name-line-height }}px;
+                    }
+                    .company-description-{{ block.id }} {
+                        font-size: {{ block.settings.company-description-mobile-font-size }}px;
+                        line-height: {{ block.settings.company-description-line-height }}px;
+                    }
+                    .company-origin-{{ block.id }} {
+                        font-size: {{ block.settings.company-origin-mobile-font-size }}px;
+                        line-height: {{ block.settings.company-origin-mobile-line-height }}px;
+                    }
+                    .list-item-{{ block.id }} {
+                        font-size: {{ block.settings.list--mobile-font-size }}px;
+                        line-height: {{ block.settings.list-mobile-line-height }}px;
+                    }
+                }
 
         {% endcase %}
 
@@ -145,6 +163,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "company-name-mobile-font-size",
+                    "min": 14,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 26,
+                    "label": "Company Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "company-name-font-weight",
                     "label": "Company Font Weight",
                     "min": 100,
@@ -162,6 +190,16 @@
                     "unit": "px",
                     "default": 37,
                     "label": "Company Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "company-name-mobile-line-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 37,
+                    "label": "Company Line Height (Mobile)"
                 },
                 {
                     "type": "text",
@@ -186,6 +224,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "company-origin-mobile-font-size",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 12,
+                    "label": "Origin Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "company-origin-font-weight",
                     "label": "Origin Font Weight",
                     "min": 100,
@@ -203,6 +251,16 @@
                     "unit": "px",
                     "default": 21,
                     "label": "Origin Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "company-origin-mobile-line-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 21,
+                    "label": "Origin Line Height (Mobile)"
                 },
                 {
                     "type": "text",
@@ -226,6 +284,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "company-description-mobile-font-size",
+                    "min": 14,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Description Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "company-description-font-weight",
                     "label": "Description Font Weight",
                     "min": 100,
@@ -243,6 +311,16 @@
                     "unit": "px",
                     "default": 28,
                     "label": "Product Description Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "company-description-mobile-line-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Product Description Line Height (Mobile)"
                 },
                 {
                     "type": "text",
@@ -271,6 +349,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "list-mobile-font-size",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "List Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "list-font-weight",
                     "label": "List Font Weight",
                     "min": 100,
@@ -291,13 +379,13 @@
                 },
                 {
                     "type": "range",
-                    "id": "list-letter-spacing",
-                    "min": -1,
-                    "max": 5,
-                    "step": 0.1,
-                    "unit": "em",
-                    "default": 0,
-                    "label": "List Letter Spacing"
+                    "id": "list-mobile-line-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "List Line Height (Mobile)"
                 },
                 {
                     "type": "checkbox",

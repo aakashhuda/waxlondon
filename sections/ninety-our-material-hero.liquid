@@ -65,34 +65,49 @@
     }
     .our-material-{{ section.id }} {
         display: flex;
+        gap: 70px;
         width: {{ section.settings.section-width }}%;
     }
-    .image-{{ section.id }} {
-        width: {{ section.settings.image-width }}%;
-    }
     .image-container-{{ section.id }} {
-        flex-grow: 1;
-        flex-shrink: 0;
+        width: calc({{ section.settings.image-width }}% - 35px);
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
     }
+    
     .text-container-{{ section.id }} {
-        flex-grow: 1;
-        flex-shrink: 1;
+        width: calc(100% - 35px);
+    }
+    @media (min-width: 1800px) {
+        .our-material-{{ section.id }} {
+            gap: 0px;
+        }
+    }
+    @media (min-width: 2000px) {
+        .our-material-{{ section.id }} {
+            gap: 0px;
+        }
     }
 
     {% for block in section.blocks %}
         {% case block.type %}
             {% when 'text' %}
-
                 .text-{{ block.id }} {
                     font-size: {{ block.settings.font-size }}px;
                     line-height: {{ block.settings.line-height }}px;
-                    letter-spacing: {{ block.settings.letter-spacing }}em;
                     font-family: {{ block.settings.font }};
                     width: {{ block.settings.text-width }}%;
                     font-weight: {{ block.settings.font-weight }};
+                    letter-spacing: {{ block.settings.letter-spacing }}em;
+                }
+                @media (max-width: 768px) {
+                    .text-{{ block.id }} {
+                        font-size: {{ block.settings.font-mobile-size }}px;
+                        line-height: {{ block.settings.line-mobile-height }}px;
+                        width: {{ block.settings.text-mobile-width }}%;
+                        font-weight: {{ block.settings.font-mobile-weight }};
+                        letter-spacing: {{ block.settings.mobile-letter-spacing }}em;
+                    }
                 }
             {% when 'button-link' %}
                 .button-link a {
@@ -122,7 +137,13 @@
                 }
 
                 @media (max-width: 768px) {
-                    
+                    .bullet-point .point {
+                        font-size: {{ block.settings.point-mobile-font-size }}px;
+                    }
+    
+                    .bullet-point .point-text {
+                        font-size: {{ block.settings.point-mobile-text-font-size }}px;
+                    }
                 }
             {% when 'spacer' %}
                 .custom-spacer-{{ block.id }} {
@@ -154,7 +175,7 @@
             "max": 100,
             "step": 1,
             "unit": "%",
-            "default": 70,
+            "default": 100,
             "label": "Image Width"
         },
         {
@@ -190,6 +211,36 @@
                 },
                 {
                     "type": "range",
+                    "id": "font-mobile-size",
+                    "min": 14,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
+                    "id": "letter-spacing",
+                    "label": "Letter Spacing",
+                    "min": -2,
+                    "max": 3,
+                    "unit": "em",
+                    "step": 0.10,
+                    "default": -0.10
+                },
+                {
+                    "type": "range",
+                    "id": "mobile-letter-spacing",
+                    "label": "Letter Spacing (Mobile)",
+                    "min": -2,
+                    "max": 3,
+                    "unit": "em",
+                    "step": 0.10,
+                    "default": -0.10
+                },
+                {
+                    "type": "range",
                     "id": "line-height",
                     "min": 10,
                     "max": 100,
@@ -200,13 +251,13 @@
                 },
                 {
                     "type": "range",
-                    "id": "letter-spacing",
-                    "min": -1,
-                    "max": 5,
-                    "step": 0.1,
-                    "unit": "em",
-                    "default": 0,
-                    "label": "Letter Spacing"
+                    "id": "line-mobile-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 37,
+                    "label": "Line Height (Mobile)"
                 },
                 {
                     "type": "font",
@@ -225,6 +276,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "font-mobile-weight",
+                    "label": "Font Weight (Mobile)",
+                    "min": 100,
+                    "max": 900,
+                    "step": 100,
+                    "default": 400,
+                    "unit": "num"
+                },
+                {
+                    "type": "range",
                     "id": "text-width",
                     "min": 20,
                     "max": 100,
@@ -232,6 +293,16 @@
                     "unit": "%",
                     "default": 100,
                     "label": "Width"
+                },
+                {
+                    "type": "range",
+                    "id": "text-mobile-width",
+                    "min": 20,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Width (Mobile)"
                 }
             ]
         },
@@ -273,6 +344,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "point-mobile-font-size",
+                    "label": "Point Font Size (Mobile)",
+                    "default": 16,
+                    "min": 14,
+                    "max": 32,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
                     "id": "point-font-weight",
                     "label": "Point Font Weight",
                     "min": 100,
@@ -285,6 +366,16 @@
                     "type": "range",
                     "id": "point-text-font-size",
                     "label": "Point Text Font Size",
+                    "default": 16,
+                    "min": 14,
+                    "max": 32,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "point-mobile-text-font-size",
+                    "label": "Point Text Font Size (Mobile)",
                     "default": 16,
                     "min": 14,
                     "max": 32,

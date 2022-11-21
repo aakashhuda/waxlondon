@@ -84,7 +84,6 @@
             .description-{{ block.id }} {
                 font-size: {{ block.settings.text-font-size }}px;
                 line-height: {{ block.settings.text-line-height }}px;
-                letter-spacing: {{ block.settings.text-letter-spacing }}em;
                 color: {{ block.settings.text-font-color }};
                 width: {{ block.settings.text-width }}%;
                 text-align: justify;
@@ -92,7 +91,6 @@
             .title-{{ block.id }} {
                 font-size: {{ block.settings.title-font-size }}px;
                 line-height: {{ block.settings.title-line-height }}px;
-                letter-spacing: {{ block.settings.title-letter-spacing }}em;
                 color: {{ block.settings.title-font-color }};
                 font-weight: {{ block.settings.title-font-weight }};
                 padding-bottom: 55px;
@@ -144,6 +142,20 @@
                 }
 
             {% endif %}
+            @media (max-width: 768px) {
+                .description-{{ block.id }} {
+                    font-size: {{ block.settings.text-mobile-font-size }}px;
+                    line-height: {{ block.settings.text-mobile-line-height }}px;
+                    width: {{ block.settings.text-mobile-width }}%;
+                }
+                .title-{{ block.id }} {
+                    font-size: {{ block.settings.title-mobile-font-size }}px;
+                    line-height: {{ block.settings.title-mobile-line-height }}px;
+                }
+                .text-tile-btn-{{ block.id }} {
+                    font-size:{{ block.settings.text-mobile-font-size }}px;
+                }
+            }
         {% when 'spacer' %}
             .custom-spacer-{{ block.id }} {
                 height: {{ block.settings.spacer }}px;
@@ -232,6 +244,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "title-mobile-font-size",
+                    "min": 6,
+                    "max": 32,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 26,
+                    "label": "Title Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "title-line-height",
                     "min": 1,
                     "max": 50,
@@ -242,13 +264,13 @@
                 },
                 {
                     "type": "range",
-                    "id": "title-letter-spacing",
-                    "min": -2,
-                    "max": 5,
-                    "step": 0.50,
-                    "unit": "em",
-                    "default": 0,
-                    "label": "Title Letter Spacing"
+                    "id": "title-mobile-line-height",
+                    "min": 1,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 37,
+                    "label": "Title Line Height (Mobile)"
                 },
                 {
                     "type": "color",
@@ -289,6 +311,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "text-mobile-font-size",
+                    "min": 6,
+                    "max": 32,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Description Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "text-line-height",
                     "min": 1,
                     "max": 100,
@@ -299,13 +331,13 @@
                 },
                 {
                     "type": "range",
-                    "id": "text-letter-spacing",
-                    "min": 0,
-                    "max": 5,
-                    "step": 0.50,
-                    "unit": "em",
-                    "default": 0,
-                    "label": "Description Letter Spacing"
+                    "id": "text-mobile-line-height",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Description Line Height (Mobile)"
                 },
                 {
                     "type": "range",
@@ -316,6 +348,16 @@
                     "unit": "%",
                     "default": 100,
                     "label": "Description Width"
+                },
+                {
+                    "type": "range",
+                    "id": "text-mobile-width",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "%",
+                    "default": 100,
+                    "label": "Description Width (Mobile)"
                 },
                 {
                     "type": "color",
