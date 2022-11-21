@@ -16,7 +16,7 @@
             "font": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
             "font-weight": 400,
             "font-mobile-weight": 400,
-            "text-width": 80,
+            "text-width": 64,
             "text-mobile-width": 100
           }
         },
@@ -39,7 +39,7 @@
             "font": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
             "font-weight": 400,
             "font-mobile-weight": 400,
-            "text-width": 100,
+            "text-width": 64,
             "text-mobile-width": 100
           }
         },
@@ -62,7 +62,7 @@
             "font": "'Times New Roman', Times, serif",
             "font-weight": 400,
             "font-mobile-weight": 400,
-            "text-width": 100,
+            "text-width": 64,
             "text-mobile-width": 100
           }
         }
