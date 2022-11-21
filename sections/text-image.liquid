@@ -55,7 +55,6 @@
             }
             .text-container-{{ block.id }} div p{
                 font-size: {{ block.settings.description-font-size }}px;
-                letter-spacing: {{ block.settings.letter-spacing }}em;
                 line-height: {{ block.settings.line-height }}px;
                 font-family: {{ block.settings.description-font }};
             }
@@ -100,6 +99,10 @@
                 }
                 .text-container-{{ block.id }} div {
                     width: 90%;
+                }
+                .text-container-{{ block.id }} div p{
+                    font-size: {{ block.settings.description-mobile-font-size }}px;
+                    line-height: {{ block.settings.mobile-line-height }}px;
                 }
                 .text-container-{{ block.id }} a.desktop {
                     display: none;
@@ -179,6 +182,16 @@
                 },
                 {
                     "type": "range",
+                    "id": "description-mobile-font-size",
+                    "min": 12,
+                    "max": 20,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 14,
+                    "label": "Description Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
                     "id": "line-height",
                     "min": 20,
                     "max": 50,
@@ -189,13 +202,13 @@
                 },
                 {
                     "type": "range",
-                    "id": "letter-spacing",
-                    "min": -1,
-                    "max": 5,
-                    "step": 0.1,
-                    "unit": "em",
-                    "default": 0,
-                    "label": "Letter Spacing"
+                    "id": "mobile-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 23,
+                    "label": "Line Height (Mobile)"
                 },
                 {
                     "type": "image_picker",
@@ -275,7 +288,7 @@
     ],
     "presets": [
         {
-            "name": "Text Image"
+            "name": "Ninety Text Image"
         }
     ]
 }

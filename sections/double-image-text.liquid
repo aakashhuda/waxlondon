@@ -52,8 +52,6 @@
             }
             .potrait-image-container-{{ block.id }} {
                 width: 100%;
-                {% comment %} display: flex;
-                justify-content: space-evenly; {% endcomment %}
                 padding-top: {{ block.settings.padding-top }}%; 
             }
             .image-with-text-container-{{ block.id }} {
@@ -69,13 +67,9 @@
             .image-p-{{ block.id }} {
                 width: {{ block.settings.image-p-width }}%;
                 height: auto;
-                {% comment %} max-width: 651px;
-                max-height: 868px; {% endcomment %}
             }
             .image-l-{{ block.id }} {
                 width: {{ block.settings.image-l-width }}%;
-                {% comment %} max-width: 720px;
-                max-height: 480px; {% endcomment %}
             }
             .link-{{ block.id }} a {
                 text-decoration: none;
@@ -88,10 +82,13 @@
             .title-{{ block.id }} {
                 font-family: {{ block.settings.title-font }};
                 font-size: {{ block.settings.title-font-size }}px;
+                color: {{ block.settings.title-font-color }};
             }
             .description-{{ block.id }} {
                 font-family: {{ block.settings.description-font }};
                 font-size: {{ block.settings.description-font-size }}px;
+                line-height: {{ block.settings.description-line-height }}px;
+                color: {{ block.settings.description-font-color }};
                 text-align: justify;
                 width: {{ block.settings.description-width }}%;
             }
@@ -99,6 +96,7 @@
                 display: none;
                 font-family: {{ block.settings.mobile-description-font }};
                 font-size: {{ block.settings.mobile-description-font-size }}px;
+                color: {{ block.settings.mobile-description-font-color }};
                 width: {{ block.settings.mobile-description-width }}%;
             }
             .hr-parent-{{ block.id }}{
@@ -155,11 +153,13 @@
                 }
                 .title-{{ block.id }} {
                     padding-top: 14px;
-                    font-size: 30px;
+                    font-size: {{ block.settings.title-mobile-font-size }}px;
                 }
                 .description-{{ block.id }} {
                     padding-top: 35px;
                     padding-bottom: 30px;
+                    font-size: {{ block.settings.description-mobile-font-size }}px;
+                    line-height: {{ block.settings.description-mobile-line-height }}px;
                 }
                 .link-{{ block.id }} {
                     width: 100%;
@@ -178,6 +178,7 @@
                     display: block;
                     padding-top: 16px;
                     padding-bottom: 40px;
+                    line-height: {{ block.settings.mobile-description-line-height }}px;
                 }
                 hr.hr-{{ block.id }}, hr.hr1-{{ block.id }} {
                     display: block;
@@ -296,6 +297,12 @@
                     "label": "Title Font"
                 },
                 {
+                    "type": "color",
+                    "id": "title-font-color",
+                    "label": "Title Font Color (Mobile)",
+                    "default": "#000000"
+                },
+                {
                     "type": "range",
                     "id": "title-font-size",
                     "min": 14,
@@ -304,6 +311,16 @@
                     "unit": "px",
                     "default": 26,
                     "label": "Title Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "title-mobile-font-size",
+                    "min": 14,
+                    "max": 30,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 30,
+                    "label": "Title Font Size (Mobile)"
                 },
                 {
                     "type": "checkbox",
@@ -317,6 +334,12 @@
                     "label": "Description Font"
                 },
                 {
+                    "type": "color",
+                    "id": "description-font-color",
+                    "label": "Description Font Color",
+                    "default": "#000000"
+                },
+                {
                     "type": "range",
                     "id": "description-font-size",
                     "min": 14,
@@ -325,6 +348,36 @@
                     "unit": "px",
                     "default": 16,
                     "label": "Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "description-mobile-font-size",
+                    "min": 14,
+                    "max": 20,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Description Font Size (Mobile)"
+                },
+                {
+                    "type": "range",
+                    "id": "description-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Description Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "description-mobile-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Description Line Height (Mobile)"
                 },
                 {
                     "type": "range",
@@ -342,6 +395,12 @@
                     "label": "Mobile Description Font"
                 },
                 {
+                    "type": "color",
+                    "id": "mobile-description-font-color",
+                    "label": "Mobile Description Font Color",
+                    "default": "#000000"
+                },
+                {
                     "type": "range",
                     "id": "mobile-description-font-size",
                     "min": 14,
@@ -350,6 +409,16 @@
                     "unit": "px",
                     "default": 16,
                     "label": "Mobile Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "mobile-description-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Mobile Description Line Height"
                 },
                 {
                     "type": "range",
@@ -378,6 +447,11 @@
                     "label": "Height"
                 }
             ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Ninety Double Image With Text"
         }
     ]
 }
