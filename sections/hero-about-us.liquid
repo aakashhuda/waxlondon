@@ -3,13 +3,13 @@
         {% when 'hero-about-us' %} 
             <div id="wrapper-{{ block.id }}"> 
                 <section class="about-us-{{ block.id }}">
-                    <div class="text-{{ block.id }}">
-                        <h1 class="title-{{ block.id }}">{{ block.settings.header-title }}</h1>
-                        <div class="description-{{ block.id }}">
+                    <div class="text-container{{ block.id }}">
+                        <h1 class="title-{{ block.id }}">{{ block.settings.title }}</h1>
+                        <div class="main-description-{{ block.id }}">
                             <p>{{ block.settings.description }}</p>
                         </div>
-                        <div class="history-description-{{ block.id }}">
-                            <p>{{ block.settings.history-description }}</p>
+                        <div class="sub-description-{{ block.id }}">
+                            <p>{{ block.settings.sub-description }}</p>
                         </div>
                     </div>
                     <div class="image-container-{{ block.id }}">
@@ -42,16 +42,18 @@
                     align-items: stretch;
                     width: {{ block.settings.block-width }}%;
                 }
-                .text-{{ block.id }} {
+                .text-container{{ block.id }} {
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                 }
-                .text-{{ block.id }} h1 {
+                .text-container{{ block.id }} h1 {
                     margin-bottom: 28px;
                     margin-top: 10px;
                 }
                 .image-container-{{ block.id }} {
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                 }
@@ -60,7 +62,7 @@
                     font-family: {{ block.settings.title-font }};
                     color: {{ block.settings.title-font-color }};
                 }
-                .description-{{ block.id }} {
+                .main-description-{{ block.id }} {
                     font-size: 26px;
                     color: {{ block.settings.description-font-color }};
                     font-size: {{ block.settings.description-font-size }}px;
@@ -68,12 +70,12 @@
                     font-family: {{ block.settings.description-font }};
                     width: {{ block.settings.description-width }}%;
                 }
-                .history-description-{{ block.id }} {
-                    font-size: {{ block.settings.history-font-size }}px;
-                    line-height: {{ block.settings.history-line-height }}px;
-                    color: {{ block.settings.history-font-color }};
-                    font-family: {{ block.settings.history-font }};
-                    width: {{ block.settings.history-width }}%;
+                .sub-description-{{ block.id }} {
+                    font-size: {{ block.settings.sub-description-font-size }}px;
+                    line-height: {{ block.settings.sub-description-line-height }}px;
+                    color: {{ block.settings.sub-description-font-color }};
+                    font-family: {{ block.settings.sub-description-font }};
+                    width: {{ block.settings.sub-description-width }}%;
                     text-align: justify;
                 }
                 .hr-parent-{{ section.id }}{
@@ -91,35 +93,34 @@
                     .about-us-{{ block.id }} {
                         flex-wrap: wrap;
                     }
-                    .text-{{ block.id }}{
+                    .text-container{{ block.id }}{
                         order: 1;
                         width: 90%;
                     }
                     .image-container-{{ block.id }} {
                         order: 0;
                     }
-                    .description-{{ block.id }} p {
+                    .main-description-{{ block.id }} p {
                         margin: 0;
                     }
                     .title-{{ block.id }} {
                         font-size: {{ block.settings.title-mobile-font-size }}px;
                         color: {{ block.settings.title-mobile-font-color }};
                     }
-                    .description-{{ block.id }} {
+                    .main-description-{{ block.id }} {
                         font-size: {{ block.settings.description-mobile-font-size }}px;
                         color: {{ block.settings.description-mobile-font-color }};
                         line-height: {{ block.settings.description-mobile-line-height }}px;
                         width: {{ block.settings.description-mobile-width }}%;
-                        {% comment %} width: {{ block.settings.description-width }}%; {% endcomment %}
                     }
 
-                    .description-{{ block.id }} {
+                    .main-description-{{ block.id }} {
                         font-size: 16px;
                         text-align: justify;
                         letter-spacing: -0.01em;
                         line-height: 23px;
                     }
-                    .history-description-{{ block.id }} {
+                    .sub-description-{{ block.id }} {
                         display: none;
                     }
                     .image-container-{{ block.id }} {
@@ -166,7 +167,7 @@
                 },
                 {
                     "type": "text",
-                    "id": "header-title",
+                    "id": "title",
                     "label": "Title",
                     "default": "About Us"
                 },
@@ -177,8 +178,8 @@
                 },
                 {
                     "type": "text",
-                    "id": "history-description",
-                    "label": "History Description"
+                    "id": "sub-description",
+                    "label": "Sub Description"
                 },
                 {
                     "type": "image_picker",
@@ -213,7 +214,7 @@
                     "step": 1,
                     "unit": "px",
                     "default": 26,
-                    "label": "Description Font Size"
+                    "label": "Main Description Font Size"
                 },
                 {
                     "type": "range",
@@ -223,17 +224,17 @@
                     "step": 1,
                     "unit": "px",
                     "default": 16,
-                    "label": "Description Font Size (Mobile)"
+                    "label": "Main Description Font Size (Mobile)"
                 },
                 {
                     "type": "range",
-                    "id": "history-font-size",
+                    "id": "sub-description-font-size",
                     "min": 12,
                     "max": 30,
                     "step": 1,
                     "unit": "px",
                     "default": 16,
-                    "label": "History Font Size"
+                    "label": "Sub Description Font Size"
                 },
                 {
                     "type": "range",
@@ -243,7 +244,7 @@
                     "step": 1,
                     "unit": "px",
                     "default": 37,
-                    "label": "Description Line Height"
+                    "label": "Main Description Line Height"
                 },
                 {
                     "type": "range",
@@ -253,17 +254,17 @@
                     "step": 1,
                     "unit": "px",
                     "default": 23,
-                    "label": "Description Line Height (Mobile)"
+                    "label": "Main Description Line Height (Mobile)"
                 },
                 {
                     "type": "range",
-                    "id": "history-line-height",
+                    "id": "sub-description-line-height",
                     "min": 20,
                     "max": 50,
                     "step": 1,
                     "unit": "px",
                     "default": 28,
-                    "label": "History Line Height"
+                    "label": "Sub Description Line Height"
                 },
                 {
                     "type": "font",
@@ -285,24 +286,24 @@
                 {
                     "type": "font",
                     "id": "description-font",
-                    "label": "Description Font"
+                    "label": "Main Description Font"
                 },
                 {
                     "type": "color",
                     "id": "description-font-color",
-                    "label": "Description Font Color",
+                    "label": "Main Description Font Color",
                     "default": "#000000"
                 },
                 {
                     "type": "color",
                     "id": "description-mobile-font-color",
-                    "label": "Description Font Color (Mobile)",
+                    "label": "Main Description Font Color (Mobile)",
                     "default": "#000000"
                 },
                 {
                     "type": "font",
-                    "id": "history-font",
-                    "label": "History Font"
+                    "id": "sub-description-font",
+                    "label": "Sub Description Font"
                 },
                 {
                     "type": "range",
@@ -312,7 +313,7 @@
                     "step": 1,
                     "unit": "%",
                     "default": 100,
-                    "label": "Description Width"
+                    "label": "Main Description Width"
                 },
                 {
                     "type": "range",
@@ -322,17 +323,17 @@
                     "step": 1,
                     "unit": "%",
                     "default": 95,
-                    "label": "Description Width (Mobile)"
+                    "label": "Main Description Width (Mobile)"
                 },
                 {
                     "type": "range",
-                    "id": "history-width",
+                    "id": "sub-description-width",
                     "min": 50,
                     "max": 100,
                     "step": 1,
                     "unit": "%",
                     "default": 100,
-                    "label": "History Width"
+                    "label": "Sub Description Width"
                 }
             ]
         },
