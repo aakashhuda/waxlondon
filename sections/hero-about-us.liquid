@@ -3,18 +3,38 @@
         {% when 'hero-about-us' %} 
             <div id="wrapper-{{ block.id }}"> 
                 <section class="about-us-{{ block.id }}">
-                    <div class="text-container{{ block.id }}">
-                        <h1 class="title-{{ block.id }}">{{ block.settings.title }}</h1>
-                        <div class="main-description-{{ block.id }}">
-                            <p>{{ block.settings.description }}</p>
+                    {% if block.settings.image-first-layout == false %}
+                        <div class="text-container-{{ block.id }}">
+                            <h1 class="title-{{ block.id }}">{{ block.settings.title }}</h1>
+                            <div class="description-container-{{ block.id }}">
+                                <div class="main-description-{{ block.id }}">
+                                    <p>{{ block.settings.description }}</p>
+                                </div>
+                                <div class="sub-description-{{ block.id }}">
+                                    <p>{{ block.settings.sub-description }}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="sub-description-{{ block.id }}">
-                            <p>{{ block.settings.sub-description }}</p>
+                        <div class="image-container-{{ block.id }}">
+                            <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: "master" }}">
                         </div>
-                    </div>
-                    <div class="image-container-{{ block.id }}">
-                        <img src="{{ block.settings.image | img_url: "master" }}">
-                    </div>
+
+                    {% else %}
+                        <div class="image-container-{{ block.id }}">
+                            <img class="image-{{ block.id }}" src="{{ block.settings.image | img_url: "master" }}">
+                        </div>
+                        <div class="text-container-{{ block.id }}">
+                            <h1 class="title-{{ block.id }}">{{ block.settings.title }}</h1>
+                            <div class="description-container-{{ block.id }}">
+                                <div class="main-description-{{ block.id }}">
+                                    <p>{{ block.settings.description }}</p>
+                                </div>
+                                <div class="sub-description-{{ block.id }}">
+                                    <p>{{ block.settings.sub-description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
                 </section>
             </div>
 
@@ -40,22 +60,25 @@
                     display: flex;
                     justify-content: space-evenly;
                     align-items: stretch;
+                    gap: 100px;
                     width: {{ block.settings.block-width }}%;
                 }
-                .text-container{{ block.id }} {
-                    width: 100%;
+                .text-container-{{ block.id }} {
+                    flex: 1;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: space-between;
                 }
-                .text-container{{ block.id }} h1 {
-                    margin-bottom: 28px;
-                    margin-top: 10px;
+                .text-container-{{ block.id }} h1 {
+                    margin: 0;
                 }
                 .image-container-{{ block.id }} {
-                    width: 100%;
+                    flex: 1;
                     display: flex;
                     justify-content: center;
+                }
+                .image-{{ block.id }} {
+                    width: 100%;
                 }
                 .title-{{ block.id }} {
                     font-size: {{ block.settings.title-font-size }}px;
@@ -78,6 +101,9 @@
                     width: {{ block.settings.sub-description-width }}%;
                     text-align: justify;
                 }
+                .sub-description-{{ block.id }} p {
+                    margin-bottom: 0;
+                }
                 .hr-parent-{{ section.id }}{
                     display: flex;
                     flex-direction: column;
@@ -89,15 +115,33 @@
                     width: 93%;
                     margin: 1rem 0;
                 }
+                @media (min-width: 1150px) and (max-width: 1440px) {
+                    .title-{{ block.id }} {
+                        font-size: 70px;
+                    }
+                }
+                @media (min-width: 1040px) and (max-width: 1149px) {
+                    .title-{{ block.id }} {
+                        font-size: 65px;
+                    }
+                }
+                @media (min-width: 769px) and (max-width: 1040px) {
+                    .title-{{ block.id }} {
+                        font-size: 45px;
+                    }
+                }
                 @media (max-width: 768px) {
                     .about-us-{{ block.id }} {
                         flex-wrap: wrap;
+                        gap: 15px;
                     }
-                    .text-container{{ block.id }}{
+                    .text-container-{{ block.id }}{
+                        flex: none;
                         order: 1;
                         width: 90%;
                     }
                     .image-container-{{ block.id }} {
+                        flex: none;
                         order: 0;
                     }
                     .main-description-{{ block.id }} p {
@@ -166,25 +210,26 @@
                     "label": "Section Width"
                 },
                 {
+                    "type": "checkbox",
+                    "id": "image-first-layout",
+                    "default": false,
+                    "label": "Image First Layout"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Select Image"
+                },
+                {
                     "type": "text",
                     "id": "title",
                     "label": "Title",
                     "default": "About Us"
                 },
                 {
-                    "type": "text",
-                    "id": "description",
-                    "label": "Description"
-                },
-                {
-                    "type": "text",
-                    "id": "sub-description",
-                    "label": "Sub Description"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Select Image"
+                    "type": "font",
+                    "id": "title-font",
+                    "label": "Title Font"
                 },
                 {
                     "type": "range",
@@ -207,6 +252,28 @@
                     "label": "Title Font Size (Mobile)"
                 },
                 {
+                    "type": "color",
+                    "id": "title-font-color",
+                    "label": "Title Font Color",
+                    "default": "#2B2725"
+                },
+                {
+                    "type": "color",
+                    "id": "title-mobile-font-color",
+                    "label": "Title Font Color (Mobile)",
+                    "default": "#2B2725"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Main Description"
+                },
+                {
+                    "type": "font",
+                    "id": "description-font",
+                    "label": "Main Description Font"
+                },
+                {
                     "type": "range",
                     "id": "description-font-size",
                     "min": 18,
@@ -227,14 +294,16 @@
                     "label": "Main Description Font Size (Mobile)"
                 },
                 {
-                    "type": "range",
-                    "id": "sub-description-font-size",
-                    "min": 12,
-                    "max": 30,
-                    "step": 1,
-                    "unit": "px",
-                    "default": 16,
-                    "label": "Sub Description Font Size"
+                    "type": "color",
+                    "id": "description-font-color",
+                    "label": "Main Description Font Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "description-mobile-font-color",
+                    "label": "Main Description Font Color (Mobile)",
+                    "default": "#000000"
                 },
                 {
                     "type": "range",
@@ -258,55 +327,6 @@
                 },
                 {
                     "type": "range",
-                    "id": "sub-description-line-height",
-                    "min": 20,
-                    "max": 50,
-                    "step": 1,
-                    "unit": "px",
-                    "default": 28,
-                    "label": "Sub Description Line Height"
-                },
-                {
-                    "type": "font",
-                    "id": "title-font",
-                    "label": "Title Font"
-                },
-                {
-                    "type": "color",
-                    "id": "title-font-color",
-                    "label": "Title Font Color",
-                    "default": "#2B2725"
-                },
-                {
-                    "type": "color",
-                    "id": "title-mobile-font-color",
-                    "label": "Title Font Color (Mobile)",
-                    "default": "#2B2725"
-                },
-                {
-                    "type": "font",
-                    "id": "description-font",
-                    "label": "Main Description Font"
-                },
-                {
-                    "type": "color",
-                    "id": "description-font-color",
-                    "label": "Main Description Font Color",
-                    "default": "#000000"
-                },
-                {
-                    "type": "color",
-                    "id": "description-mobile-font-color",
-                    "label": "Main Description Font Color (Mobile)",
-                    "default": "#000000"
-                },
-                {
-                    "type": "font",
-                    "id": "sub-description-font",
-                    "label": "Sub Description Font"
-                },
-                {
-                    "type": "range",
                     "id": "description-width",
                     "min": 50,
                     "max": 100,
@@ -326,13 +346,43 @@
                     "label": "Main Description Width (Mobile)"
                 },
                 {
+                    "type": "text",
+                    "id": "sub-description",
+                    "label": "Sub Description"
+                },
+                {
+                    "type": "font",
+                    "id": "sub-description-font",
+                    "label": "Sub Description Font"
+                },
+                {
+                    "type": "range",
+                    "id": "sub-description-font-size",
+                    "min": 12,
+                    "max": 30,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
+                    "label": "Sub Description Font Size"
+                },
+                {
+                    "type": "range",
+                    "id": "sub-description-line-height",
+                    "min": 20,
+                    "max": 50,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 28,
+                    "label": "Sub Description Line Height"
+                },
+                {
                     "type": "range",
                     "id": "sub-description-width",
                     "min": 50,
                     "max": 100,
                     "step": 1,
                     "unit": "%",
-                    "default": 100,
+                    "default": 80,
                     "label": "Sub Description Width"
                 }
             ]
