@@ -41,6 +41,7 @@
                 width: {{ block.settings.block-width }}%;
             }
             .text-container-{{ block.id }} {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -89,6 +90,7 @@
             }
             @media (max-width: 768px) {
                 .text-image-container-{{ block.id }} {
+                    width: 100%;
                     flex-wrap: wrap;
                 }
                 .image-container-{{ block.id }} {
@@ -141,13 +143,13 @@
 
 {% schema %}
 {
-    "name": "Text Image",
+    "name": "Text With Image",
     "settings": [
 
     ],
     "blocks": [
         {
-            "name": "Text Image",
+            "name": "Text With Image",
             "type": "text-image",
             "settings": [
                 {
@@ -157,13 +159,14 @@
                     "max": 100,
                     "step": 1,
                     "unit": "%",
-                    "default": 100,
+                    "default": 95,
                     "label": "Block Width"
                 },
                 {
                     "type": "text",
                     "id": "description",
-                    "label": "Description"
+                    "label": "Description",
+                    "default": "In 2022, creative director Elliot Atkinson joined Ninety Percent, elevating our aesthetic language into a sophisticated vision for our customers and connecting the clothes back to nature. Capturing the sensuality of visiting uncharted destinations and feeling the sea, the earth – thus designing pieces that ultimately fit into the ebbs and flow of our current lifestyles."
                 },
                 {
                     "type": "font",
@@ -211,6 +214,16 @@
                     "label": "Line Height (Mobile)"
                 },
                 {
+                    "type": "range",
+                    "id": "text-width",
+                    "label": "Text Width",
+                    "min": 20,
+                    "max": 100,
+                    "default": 50,
+                    "step": 1,
+                    "unit": "%"
+                },
+                {
                     "type": "image_picker",
                     "id": "image",
                     "label": "Choose Image"
@@ -224,16 +237,6 @@
                     "unit": "%",
                     "default": 100,
                     "label": "Image Width"
-                },
-                {
-                    "type": "range",
-                    "id": "text-width",
-                    "label": "Text Width",
-                    "min": 50,
-                    "max": 100,
-                    "default": 100,
-                    "step": 1,
-                    "unit": "%"
                 },
                 {
                     "type": "text",
@@ -256,16 +259,6 @@
                     "type": "url",
                     "id": "mobile-url",
                     "label": "Mobile URL"
-                },
-                {
-                    "type": "range",
-                    "id": "description-width",
-                    "min": 50,
-                    "max": 100,
-                    "step": 1,
-                    "unit": "%",
-                    "default": 100,
-                    "label": "Description Width"
                 }
             ]
         },
@@ -288,7 +281,7 @@
     ],
     "presets": [
         {
-            "name": "Ninety Text Image"
+            "name": "Text With Image"
         }
     ]
 }
