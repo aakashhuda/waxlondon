@@ -1,4 +1,4 @@
- {% for block in section.blocks %}
+{% for block in section.blocks %}
     {% case block.type %}
         {% when 'hero-about-us' %} 
             <div id="wrapper-{{ block.id }}"> 
@@ -7,6 +7,11 @@
                         <div class="text-container-{{ block.id }}">
                             <h1 class="title-{{ block.id }}">{{ block.settings.title }}</h1>
                             <div class="description-container-{{ block.id }}">
+
+                                <div class="bullet-point">
+                                    <span class="point">{{ block.settings.point }}</span> <span class="point-text">{{ block.settings.point-text }}</span>
+                                  </div>
+
                                 <div class="main-description-{{ block.id }}">
                                     <p>{{ block.settings.description }}</p>
                                 </div>
@@ -26,6 +31,9 @@
                         <div class="text-container-{{ block.id }}">
                             <h1 class="title-{{ block.id }}">{{ block.settings.title }}</h1>
                             <div class="description-container-{{ block.id }}">
+                                <div class="bullet-point">
+                                    <span class="point">{{ block.settings.point }}</span> <span class="point-text">{{ block.settings.point-text }}</span>
+                                  </div>
                                 <div class="main-description-{{ block.id }}">
                                     <p>{{ block.settings.description }}</p>
                                 </div>
@@ -62,6 +70,7 @@
                     align-items: stretch;
                     gap: 100px;
                     width: {{ block.settings.block-width }}%;
+                    max-width: 2000px;
                 }
                 .text-container-{{ block.id }} {
                     flex: 1;
@@ -115,6 +124,102 @@
                     width: 93%;
                     margin: 1rem 0;
                 }
+
+                #wrapper-{{ block.id }} .bullet-point  {
+                    
+                    margin-bottom: 40px;
+                }
+                
+                #wrapper-{{ block.id }} .bullet-point .point {
+                    font-family: {{ block.settings.point-font }};
+                    font-size: {{ block.settings.point-font-size }}px;
+                    color: {{ block.settings.point-font-color }};
+                    font-weight: {{ block.settings.point-font-weight }};
+                    margin-bottom: 40px;
+                }
+                #wrapper-{{ block.id }} .bullet-point .point-text {
+                    font-family: {{ block.settings.point-text-font }};
+                    font-size: {{ block.settings.point-text-font-size }}px;
+                    color: {{ block.settings.point-text-font-color }};
+                    text-transform: uppercase;
+                    padding-left: {{ block.settings.point-text-padding }}px;
+                    font-weight: {{ block.settings.point-text-font-weight }};
+                }
+                {% if block.settings.show-title != true %} 
+                    .text-container-{{ block.id }} .title-{{ block.id }} {
+                        display: none;
+                    }
+                {% endif %}
+
+                {% if  block.settings.show-point != true %} 
+                    .text-container-{{ block.id }}  .bullet-point {
+                        display: none;
+                    }
+                {% endif %}
+                {% comment %} beginning of image size responsiveness {% endcomment %}
+                @media (min-width: 1251px) and (max-width: 1300px) {
+                    .image-{{ block.id }} {
+                        width: 95%;
+                    }
+                }
+                @media (min-width: 1301px) and (max-width: 1350px) {
+                    .image-{{ block.id }} {
+                        width: 90%;
+                    }
+                }
+                @media (min-width: 1351px) and (max-width: 1400px) {
+                    .image-{{ block.id }} {
+                        width: 85%;
+                    }
+                }
+                @media (min-width: 1401px) and (max-width: 1450px) {
+                    .image-{{ block.id }} {
+                        width: 80%;
+                    }
+                }
+                @media (min-width: 1451px) and (max-width: 1500px) {
+                    .image-{{ block.id }} {
+                        width: 75%;
+                    }
+                }
+                @media (min-width: 1501px) and (max-width: 1600px) {
+                    .image-{{ block.id }} {
+                        width: 70%;
+                    }
+                }
+                @media (min-width: 1601px) and (max-width: 1700px) {
+                    .image-{{ block.id }} {
+                        width: 65%;
+                    }
+                    .about-us-{{ block.id }} {
+                        gap: 50px;
+                    }
+                }
+                @media (min-width: 1701px) and (max-width: 1800px) {
+                    .image-{{ block.id }} {
+                        width: 60%;
+                    }
+                    .about-us-{{ block.id }} {
+                        gap: 0px;
+                    }
+                }
+                @media (min-width: 1801px) and (max-width: 1900px) {
+                    .image-{{ block.id }} {
+                        width: 55%;
+                    }
+                    .about-us-{{ block.id }} {
+                        gap: 0px;
+                    }
+                }
+                @media (min-width: 1901px) and (max-width: 2000px) {
+                    .image-{{ block.id }} {
+                        width: 52%;
+                    }
+                    .about-us-{{ block.id }} {
+                        gap: 0px;
+                    }
+                }
+                {% comment %} end of image size responsiveness {% endcomment %}
                 @media (min-width: 1150px) and (max-width: 1440px) {
                     .title-{{ block.id }} {
                         font-size: 70px;
@@ -216,6 +321,18 @@
                     "label": "Image First Layout"
                 },
                 {
+                    "type": "checkbox",
+                    "label" : "Show-Title",
+                    "id": "show-title",
+                    "default": true
+                },
+                {
+                    "type": "checkbox",
+                    "label" : "Show-Point",
+                    "id": "show-point",
+                    "default": true
+                },
+                {
                     "type": "image_picker",
                     "id": "image",
                     "label": "Select Image"
@@ -225,6 +342,7 @@
                     "id": "title",
                     "label": "Title",
                     "default": "About Us"
+                    
                 },
                 {
                     "type": "font",
@@ -262,6 +380,98 @@
                     "id": "title-mobile-font-color",
                     "label": "Title Font Color (Mobile)",
                     "default": "#2B2725"
+                },
+                {
+                    "type": "text",
+                    "id": "point",
+                    "label": "Point",
+                    "default": "Featured"          
+                },
+                {
+                    "type": "text",
+                    "id": "point-text",
+                    "label": "Point Text",
+                    "default": "Collection No.20 Lookbook"
+                },
+                {
+                    "type": "range",
+                    "id": "point-text-padding",
+                    "label": "Point Text Distance",
+                    "default": 5,
+                    "min": 0,
+                    "max": 40,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "point-font-size",
+                    "label": "Point Font Size",
+                    "default": 16,
+                    "min": 14,
+                    "max": 32,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "point-mobile-font-size",
+                    "label": "Point Font Size (Mobile)",
+                    "default": 16,
+                    "min": 14,
+                    "max": 32,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "point-font-weight",
+                    "label": "Point Font Weight",
+                    "min": 100,
+                    "max": 900,
+                    "step": 100,
+                    "default": 400,
+                    "unit": "num"
+                },
+                {
+                    "type": "range",
+                    "id": "point-text-font-size",
+                    "label": "Point Text Font Size",
+                    "default": 16,
+                    "min": 14,
+                    "max": 32,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "point-mobile-text-font-size",
+                    "label": "Point Text Font Size (Mobile)",
+                    "default": 16,
+                    "min": 14,
+                    "max": 32,
+                    "unit": "px",
+                    "step": 1
+                },
+                {
+                    "type": "range",
+                    "id": "point-text-font-weight",
+                    "label": "Point Text Font Weight",
+                    "min": 100,
+                    "max": 900,
+                    "step": 100,
+                    "default": 400,
+                    "unit": "num"
+                },
+                {
+                    "type": "font",
+                    "id": "point-font",
+                    "label": "Point Font"
+                },
+                {
+                    "type": "font",
+                    "id": "point-text-font",
+                    "label": "Point Text Font"
                 },
                 {
                     "type": "text",
@@ -408,7 +618,15 @@
     ],
     "presets": [
         {
-            "name": "Hero Section"
+            "name": "Hero Section",
+            "blocks": [
+                {
+                "type": "hero-about-us"
+                },
+                {
+                "type": "spacer"
+                }
+            ]
         }
     ]
 }

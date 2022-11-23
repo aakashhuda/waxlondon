@@ -3,8 +3,7 @@
     {% for block in section.blocks %}
         {% case block.type %}
             {% when "image-block" %}
-                <div class="block-{{ block.id }} block-width-{{ block.settings.block-width }}">
-                    
+                <div class="block-{{ block.id }} block-width-{{ block.settings.block-width }}">  
                         <div class="image-block-inner" >
                             <img src="{{ block.settings.bg-image | img_url: 'grande' }}" alt="">
                             <div class="image-block-text">
@@ -13,12 +12,9 @@
                             </div>
                             <span class="image-block-caption"> {{ block.settings.caption }} </span>
                         </div>
-
-                   
                 </div>
             
             {% when 'spacer-block' %}
-
                 <div class="spacer-{{ block.id }}">
                         
                 </div>
@@ -153,7 +149,7 @@
 
 {% schema %}
 {
-    "name": "np-single-image",
+    "name": "Single Image",
     "settings": [
         
     ],
@@ -163,193 +159,6 @@
             "name": "Image",
             "settings": [
                 {
-                    "type": "image_picker",
-                    "label": "Image Pick",
-                    "id": "bg-image"
-                },
-                {
-                    "type": "richtext",
-                    "label": "Add title",
-                    "id": "title"
-                },
-              
-                {
-                    "type": "range",
-                    "id":"title-text-size",
-                    "label":"Title text size",
-                    "min":8,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":10
-                }, 
-                {
-                    "type": "range",
-                    "id":"mobile-title-text-size",
-                    "label":"Title text size for mobile devices",
-                    "min":8,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":10
-                }, 
-                {
-                    "type":"color",
-                    "id":"title-color",
-                    "label":"title text color",
-                    "default": "#000000"
-                },
-                {
-                "type": "font",
-                "id": "title-font-family",
-                "label" : "Title Font Family"
-              },
-              {
-                  "type": "range",
-                  "id": "title-line-height",
-                  "min": 10,
-                  "max": 100,
-                  "step": 1,
-                  "unit": "px",
-                  "default": 37,
-                  "label": "Title Line Height"
-              },
-              {
-                  "type": "range",
-                  "id": "mobile-title-line-height",
-                  "min": 10,
-                  "max": 100,
-                  "step": 1,
-                  "unit": "px",
-                  "default": 37,
-                  "label": "Title Line Height For Mobile Devices"
-              },
-               
-                {
-                    "type": "richtext",
-                    "label": "Add description",
-                    "id": "desc"
-                  
-                },
-                {
-                    "type": "range",
-                    "id":"desc-text-size",
-                    "label":"Description text size",
-                    "min":8,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":10
-                }, 
-                {
-                    "type": "range",
-                    "id":"mobile-desc-text-size",
-                    "label":"Description text size for mobile devices",
-                    "min":8,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":10
-                },
-                {
-                    "type":"color",
-                    "id":"desc-color",
-                    "label":"desc text color",
-                    "default": "#000000"
-                },
-                {
-                "type": "font",
-                "id": "desc-font-family",
-                "label" : "Description Font Family"
-              },
-              {
-                  "type": "range",
-                  "id": "desc-line-height",
-                  "min": 10,
-                  "max": 100,
-                  "step": 1,
-                  "unit": "px",
-                  "default": 37,
-                  "label": "Description Line Height"
-              },
-              {
-                  "type": "range",
-                  "id": "mobile-desc-line-height",
-                  "min": 10,
-                  "max": 100,
-                  "step": 1,
-                  "unit": "px",
-                  "default": 37,
-                  "label": "Description Line Height for Mobile Devices"
-              },
-              {
-                    "type": "richtext",
-                    "label": "Add caption",
-                    "id": "caption"
-                
-                },
-                {
-                    "type": "range",
-                    "id":"caption-text-size",
-                    "label":"Caption text size",
-                    "min":8,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":10
-                }, 
-                {
-                    "type": "range",
-                    "id":"mobile-caption-text-size",
-                    "label":"Caption text size for mobile devices",
-                    "min":8,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":10
-                },
-                {
-                    "type":"color",
-                    "id":"caption-color",
-                    "label":"caption text color",
-                    "default": "#000000"
-                },
-                {
-                "type": "font",
-                "id": "caption-font-family",
-                "label" : "caption Font Family"
-              },
-              {
-                  "type": "range",
-                  "id": "caption-line-height",
-                  "min": 10,
-                  "max": 100,
-                  "step": 1,
-                  "unit": "px",
-                  "default": 37,
-                  "label": "Caption Line Height"
-              },
-              {
-                  "type": "range",
-                  "id": "mobile-caption-line-height",
-                  "min": 10,
-                  "max": 100,
-                  "step": 1,
-                  "unit": "px",
-                  "default": 37,
-                  "label": "Caption Line Height for Mobile Devices"
-              },
-              {
-                    "type": "range",
-                    "id":"padding",
-                    "label":"Left-Right Space",
-                    "min":0,
-                    "max":100,
-                    "step":1,
-                    "unit":"px",
-                    "default":0
-                },
-           {
                 "type": "select",
                 "id": "block-width",
                 "label": "Block width",
@@ -387,20 +196,209 @@
         "type": "checkbox",
         "id": "show-title",
         "label": "Show Title",
-        "default": false
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "show-desc",
         "label": "Show Descriptions",
-        "default": false
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "show-caption",
         "label": "Show caption",
-        "default": false
-      }
+        "default": true
+      },
+      {
+                    "type": "range",
+                    "id":"padding",
+                    "label":"Left-Right Space of the block",
+                    "min":0,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":0
+                },
+                {
+                    "type": "image_picker",
+                    "label": "Image Pick",
+                    "id": "bg-image"
+                },
+                {
+                    "type": "richtext",
+                    "label": "Add title",
+                    "id": "title",
+                    "default": "<p>Our Way</p>"
+                },
+              
+                {
+                    "type": "range",
+                    "id":"title-text-size",
+                    "label":"Title text size",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":100
+                }, 
+                {
+                    "type": "range",
+                    "id":"mobile-title-text-size",
+                    "label":"Title text size for mobile devices",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":10
+                }, 
+                {
+                    "type":"color",
+                    "id":"title-color",
+                    "label":"title text color",
+                    "default": "#000000"
+                },
+                {
+                "type": "font",
+                "id": "title-font-family",
+                "label" : "Title Font Family"
+              },
+              {
+                  "type": "range",
+                  "id": "title-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 90,
+                  "label": "Title Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-title-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Title Line Height For Mobile Devices"
+              },
+               
+                {
+                    "type": "richtext",
+                    "label": "Add description",
+                    "id": "desc",
+                    "default": "<p> We're a responsible luxury fashion label sharing 90% of our profits with people and causes we believe in. We're cultivating a culture of beauty that goes beyond our clothing, pioneering a new business culture rooted in community. All we do is rooted in people, planet and our values making tangible strides for the world we want. </p>"
+                  
+                },
+                {
+                    "type": "range",
+                    "id":"desc-text-size",
+                    "label":"Description text size",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":20
+                }, 
+                {
+                    "type": "range",
+                    "id":"mobile-desc-text-size",
+                    "label":"Description text size for mobile devices",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":10
+                },
+                {
+                    "type":"color",
+                    "id":"desc-color",
+                    "label":"desc text color",
+                    "default": "#000000"
+                },
+                {
+                "type": "font",
+                "id": "desc-font-family",
+                "label" : "Description Font Family"
+              },
+              {
+                  "type": "range",
+                  "id": "desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 30,
+                  "label": "Description Line Height"
+              },
+              {
+                  "type": "range",
+                  "id": "mobile-desc-line-height",
+                  "min": 10,
+                  "max": 100,
+                  "step": 1,
+                  "unit": "px",
+                  "default": 37,
+                  "label": "Description Line Height for Mobile Devices"
+              },
+              {
+                    "type": "richtext",
+                    "label": "Add caption",
+                    "id": "caption"
+                
+                },
+                {
+                    "type": "range",
+                    "id":"caption-text-size",
+                    "label":"Caption text size",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default": 12
+                }, 
+                {
+                    "type": "range",
+                    "id":"mobile-caption-text-size",
+                    "label":"Caption text size for mobile devices",
+                    "min":8,
+                    "max":100,
+                    "step":1,
+                    "unit":"px",
+                    "default":10
+                },
+                {
+                    "type":"color",
+                    "id":"caption-color",
+                    "label":"caption text color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "font",
+                    "id": "caption-font-family",
+                    "label" : "caption Font Family"
+                },
+                {
+                    "type": "range",
+                    "id": "caption-line-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 21,
+                    "label": "Caption Line Height"
+                },
+                {
+                    "type": "range",
+                    "id": "mobile-caption-line-height",
+                    "min": 10,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 37,
+                    "label": "Caption Line Height for Mobile Devices"
+                }
             ]
         },
         {
@@ -423,7 +421,15 @@
     "presets": [
         {
          "category":"content",
-           "name":"np-single-image"
+           "name":"Single Image",
+           "blocks": [
+        {
+          "type": "image-block"
+        },
+        {
+          "type": "spacer-block"
+        }
+      ]
         }
     ]
 }
