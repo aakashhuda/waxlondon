@@ -28,6 +28,7 @@
     .company-with-info-{{ section.id }} {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: {{ section.settings.section-width }}%;
     }
 
@@ -41,15 +42,16 @@
                     }   
                 {% endif %}
                 .company-card-{{ block.id }} {
-                    max-width: 440px;
+                    {% comment %} max-width: 440px; {% endcomment %}
                     display: flex;
                     flex-direction: column;
-                    justify-content: stretch;
+                    justify-content: center;
                     align-items: start;
                     flex: 1;
                     padding: 2%;
                     padding-top: 0;
                     position: relative;
+                    min-height: 800px;
                 }
                 .company-name-{{ block.id }} {
                     font-family: {{ block.settings.company-name-font }};
@@ -79,7 +81,7 @@
                     padding-right: {{ block.settings.product-text-right-padding }}px;
                 }
                 .company-speciality-list-{{ block.id }} {
-                    padding: 0 50px;
+                    padding: 0 30px;
                 }
                 .list-item-{{ block.id }} {
                     margin: 30px 0;
@@ -94,6 +96,17 @@
                         border-right: 1px solid #c0bfbd;
                     }
                 {% endif %}
+
+                @media (min-width: 1000px) and (max-width: 1300px) {
+                    .company-name-{{ block.id }} {
+                        font-size: 20px;
+                    }
+                }
+                @media (min-width: 769px) and (max-width: 999px) {
+                    .company-name-{{ block.id }} {
+                        font-size: 15px;
+                    }
+                }
 
                 @media (max-width: 768px) {
                     .company-name-{{ block.id }} {
@@ -123,7 +136,7 @@
 {% schema %}
 
 {
-    "name": "Ninety Company With Info",
+    "name": "Company With Info",
     "settings": [
         {
             "type": "range",
@@ -138,9 +151,15 @@
     ],
     "blocks": [
         {
-            "name": "Company",
+            "name": "Company With Info",
             "type": "company-card",
             "settings": [
+                {
+                    "type": "checkbox",
+                    "id": "enable-border",
+                    "label": "Enable Right Line",
+                    "default": false
+                },
                 {
                     "type": "richtext",
                     "id": "company-name",
@@ -265,7 +284,8 @@
                 {
                     "type": "text",
                     "id": "company-description",
-                    "label": "Company Description"
+                    "label": "Company Description",
+                    "default": "Echotex operates with planet, people and product at its heart. Industry-leading, it was the first factory in Bangladesh to offer health insurance for all workers, fair wages and a free lunch, every day."
                 },
                 {
                     "type": "font",
@@ -325,12 +345,14 @@
                 {
                     "type": "text",
                     "id": "list-content-1",
-                    "label": "First List Content"
+                    "label": "First List Content",
+                    "default": "Its pioneering ethical practices help to safeguard and improve the wellbeing of the workforce."
                 },
                 {
                     "type": "text",
                     "id": "list-content-2",
-                    "label": "Second List Content"
+                    "label": "Second List Content",
+                    "default": "Sustainable production processes produce excellent quality products without compromising the environment or our brand values."
                 },
                 {
                     "type": "font",
@@ -386,19 +408,13 @@
                     "unit": "px",
                     "default": 28,
                     "label": "List Line Height (Mobile)"
-                },
-                {
-                    "type": "checkbox",
-                    "id": "enable-border",
-                    "label": "Enable Right Line",
-                    "default": false
                 }
             ]
         }
     ],
     "presets": [
         {
-            "name": "Ninety Company With Info"
+            "name": "Company With Info"
         }
     ]
 }
