@@ -51,7 +51,7 @@
                     border-bottom: 1px solid #2b2724;
                 }
                 .product-card-{{ block.id }} {
-                    max-width: 440px;
+                    {% comment %} max-width: 440px; {% endcomment %}
                     display: flex;
                     flex-direction: column;
                     justify-content: stretch;
@@ -129,7 +129,7 @@
 {% schema %}
 
 {
-    "name": "Ninety Product With Info",
+    "name": "Product With Info",
     "settings": [
         {
             "type": "range",
@@ -144,7 +144,7 @@
     ],
     "blocks": [
         {
-            "name": "Product",
+            "name": "Product Card",
             "type": "product-card",
             "settings": [
                 {
@@ -381,7 +381,7 @@
     ],
     "presets": [
         {
-            "name": "Ninety Product With Info"
+            "name": "Product With Info"
         }
     ]
 }

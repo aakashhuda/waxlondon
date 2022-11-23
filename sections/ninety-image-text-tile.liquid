@@ -168,10 +168,10 @@
 
 {% schema %}
 {
-    "name": "Ninety Image Text Tile",
+    "name": "Image With Text Tile",
     "blocks": [
         {
-            "name": "Image and Text Tile",
+            "name": "Image With Text Tile",
             "type": "image-and-text-tile",
             "settings": [
                 {
@@ -230,7 +230,8 @@
                 {
                     "type": "text",
                     "id": "title",
-                    "label": "Add Title"
+                    "label": "Add Title",
+                    "default": "Packaging"
                 },
                 {
                     "type": "range",
@@ -296,8 +297,14 @@
                 {
                     "type": "color",
                     "id": "bg-color",
-                    "label": "Choose text background color",
+                    "label": "Description background color",
                     "default": "#FFFFFF"
+                },
+                {
+                    "type": "color",
+                    "id": "text-font-color",
+                    "label": "Description Font Color",
+                    "default": "#000000"
                 },
                 {
                     "type": "range",
@@ -360,12 +367,6 @@
                     "label": "Description Width (Mobile)"
                 },
                 {
-                    "type": "color",
-                    "id": "text-font-color",
-                    "label": "Description Font Color",
-                    "default": "#000000"
-                },
-                {
                     "type": "checkbox",
                     "id": "show-button",
                     "label": "Show Button",
@@ -409,7 +410,7 @@
     ],
     "presets": [
         {
-            "name": "Ninety Image Text Tile"
+            "name": "Image With Text Tile"
         }
     ]
 }
